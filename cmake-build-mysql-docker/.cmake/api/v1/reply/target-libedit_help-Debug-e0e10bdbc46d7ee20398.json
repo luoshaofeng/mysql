@@ -1,0 +1,80 @@
+{
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"ADD_CUSTOM_TARGET",
+			"MAKELIST_TARGET"
+		],
+		"files" : 
+		[
+			"extra/libedit/libedit-20240808-3.1/src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 85,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 70,
+				"parent" : 1
+			}
+		]
+	},
+	"id" : "libedit_help::@5ad877e6f0b3b9a90ea3",
+	"name" : "libedit_help",
+	"paths" : 
+	{
+		"build" : "extra/libedit/libedit-20240808-3.1/src",
+		"source" : "extra/libedit/libedit-20240808-3.1/src"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "cmake-build-mysql-docker/extra/libedit/libedit-20240808-3.1/src/CMakeFiles/libedit_help",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-mysql-docker/extra/libedit/libedit-20240808-3.1/src/CMakeFiles/libedit_help.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-mysql-docker/extra/libedit/libedit-20240808-3.1/src/help.h.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

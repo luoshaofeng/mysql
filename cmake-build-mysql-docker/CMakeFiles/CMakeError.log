@@ -1,0 +1,2294 @@
+Performing C SOURCE FILE Test C_LD_lld_RESULT failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_a6f0e/fast && /usr/bin/make  -f CMakeFiles/cmTC_a6f0e.dir/build.make CMakeFiles/cmTC_a6f0e.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a6f0e.dir/src.c.o
+/usr/bin/cc -DC_LD_lld_RESULT  -fno-omit-frame-pointer -ffp-contract=off   -fPIE -o CMakeFiles/cmTC_a6f0e.dir/src.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_a6f0e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a6f0e.dir/link.txt --verbose=1
+/usr/bin/cc -fno-omit-frame-pointer -ffp-contract=off   CMakeFiles/cmTC_a6f0e.dir/src.c.o -o cmTC_a6f0e  -fuse-ld=lld 
+collect2: fatal error: cannot find 'ld'
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_a6f0e.dir/build.make:99: cmTC_a6f0e] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_a6f0e/fast] Error 2
+
+
+Source file was:
+int main() {}
+Performing C++ SOURCE FILE Test CXX_LD_lld_RESULT failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_bcc73/fast && /usr/bin/make  -f CMakeFiles/cmTC_bcc73.dir/build.make CMakeFiles/cmTC_bcc73.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_bcc73.dir/src.cxx.o
+/usr/bin/c++ -DCXX_LD_lld_RESULT  -std=c++17 -fno-omit-frame-pointer -ffp-contract=off   -fPIE -o CMakeFiles/cmTC_bcc73.dir/src.cxx.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_bcc73
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bcc73.dir/link.txt --verbose=1
+/usr/bin/c++ -std=c++17 -fno-omit-frame-pointer -ffp-contract=off   CMakeFiles/cmTC_bcc73.dir/src.cxx.o -o cmTC_bcc73  -fuse-ld=lld 
+collect2: fatal error: cannot find 'ld'
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_bcc73.dir/build.make:99: cmTC_bcc73] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_bcc73/fast] Error 2
+
+
+Source file was:
+int main() {}
+Determining if the function floor exists failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_c54d1/fast && /usr/bin/make  -f CMakeFiles/cmTC_c54d1.dir/build.make CMakeFiles/cmTC_c54d1.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c54d1.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -DCHECK_FUNCTION_EXISTS=floor -fPIE -o CMakeFiles/cmTC_c54d1.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+<command-line>: warning: conflicting types for built-in function 'floor'; expected 'double(double)' [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.22/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro 'CHECK_FUNCTION_EXISTS'
+    7 |   CHECK_FUNCTION_EXISTS(void);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+/usr/share/cmake-3.22/Modules/CheckFunctionExists.c:1:1: note: 'floor' is declared in header '<math.h>'
+  +++ |+#include <math.h>
+    1 | #ifdef CHECK_FUNCTION_EXISTS
+Linking C executable cmTC_c54d1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c54d1.dir/link.txt --verbose=1
+/usr/bin/cc -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -DCHECK_FUNCTION_EXISTS=floor CMakeFiles/cmTC_c54d1.dir/CheckFunctionExists.c.o -o cmTC_c54d1 
+/usr/bin/ld: CMakeFiles/cmTC_c54d1.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x10): undefined reference to `floor'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_c54d1.dir/build.make:99: cmTC_c54d1] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_c54d1/fast] Error 2
+
+
+
+Determining if files sys/types.h;sasl/sasl.h exist failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_fffc0/fast && /usr/bin/make  -f CMakeFiles/cmTC_fffc0.dir/build.make CMakeFiles/cmTC_fffc0.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fffc0.dir/HAVE_SASL_SASL_H.c.o
+/usr/bin/cc   -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics  -fPIE -o CMakeFiles/cmTC_fffc0.dir/HAVE_SASL_SASL_H.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CheckIncludeFiles/HAVE_SASL_SASL_H.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CheckIncludeFiles/HAVE_SASL_SASL_H.c:3:10: fatal error: sasl/sasl.h: No such file or directory
+    3 | #include <sasl/sasl.h>
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_fffc0.dir/build.make:78: CMakeFiles/cmTC_fffc0.dir/HAVE_SASL_SASL_H.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_fffc0/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <sasl/sasl.h>
+
+
+int main(void){return 0;}
+
+Determining if the function _aligned_malloc exists failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_9d3c8/fast && /usr/bin/make  -f CMakeFiles/cmTC_9d3c8.dir/build.make CMakeFiles/cmTC_9d3c8.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9d3c8.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -DCHECK_FUNCTION_EXISTS=_aligned_malloc -fPIE -o CMakeFiles/cmTC_9d3c8.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_9d3c8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9d3c8.dir/link.txt --verbose=1
+/usr/bin/cc -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -DCHECK_FUNCTION_EXISTS=_aligned_malloc CMakeFiles/cmTC_9d3c8.dir/CheckFunctionExists.c.o -o cmTC_9d3c8  -lm 
+/usr/bin/ld: CMakeFiles/cmTC_9d3c8.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x10): undefined reference to `_aligned_malloc'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_9d3c8.dir/build.make:99: cmTC_9d3c8] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_9d3c8/fast] Error 2
+
+
+
+Determining if the function directio exists failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_683a7/fast && /usr/bin/make  -f CMakeFiles/cmTC_683a7.dir/build.make CMakeFiles/cmTC_683a7.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_683a7.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -DCHECK_FUNCTION_EXISTS=directio -fPIE -o CMakeFiles/cmTC_683a7.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_683a7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_683a7.dir/link.txt --verbose=1
+/usr/bin/cc -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -DCHECK_FUNCTION_EXISTS=directio CMakeFiles/cmTC_683a7.dir/CheckFunctionExists.c.o -o cmTC_683a7  -lm 
+/usr/bin/ld: CMakeFiles/cmTC_683a7.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x10): undefined reference to `directio'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_683a7.dir/build.make:99: cmTC_683a7] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_683a7/fast] Error 2
+
+
+
+Determining if the function gethrtime exists failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_a059a/fast && /usr/bin/make  -f CMakeFiles/cmTC_a059a.dir/build.make CMakeFiles/cmTC_a059a.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a059a.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -DCHECK_FUNCTION_EXISTS=gethrtime -fPIE -o CMakeFiles/cmTC_a059a.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a059a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a059a.dir/link.txt --verbose=1
+/usr/bin/cc -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -DCHECK_FUNCTION_EXISTS=gethrtime CMakeFiles/cmTC_a059a.dir/CheckFunctionExists.c.o -o cmTC_a059a  -lm 
+/usr/bin/ld: CMakeFiles/cmTC_a059a.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x10): undefined reference to `gethrtime'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_a059a.dir/build.make:99: cmTC_a059a] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_a059a/fast] Error 2
+
+
+
+Determining if the function getpassphrase exists failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_bec78/fast && /usr/bin/make  -f CMakeFiles/cmTC_bec78.dir/build.make CMakeFiles/cmTC_bec78.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bec78.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -DCHECK_FUNCTION_EXISTS=getpassphrase -fPIE -o CMakeFiles/cmTC_bec78.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_bec78
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bec78.dir/link.txt --verbose=1
+/usr/bin/cc -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -DCHECK_FUNCTION_EXISTS=getpassphrase CMakeFiles/cmTC_bec78.dir/CheckFunctionExists.c.o -o cmTC_bec78  -lm 
+/usr/bin/ld: CMakeFiles/cmTC_bec78.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x10): undefined reference to `getpassphrase'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_bec78.dir/build.make:99: cmTC_bec78] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_bec78/fast] Error 2
+
+
+
+Determining if the function issetugid exists failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_128c0/fast && /usr/bin/make  -f CMakeFiles/cmTC_128c0.dir/build.make CMakeFiles/cmTC_128c0.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_128c0.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -DCHECK_FUNCTION_EXISTS=issetugid -fPIE -o CMakeFiles/cmTC_128c0.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_128c0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_128c0.dir/link.txt --verbose=1
+/usr/bin/cc -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -DCHECK_FUNCTION_EXISTS=issetugid CMakeFiles/cmTC_128c0.dir/CheckFunctionExists.c.o -o cmTC_128c0  -lm 
+/usr/bin/ld: CMakeFiles/cmTC_128c0.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x10): undefined reference to `issetugid'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_128c0.dir/build.make:99: cmTC_128c0] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_128c0/fast] Error 2
+
+
+
+Determining if the function strlcpy exists failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_4ff9a/fast && /usr/bin/make  -f CMakeFiles/cmTC_4ff9a.dir/build.make CMakeFiles/cmTC_4ff9a.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4ff9a.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -DCHECK_FUNCTION_EXISTS=strlcpy -fPIE -o CMakeFiles/cmTC_4ff9a.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_4ff9a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4ff9a.dir/link.txt --verbose=1
+/usr/bin/cc -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -DCHECK_FUNCTION_EXISTS=strlcpy CMakeFiles/cmTC_4ff9a.dir/CheckFunctionExists.c.o -o cmTC_4ff9a  -lm 
+/usr/bin/ld: CMakeFiles/cmTC_4ff9a.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x10): undefined reference to `strlcpy'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_4ff9a.dir/build.make:99: cmTC_4ff9a] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_4ff9a/fast] Error 2
+
+
+
+Determining if the function strlcat exists failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_84891/fast && /usr/bin/make  -f CMakeFiles/cmTC_84891.dir/build.make CMakeFiles/cmTC_84891.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_84891.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -DCHECK_FUNCTION_EXISTS=strlcat -fPIE -o CMakeFiles/cmTC_84891.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_84891
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_84891.dir/link.txt --verbose=1
+/usr/bin/cc -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -DCHECK_FUNCTION_EXISTS=strlcat CMakeFiles/cmTC_84891.dir/CheckFunctionExists.c.o -o cmTC_84891  -lm 
+/usr/bin/ld: CMakeFiles/cmTC_84891.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x10): undefined reference to `strlcat'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_84891.dir/build.make:99: cmTC_84891] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_84891/fast] Error 2
+
+
+
+Determining if the function tell exists failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_2c3bf/fast && /usr/bin/make  -f CMakeFiles/cmTC_2c3bf.dir/build.make CMakeFiles/cmTC_2c3bf.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2c3bf.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -DCHECK_FUNCTION_EXISTS=tell -fPIE -o CMakeFiles/cmTC_2c3bf.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_2c3bf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2c3bf.dir/link.txt --verbose=1
+/usr/bin/cc -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -DCHECK_FUNCTION_EXISTS=tell CMakeFiles/cmTC_2c3bf.dir/CheckFunctionExists.c.o -o cmTC_2c3bf  -lm 
+/usr/bin/ld: CMakeFiles/cmTC_2c3bf.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x10): undefined reference to `tell'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_2c3bf.dir/build.make:99: cmTC_2c3bf] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_2c3bf/fast] Error 2
+
+
+
+Determining if the function ntohll exists failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_5c7c6/fast && /usr/bin/make  -f CMakeFiles/cmTC_5c7c6.dir/build.make CMakeFiles/cmTC_5c7c6.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5c7c6.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -DCHECK_FUNCTION_EXISTS=ntohll -fPIE -o CMakeFiles/cmTC_5c7c6.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_5c7c6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5c7c6.dir/link.txt --verbose=1
+/usr/bin/cc -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -DCHECK_FUNCTION_EXISTS=ntohll CMakeFiles/cmTC_5c7c6.dir/CheckFunctionExists.c.o -o cmTC_5c7c6  -lm 
+/usr/bin/ld: CMakeFiles/cmTC_5c7c6.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x10): undefined reference to `ntohll'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_5c7c6.dir/build.make:99: cmTC_5c7c6] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_5c7c6/fast] Error 2
+
+
+
+Determining if the FIONREAD exist failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_4ed04/fast && /usr/bin/make  -f CMakeFiles/cmTC_4ed04.dir/build.make CMakeFiles/cmTC_4ed04.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4ed04.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics  -fPIE -o CMakeFiles/cmTC_4ed04.dir/CheckSymbolExists.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckSymbolExists.c:2:10: fatal error: sys/filio.h: No such file or directory
+    2 | #include <sys/filio.h>
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_4ed04.dir/build.make:78: CMakeFiles/cmTC_4ed04.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_4ed04/fast] Error 2
+
+
+File /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/filio.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef FIONREAD
+  return ((int*)(&FIONREAD))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the function kqueue exists failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_012d0/fast && /usr/bin/make  -f CMakeFiles/cmTC_012d0.dir/build.make CMakeFiles/cmTC_012d0.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_012d0.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -DCHECK_FUNCTION_EXISTS=kqueue -fPIE -o CMakeFiles/cmTC_012d0.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_012d0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_012d0.dir/link.txt --verbose=1
+/usr/bin/cc -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -DCHECK_FUNCTION_EXISTS=kqueue CMakeFiles/cmTC_012d0.dir/CheckFunctionExists.c.o -o cmTC_012d0  -lm 
+/usr/bin/ld: CMakeFiles/cmTC_012d0.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x10): undefined reference to `kqueue'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_012d0.dir/build.make:99: cmTC_012d0] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_012d0/fast] Error 2
+
+
+
+Determining if the EVFILT_TIMER exist failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_734d8/fast && /usr/bin/make  -f CMakeFiles/cmTC_734d8.dir/build.make CMakeFiles/cmTC_734d8.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_734d8.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics  -fPIE -o CMakeFiles/cmTC_734d8.dir/CheckSymbolExists.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckSymbolExists.c:3:10: fatal error: sys/event.h: No such file or directory
+    3 | #include <sys/event.h>
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_734d8.dir/build.make:78: CMakeFiles/cmTC_734d8.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_734d8/fast] Error 2
+
+
+File /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/types.h>
+#include <sys/event.h>
+#include <sys/time.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef EVFILT_TIMER
+  return ((int*)(&EVFILT_TIMER))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Performing C SOURCE FILE Test HAVE_FAKE_PAUSE_INSTRUCTION failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_110cb/fast && /usr/bin/make  -f CMakeFiles/cmTC_110cb.dir/build.make CMakeFiles/cmTC_110cb.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_110cb.dir/src.c.o
+/usr/bin/cc -DHAVE_FAKE_PAUSE_INSTRUCTION -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics  -fPIE -o CMakeFiles/cmTC_110cb.dir/src.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c
+/tmp/ccE6UneS.s: Assembler messages:
+/tmp/ccE6UneS.s:12: Error: unknown mnemonic `rep' -- `rep'
+make[1]: *** [CMakeFiles/cmTC_110cb.dir/build.make:78: CMakeFiles/cmTC_110cb.dir/src.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_110cb/fast] Error 2
+
+
+Source file was:
+
+    int main()
+    {
+     __asm__ __volatile__ ("rep; nop");
+     return 0;
+    }
+   
+Performing C SOURCE FILE Test HAVE_HMT_PRIORITY_INSTRUCTION failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_84d8d/fast && /usr/bin/make  -f CMakeFiles/cmTC_84d8d.dir/build.make CMakeFiles/cmTC_84d8d.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_84d8d.dir/src.c.o
+/usr/bin/cc -DHAVE_HMT_PRIORITY_INSTRUCTION -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics  -fPIE -o CMakeFiles/cmTC_84d8d.dir/src.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c
+/tmp/ccHyNO3k.s: Assembler messages:
+/tmp/ccHyNO3k.s:12: Error: unknown mnemonic `or' -- `or 1,1,1'
+/tmp/ccHyNO3k.s:15: Error: unknown mnemonic `or' -- `or 2,2,2'
+make[1]: *** [CMakeFiles/cmTC_84d8d.dir/build.make:78: CMakeFiles/cmTC_84d8d.dir/src.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_84d8d/fast] Error 2
+
+
+Source file was:
+
+    int main()
+    {
+     __asm__ __volatile__ ("or 1,1,1");
+     __asm__ __volatile__ ("or 2,2,2");
+     return 0;
+    }
+    
+Performing C SOURCE FILE Test HAVE_PTHREAD_GETTHREADID_NP failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_66209/fast && /usr/bin/make  -f CMakeFiles/cmTC_66209.dir/build.make CMakeFiles/cmTC_66209.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_66209.dir/src.c.o
+/usr/bin/cc -DHAVE_PTHREAD_GETTHREADID_NP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics  -fPIE -o CMakeFiles/cmTC_66209.dir/src.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c:2:10: fatal error: pthread_np.h: No such file or directory
+    2 | #include <pthread_np.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_66209.dir/build.make:78: CMakeFiles/cmTC_66209.dir/src.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_66209/fast] Error 2
+
+
+Source file was:
+
+#include <pthread_np.h>
+int main(int ac, char **av)
+{
+  unsigned long long tid = pthread_getthreadid_np();
+  return (tid != 0 ? 0 : 1);
+}
+Performing C SOURCE FILE Test HAVE_PTHREAD_THREADID_NP failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_10364/fast && /usr/bin/make  -f CMakeFiles/cmTC_10364.dir/build.make CMakeFiles/cmTC_10364.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_10364.dir/src.c.o
+/usr/bin/cc -DHAVE_PTHREAD_THREADID_NP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics  -fPIE -o CMakeFiles/cmTC_10364.dir/src.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c: In function 'main':
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c:6:3: warning: implicit declaration of function 'pthread_threadid_np'; did you mean 'pthread_tryjoin_np'? [-Wimplicit-function-declaration]
+    6 |   pthread_threadid_np(NULL, &tid64);
+      |   ^~~~~~~~~~~~~~~~~~~
+      |   pthread_tryjoin_np
+Linking C executable cmTC_10364
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_10364.dir/link.txt --verbose=1
+/usr/bin/cc -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics  CMakeFiles/cmTC_10364.dir/src.c.o -o cmTC_10364  -lm 
+/usr/bin/ld: CMakeFiles/cmTC_10364.dir/src.c.o: in function `main':
+src.c:(.text+0x34): undefined reference to `pthread_threadid_np'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_10364.dir/build.make:99: cmTC_10364] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_10364/fast] Error 2
+
+
+Source file was:
+
+#include <pthread.h>
+int main(int ac, char **av)
+{
+  unsigned long long tid64;
+  pthread_threadid_np(NULL, &tid64);
+  return (tid64 != 0 ? 0 : 1);
+}
+Performing C SOURCE FILE Test HAVE_PTHREAD_SETNAME_NP_MACOS failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_24592/fast && /usr/bin/make  -f CMakeFiles/cmTC_24592.dir/build.make CMakeFiles/cmTC_24592.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_24592.dir/src.c.o
+/usr/bin/cc -DHAVE_PTHREAD_SETNAME_NP_MACOS -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics  -fPIE -o CMakeFiles/cmTC_24592.dir/src.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c: In function 'main':
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c:6:29: warning: passing argument 1 of 'pthread_setname_np' makes integer from pointer without a cast [-Wint-conversion]
+    6 |   return pthread_setname_np(name);
+      |                             ^~~~
+      |                             |
+      |                             char *
+In file included from /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c:2:
+/usr/include/pthread.h:463:42: note: expected 'pthread_t' {aka 'long unsigned int'} but argument is of type 'char *'
+  463 | extern int pthread_setname_np (pthread_t __target_thread, const char *__name)
+      |                                ~~~~~~~~~~^~~~~~~~~~~~~~~
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c:6:10: error: too few arguments to function 'pthread_setname_np'
+    6 |   return pthread_setname_np(name);
+      |          ^~~~~~~~~~~~~~~~~~
+In file included from /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c:2:
+/usr/include/pthread.h:463:12: note: declared here
+  463 | extern int pthread_setname_np (pthread_t __target_thread, const char *__name)
+      |            ^~~~~~~~~~~~~~~~~~
+make[1]: *** [CMakeFiles/cmTC_24592.dir/build.make:78: CMakeFiles/cmTC_24592.dir/src.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_24592/fast] Error 2
+
+
+Source file was:
+
+#include <pthread.h>
+int main(int argc, char **argv)
+{
+  char name[16] = {0};
+  return pthread_setname_np(name);
+}
+Determining if the include file netinet/in6.h exists failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_25e77/fast && /usr/bin/make  -f CMakeFiles/cmTC_25e77.dir/build.make CMakeFiles/cmTC_25e77.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_25e77.dir/CheckIncludeFile.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics  -fPIE -o CMakeFiles/cmTC_25e77.dir/CheckIncludeFile.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: netinet/in6.h: No such file or directory
+    1 | #include <netinet/in6.h>
+      |          ^~~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_25e77.dir/build.make:78: CMakeFiles/cmTC_25e77.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_25e77/fast] Error 2
+
+
+
+Determining size of struct in6_addr failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_74aa8/fast && /usr/bin/make  -f CMakeFiles/cmTC_74aa8.dir/build.make CMakeFiles/cmTC_74aa8.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_74aa8.dir/SIZEOF_IN6_ADDR.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics  -fPIE -o CMakeFiles/cmTC_74aa8.dir/SIZEOF_IN6_ADDR.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CheckTypeSize/SIZEOF_IN6_ADDR.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CheckTypeSize/SIZEOF_IN6_ADDR.c:31:22: error: invalid application of 'sizeof' to incomplete type 'struct in6_addr'
+   31 | #define SIZE (sizeof(struct in6_addr))
+      |                      ^~~~~~
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CheckTypeSize/SIZEOF_IN6_ADDR.c:33:12: note: in expansion of macro 'SIZE'
+   33 |   ('0' + ((SIZE / 10000)%10)),
+      |            ^~~~
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CheckTypeSize/SIZEOF_IN6_ADDR.c:31:22: error: invalid application of 'sizeof' to incomplete type 'struct in6_addr'
+   31 | #define SIZE (sizeof(struct in6_addr))
+      |                      ^~~~~~
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CheckTypeSize/SIZEOF_IN6_ADDR.c:34:12: note: in expansion of macro 'SIZE'
+   34 |   ('0' + ((SIZE / 1000)%10)),
+      |            ^~~~
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CheckTypeSize/SIZEOF_IN6_ADDR.c:31:22: error: invalid application of 'sizeof' to incomplete type 'struct in6_addr'
+   31 | #define SIZE (sizeof(struct in6_addr))
+      |                      ^~~~~~
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CheckTypeSize/SIZEOF_IN6_ADDR.c:35:12: note: in expansion of macro 'SIZE'
+   35 |   ('0' + ((SIZE / 100)%10)),
+      |            ^~~~
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CheckTypeSize/SIZEOF_IN6_ADDR.c:31:22: error: invalid application of 'sizeof' to incomplete type 'struct in6_addr'
+   31 | #define SIZE (sizeof(struct in6_addr))
+      |                      ^~~~~~
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CheckTypeSize/SIZEOF_IN6_ADDR.c:36:12: note: in expansion of macro 'SIZE'
+   36 |   ('0' + ((SIZE / 10)%10)),
+      |            ^~~~
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CheckTypeSize/SIZEOF_IN6_ADDR.c:31:22: error: invalid application of 'sizeof' to incomplete type 'struct in6_addr'
+   31 | #define SIZE (sizeof(struct in6_addr))
+      |                      ^~~~~~
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CheckTypeSize/SIZEOF_IN6_ADDR.c:37:12: note: in expansion of macro 'SIZE'
+   37 |   ('0' +  (SIZE    % 10)),
+      |            ^~~~
+make[1]: *** [CMakeFiles/cmTC_74aa8.dir/build.make:78: CMakeFiles/cmTC_74aa8.dir/SIZEOF_IN6_ADDR.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_74aa8/fast] Error 2
+
+
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CheckTypeSize/SIZEOF_IN6_ADDR.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+#include "stdint.h"
+#include "stdio.h"
+#include "sys/types.h"
+#include "time.h"
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__PPC64__)
+# define KEY '_','_','P','P','C','6','4','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__PPC__)
+# define KEY '_','_','P','P','C','_','_'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(struct in6_addr))
+static char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Performing C SOURCE FILE Test HAVE_SOCKADDR_IN_SIN_LEN failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_e9e66/fast && /usr/bin/make  -f CMakeFiles/cmTC_e9e66.dir/build.make CMakeFiles/cmTC_e9e66.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e9e66.dir/src.c.o
+/usr/bin/cc -DHAVE_SOCKADDR_IN_SIN_LEN -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics  -fPIE -o CMakeFiles/cmTC_e9e66.dir/src.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c: In function 'main':
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c:8:41: error: 'struct sockaddr_in' has no member named 'sin_len'
+    8 |   (void)sizeof(((struct sockaddr_in *)0)->sin_len);
+      |                                         ^~
+make[1]: *** [CMakeFiles/cmTC_e9e66.dir/build.make:78: CMakeFiles/cmTC_e9e66.dir/src.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_e9e66/fast] Error 2
+
+
+Source file was:
+
+#include <sys/types.h>
+#include <netinet/in.h>
+#include <sys/socket.h>
+
+int main()
+{
+  (void)sizeof(((struct sockaddr_in *)0)->sin_len);
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE_SOCKADDR_IN6_SIN6_LEN failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_72417/fast && /usr/bin/make  -f CMakeFiles/cmTC_72417.dir/build.make CMakeFiles/cmTC_72417.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_72417.dir/src.c.o
+/usr/bin/cc -DHAVE_SOCKADDR_IN6_SIN6_LEN -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics  -fPIE -o CMakeFiles/cmTC_72417.dir/src.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c: In function 'main':
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c:8:42: error: 'struct sockaddr_in6' has no member named 'sin6_len'
+    8 |   (void)sizeof(((struct sockaddr_in6 *)0)->sin6_len);
+      |                                          ^~
+make[1]: *** [CMakeFiles/cmTC_72417.dir/build.make:78: CMakeFiles/cmTC_72417.dir/src.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_72417/fast] Error 2
+
+
+Source file was:
+
+#include <sys/types.h>
+#include <netinet/in.h>
+#include <sys/socket.h>
+
+int main()
+{
+  (void)sizeof(((struct sockaddr_in6 *)0)->sin6_len);
+  return 0;
+}
+
+Determining if files numa.h exist failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_635a7/fast && /usr/bin/make  -f CMakeFiles/cmTC_635a7.dir/build.make CMakeFiles/cmTC_635a7.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_635a7.dir/HAVE_NUMA_H.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics  -fPIE -o CMakeFiles/cmTC_635a7.dir/HAVE_NUMA_H.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CheckIncludeFiles/HAVE_NUMA_H.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CheckIncludeFiles/HAVE_NUMA_H.c:2:10: fatal error: numa.h: No such file or directory
+    2 | #include <numa.h>
+      |          ^~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_635a7.dir/build.make:78: CMakeFiles/cmTC_635a7.dir/HAVE_NUMA_H.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_635a7/fast] Error 2
+
+
+Source:
+/* */
+#include <numa.h>
+
+
+int main(void){return 0;}
+
+Determining if files numaif.h exist failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_e3fba/fast && /usr/bin/make  -f CMakeFiles/cmTC_e3fba.dir/build.make CMakeFiles/cmTC_e3fba.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e3fba.dir/HAVE_NUMAIF_H.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics  -fPIE -o CMakeFiles/cmTC_e3fba.dir/HAVE_NUMAIF_H.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CheckIncludeFiles/HAVE_NUMAIF_H.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CheckIncludeFiles/HAVE_NUMAIF_H.c:2:10: fatal error: numaif.h: No such file or directory
+    2 | #include <numaif.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_e3fba.dir/build.make:78: CMakeFiles/cmTC_e3fba.dir/HAVE_NUMAIF_H.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_e3fba/fast] Error 2
+
+
+Source:
+/* */
+#include <numaif.h>
+
+
+int main(void){return 0;}
+
+Performing C++ SOURCE FILE Test HAVE_ARMV8_CRC32 failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_01561/fast && /usr/bin/make  -f CMakeFiles/cmTC_01561.dir/build.make CMakeFiles/cmTC_01561.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_01561.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_ARMV8_CRC32 -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -std=c++17 -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics  -fPIE -o CMakeFiles/cmTC_01561.dir/src.cxx.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.cxx
+In file included from /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.cxx:2:
+/usr/lib/gcc/aarch64-linux-gnu/11/include/arm_acle.h: In function 'int main()':
+/usr/lib/gcc/aarch64-linux-gnu/11/include/arm_acle.h:199:1: error: inlining failed in call to 'always_inline' 'uint32_t __crc32d(uint32_t, uint64_t)': target specific option mismatch
+  199 | __crc32d (uint32_t __a, uint64_t __b)
+      | ^~~~~~~~
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.cxx:5:65: note: called from here
+    5 |         __crc32b(0, 0); __crc32h(0, 0); __crc32w(0, 0); __crc32d(0, 0);
+      |                                                         ~~~~~~~~^~~~~~
+In file included from /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.cxx:2:
+/usr/lib/gcc/aarch64-linux-gnu/11/include/arm_acle.h:193:1: error: inlining failed in call to 'always_inline' 'uint32_t __crc32w(uint32_t, uint32_t)': target specific option mismatch
+  193 | __crc32w (uint32_t __a, uint32_t __b)
+      | ^~~~~~~~
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.cxx:5:49: note: called from here
+    5 |         __crc32b(0, 0); __crc32h(0, 0); __crc32w(0, 0); __crc32d(0, 0);
+      |                                         ~~~~~~~~^~~~~~
+In file included from /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.cxx:2:
+/usr/lib/gcc/aarch64-linux-gnu/11/include/arm_acle.h:187:1: error: inlining failed in call to 'always_inline' 'uint32_t __crc32h(uint32_t, uint16_t)': target specific option mismatch
+  187 | __crc32h (uint32_t __a, uint16_t __b)
+      | ^~~~~~~~
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.cxx:5:33: note: called from here
+    5 |         __crc32b(0, 0); __crc32h(0, 0); __crc32w(0, 0); __crc32d(0, 0);
+      |                         ~~~~~~~~^~~~~~
+In file included from /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.cxx:2:
+/usr/lib/gcc/aarch64-linux-gnu/11/include/arm_acle.h:157:1: error: inlining failed in call to 'always_inline' 'uint32_t __crc32b(uint32_t, uint8_t)': target specific option mismatch
+  157 | __crc32b (uint32_t __a, uint8_t __b)
+      | ^~~~~~~~
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.cxx:5:17: note: called from here
+    5 |         __crc32b(0, 0); __crc32h(0, 0); __crc32w(0, 0); __crc32d(0, 0);
+      |         ~~~~~~~~^~~~~~
+In file included from /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.cxx:2:
+/usr/lib/gcc/aarch64-linux-gnu/11/include/arm_acle.h:181:1: error: inlining failed in call to 'always_inline' 'uint32_t __crc32cd(uint32_t, uint64_t)': target specific option mismatch
+  181 | __crc32cd (uint32_t __a, uint64_t __b)
+      | ^~~~~~~~~
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.cxx:4:69: note: called from here
+    4 |         __crc32cb(0, 0); __crc32ch(0, 0); __crc32cw(0, 0); __crc32cd(0, 0);
+      |                                                            ~~~~~~~~~^~~~~~
+In file included from /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.cxx:2:
+/usr/lib/gcc/aarch64-linux-gnu/11/include/arm_acle.h:175:1: error: inlining failed in call to 'always_inline' 'uint32_t __crc32cw(uint32_t, uint32_t)': target specific option mismatch
+  175 | __crc32cw (uint32_t __a, uint32_t __b)
+      | ^~~~~~~~~
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.cxx:4:52: note: called from here
+    4 |         __crc32cb(0, 0); __crc32ch(0, 0); __crc32cw(0, 0); __crc32cd(0, 0);
+      |                                           ~~~~~~~~~^~~~~~
+In file included from /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.cxx:2:
+/usr/lib/gcc/aarch64-linux-gnu/11/include/arm_acle.h:169:1: error: inlining failed in call to 'always_inline' 'uint32_t __crc32ch(uint32_t, uint16_t)': target specific option mismatch
+  169 | __crc32ch (uint32_t __a, uint16_t __b)
+      | ^~~~~~~~~
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.cxx:4:35: note: called from here
+    4 |         __crc32cb(0, 0); __crc32ch(0, 0); __crc32cw(0, 0); __crc32cd(0, 0);
+      |                          ~~~~~~~~~^~~~~~
+In file included from /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.cxx:2:
+/usr/lib/gcc/aarch64-linux-gnu/11/include/arm_acle.h:163:1: error: inlining failed in call to 'always_inline' 'uint32_t __crc32cb(uint32_t, uint8_t)': target specific option mismatch
+  163 | __crc32cb (uint32_t __a, uint8_t __b)
+      | ^~~~~~~~~
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.cxx:4:18: note: called from here
+    4 |         __crc32cb(0, 0); __crc32ch(0, 0); __crc32cw(0, 0); __crc32cd(0, 0);
+      |         ~~~~~~~~~^~~~~~
+make[1]: *** [CMakeFiles/cmTC_01561.dir/build.make:78: CMakeFiles/cmTC_01561.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_01561/fast] Error 2
+
+
+Source file was:
+
+      #include <arm_acle.h>
+      int main() {
+        __crc32cb(0, 0); __crc32ch(0, 0); __crc32cw(0, 0); __crc32cd(0, 0);
+        __crc32b(0, 0); __crc32h(0, 0); __crc32w(0, 0); __crc32d(0, 0);
+        return 0;
+      }
+Performing C SOURCE FILE Test HAS_DEPRECATED_NON_PROTOTYPE failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_16f13/fast && /usr/bin/make  -f CMakeFiles/cmTC_16f13.dir/build.make CMakeFiles/cmTC_16f13.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_16f13.dir/src.c.o
+/usr/bin/cc -DHAS_DEPRECATED_NON_PROTOTYPE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wno-missing-profile  -Wdeprecated-non-prototype -fPIE -o CMakeFiles/cmTC_16f13.dir/src.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c
+cc: error: unrecognized command-line option '-Wdeprecated-non-prototype'
+make[1]: *** [CMakeFiles/cmTC_16f13.dir/build.make:78: CMakeFiles/cmTC_16f13.dir/src.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_16f13/fast] Error 2
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_W_documentation failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_eeb13/fast && /usr/bin/make  -f CMakeFiles/cmTC_eeb13.dir/build.make CMakeFiles/cmTC_eeb13.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_eeb13.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_CXX_W_documentation -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -std=c++17 -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -march=armv8-a+crc  -Wdocumentation -fPIE -o CMakeFiles/cmTC_eeb13.dir/src.cxx.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command-line option '-Wdocumentation'
+make[1]: *** [CMakeFiles/cmTC_eeb13.dir/build.make:78: CMakeFiles/cmTC_eeb13.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_eeb13/fast] Error 2
+
+
+Source file was:
+int main(void) { return 0; }
+Determining if the include file lber.h exists failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_feb4b/fast && /usr/bin/make  -f CMakeFiles/cmTC_feb4b.dir/build.make CMakeFiles/cmTC_feb4b.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_feb4b.dir/CheckIncludeFile.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics  -fPIE -o CMakeFiles/cmTC_feb4b.dir/CheckIncludeFile.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: lber.h: No such file or directory
+    1 | #include <lber.h>
+      |          ^~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_feb4b.dir/build.make:78: CMakeFiles/cmTC_feb4b.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_feb4b/fast] Error 2
+
+
+
+Determining if the include file ldap.h exists failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_f3ae2/fast && /usr/bin/make  -f CMakeFiles/cmTC_f3ae2.dir/build.make CMakeFiles/cmTC_f3ae2.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f3ae2.dir/CheckIncludeFile.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics  -fPIE -o CMakeFiles/cmTC_f3ae2.dir/CheckIncludeFile.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: ldap.h: No such file or directory
+    1 | #include <ldap.h>
+      |          ^~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_f3ae2.dir/build.make:78: CMakeFiles/cmTC_f3ae2.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_f3ae2/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test HAVE_GETPW_R_DRAFT failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_e325e/fast && /usr/bin/make  -f CMakeFiles/cmTC_e325e.dir/build.make CMakeFiles/cmTC_e325e.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e325e.dir/src.c.o
+/usr/bin/cc -DHAVE_GETPW_R_DRAFT -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics  -fPIE -o CMakeFiles/cmTC_e325e.dir/src.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c: In function 'main':
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c:6:26: error: too few arguments to function 'getpwnam_r'
+    6 |     struct passwd *pwd = getpwnam_r(NULL, NULL, NULL, 0);
+      |                          ^~~~~~~~~~
+In file included from /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c:4:
+/usr/include/pwd.h:153:12: note: declared here
+  153 | extern int getpwnam_r (const char *__restrict __name,
+      |            ^~~~~~~~~~
+make[1]: *** [CMakeFiles/cmTC_e325e.dir/build.make:78: CMakeFiles/cmTC_e325e.dir/src.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_e325e/fast] Error 2
+
+
+Source file was:
+
+  #include <stdlib.h>
+  #include <sys/types.h>
+  #include <pwd.h>
+  int main() {
+    struct passwd *pwd = getpwnam_r(NULL, NULL, NULL, 0);
+    return pwd != NULL;
+  }
+Determining if the function vis exists failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_f34df/fast && /usr/bin/make  -f CMakeFiles/cmTC_f34df.dir/build.make CMakeFiles/cmTC_f34df.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f34df.dir/CheckFunctionExists.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -DCHECK_FUNCTION_EXISTS=vis -fPIE -o CMakeFiles/cmTC_f34df.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_f34df
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f34df.dir/link.txt --verbose=1
+/usr/bin/cc -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -DCHECK_FUNCTION_EXISTS=vis CMakeFiles/cmTC_f34df.dir/CheckFunctionExists.c.o -o cmTC_f34df  -lm 
+/usr/bin/ld: CMakeFiles/cmTC_f34df.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x10): undefined reference to `vis'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_f34df.dir/build.make:99: cmTC_f34df] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_f34df/fast] Error 2
+
+
+
+Determining if the function unvis exists failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_8bf68/fast && /usr/bin/make  -f CMakeFiles/cmTC_8bf68.dir/build.make CMakeFiles/cmTC_8bf68.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8bf68.dir/CheckFunctionExists.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -DCHECK_FUNCTION_EXISTS=unvis -fPIE -o CMakeFiles/cmTC_8bf68.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_8bf68
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8bf68.dir/link.txt --verbose=1
+/usr/bin/cc -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -DCHECK_FUNCTION_EXISTS=unvis CMakeFiles/cmTC_8bf68.dir/CheckFunctionExists.c.o -o cmTC_8bf68  -lm 
+/usr/bin/ld: CMakeFiles/cmTC_8bf68.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x10): undefined reference to `unvis'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_8bf68.dir/build.make:99: cmTC_8bf68] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_8bf68/fast] Error 2
+
+
+
+Determining if the function __secure_getenv exists failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_05b5f/fast && /usr/bin/make  -f CMakeFiles/cmTC_05b5f.dir/build.make CMakeFiles/cmTC_05b5f.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_05b5f.dir/CheckFunctionExists.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -DCHECK_FUNCTION_EXISTS=__secure_getenv -fPIE -o CMakeFiles/cmTC_05b5f.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_05b5f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_05b5f.dir/link.txt --verbose=1
+/usr/bin/cc -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -DCHECK_FUNCTION_EXISTS=__secure_getenv CMakeFiles/cmTC_05b5f.dir/CheckFunctionExists.c.o -o cmTC_05b5f  -lm 
+/usr/bin/ld: CMakeFiles/cmTC_05b5f.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x10): undefined reference to `__secure_getenv'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_05b5f.dir/build.make:99: cmTC_05b5f] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_05b5f/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test HAVE_USE_AFTER_FREE failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_4ca01/fast && /usr/bin/make  -f CMakeFiles/cmTC_4ca01.dir/build.make CMakeFiles/cmTC_4ca01.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4ca01.dir/src.c.o
+/usr/bin/cc -DHAVE_USE_AFTER_FREE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics  -Wuse-after-free -fPIE -o CMakeFiles/cmTC_4ca01.dir/src.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c
+cc: error: unrecognized command-line option '-Wuse-after-free'
+make[1]: *** [CMakeFiles/cmTC_4ca01.dir/build.make:78: CMakeFiles/cmTC_4ca01.dir/src.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_4ca01/fast] Error 2
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_W_dangling_pointer failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_2ec6d/fast && /usr/bin/make  -f CMakeFiles/cmTC_2ec6d.dir/build.make CMakeFiles/cmTC_2ec6d.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_2ec6d.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_CXX_W_dangling_pointer -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -std=c++17 -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -march=armv8-a+crc  -Wdangling-pointer -fPIE -o CMakeFiles/cmTC_2ec6d.dir/src.cxx.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command-line option '-Wdangling-pointer'; did you mean '-Wdangling-else'?
+make[1]: *** [CMakeFiles/cmTC_2ec6d.dir/build.make:78: CMakeFiles/cmTC_2ec6d.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_2ec6d/fast] Error 2
+
+
+Source file was:
+int main(void) { return 0; }
+Determining if the include file netinet/in6.h exists failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_5bf07/fast && /usr/bin/make  -f CMakeFiles/cmTC_5bf07.dir/build.make CMakeFiles/cmTC_5bf07.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5bf07.dir/CheckIncludeFile.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wno-missing-profile -Wall -Wextra -Wno-unused-parameter -Wstrict-aliasing -Wstrict-prototypes -fno-strict-aliasing -Wmissing-prototypes -Winit-self -Wmissing-field-initializers -Wdeclaration-after-statement -Waddress -Wnormalized=id -Woverride-init -Wlogical-op -Wwrite-strings  -fPIE -o CMakeFiles/cmTC_5bf07.dir/CheckIncludeFile.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: netinet/in6.h: No such file or directory
+    1 | #include <netinet/in6.h>
+      |          ^~~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_5bf07.dir/build.make:78: CMakeFiles/cmTC_5bf07.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_5bf07/fast] Error 2
+
+
+
+Determining if the include file port.h exists failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_da859/fast && /usr/bin/make  -f CMakeFiles/cmTC_da859.dir/build.make CMakeFiles/cmTC_da859.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_da859.dir/CheckIncludeFile.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wno-missing-profile -Wall -Wextra -Wno-unused-parameter -Wstrict-aliasing -Wstrict-prototypes -fno-strict-aliasing -Wmissing-prototypes -Winit-self -Wmissing-field-initializers -Wdeclaration-after-statement -Waddress -Wnormalized=id -Woverride-init -Wlogical-op -Wwrite-strings  -fPIE -o CMakeFiles/cmTC_da859.dir/CheckIncludeFile.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: port.h: No such file or directory
+    1 | #include <port.h>
+      |          ^~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_da859.dir/build.make:78: CMakeFiles/cmTC_da859.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_da859/fast] Error 2
+
+
+
+Determining if the include file sys/devpoll.h exists failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_48c5c/fast && /usr/bin/make  -f CMakeFiles/cmTC_48c5c.dir/build.make CMakeFiles/cmTC_48c5c.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_48c5c.dir/CheckIncludeFile.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wno-missing-profile -Wall -Wextra -Wno-unused-parameter -Wstrict-aliasing -Wstrict-prototypes -fno-strict-aliasing -Wmissing-prototypes -Winit-self -Wmissing-field-initializers -Wdeclaration-after-statement -Waddress -Wnormalized=id -Woverride-init -Wlogical-op -Wwrite-strings  -fPIE -o CMakeFiles/cmTC_48c5c.dir/CheckIncludeFile.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: sys/devpoll.h: No such file or directory
+    1 | #include <sys/devpoll.h>
+      |          ^~~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_48c5c.dir/build.make:78: CMakeFiles/cmTC_48c5c.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_48c5c/fast] Error 2
+
+
+
+Determining if the include file sys/event.h exists failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_ce101/fast && /usr/bin/make  -f CMakeFiles/cmTC_ce101.dir/build.make CMakeFiles/cmTC_ce101.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ce101.dir/CheckIncludeFile.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wno-missing-profile -Wall -Wextra -Wno-unused-parameter -Wstrict-aliasing -Wstrict-prototypes -fno-strict-aliasing -Wmissing-prototypes -Winit-self -Wmissing-field-initializers -Wdeclaration-after-statement -Waddress -Wnormalized=id -Woverride-init -Wlogical-op -Wwrite-strings  -fPIE -o CMakeFiles/cmTC_ce101.dir/CheckIncludeFile.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: sys/event.h: No such file or directory
+    1 | #include <sys/event.h>
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_ce101.dir/build.make:78: CMakeFiles/cmTC_ce101.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_ce101/fast] Error 2
+
+
+
+Determining if the include file mach/mach_time.h exists failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_c9fd8/fast && /usr/bin/make  -f CMakeFiles/cmTC_c9fd8.dir/build.make CMakeFiles/cmTC_c9fd8.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c9fd8.dir/CheckIncludeFile.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wno-missing-profile -Wall -Wextra -Wno-unused-parameter -Wstrict-aliasing -Wstrict-prototypes -fno-strict-aliasing -Wmissing-prototypes -Winit-self -Wmissing-field-initializers -Wdeclaration-after-statement -Waddress -Wnormalized=id -Woverride-init -Wlogical-op -Wwrite-strings  -fPIE -o CMakeFiles/cmTC_c9fd8.dir/CheckIncludeFile.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: mach/mach_time.h: No such file or directory
+    1 | #include <mach/mach_time.h>
+      |          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_c9fd8.dir/build.make:78: CMakeFiles/cmTC_c9fd8.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_c9fd8/fast] Error 2
+
+
+
+Determining if the function kqueue exists failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_13ff5/fast && /usr/bin/make  -f CMakeFiles/cmTC_13ff5.dir/build.make CMakeFiles/cmTC_13ff5.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_13ff5.dir/CheckFunctionExistsEx.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wno-missing-profile -Wall -Wextra -Wno-unused-parameter -Wstrict-aliasing -Wstrict-prototypes -fno-strict-aliasing -Wmissing-prototypes -Winit-self -Wmissing-field-initializers -Wdeclaration-after-statement -Waddress -Wnormalized=id -Woverride-init -Wlogical-op -Wwrite-strings -DCHECK_FUNCTION_EXISTS=kqueue -fPIE -o CMakeFiles/cmTC_13ff5.dir/CheckFunctionExistsEx.c.o -c /tmp/mysql/extra/libevent/libevent-2.1.11-stable/cmake/CheckFunctionExistsEx.c
+Linking C executable cmTC_13ff5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_13ff5.dir/link.txt --verbose=1
+/usr/bin/cc -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wno-missing-profile -Wall -Wextra -Wno-unused-parameter -Wstrict-aliasing -Wstrict-prototypes -fno-strict-aliasing -Wmissing-prototypes -Winit-self -Wmissing-field-initializers -Wdeclaration-after-statement -Waddress -Wnormalized=id -Woverride-init -Wlogical-op -Wwrite-strings -DCHECK_FUNCTION_EXISTS=kqueue CMakeFiles/cmTC_13ff5.dir/CheckFunctionExistsEx.c.o -o cmTC_13ff5  -lm 
+/usr/bin/ld: CMakeFiles/cmTC_13ff5.dir/CheckFunctionExistsEx.c.o: in function `main':
+CheckFunctionExistsEx.c:(.text+0x10): undefined reference to `kqueue'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_13ff5.dir/build.make:99: cmTC_13ff5] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_13ff5/fast] Error 2
+
+
+
+Determining if the function port_create exists failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_37134/fast && /usr/bin/make  -f CMakeFiles/cmTC_37134.dir/build.make CMakeFiles/cmTC_37134.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_37134.dir/CheckFunctionExistsEx.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wno-missing-profile -Wall -Wextra -Wno-unused-parameter -Wstrict-aliasing -Wstrict-prototypes -fno-strict-aliasing -Wmissing-prototypes -Winit-self -Wmissing-field-initializers -Wdeclaration-after-statement -Waddress -Wnormalized=id -Woverride-init -Wlogical-op -Wwrite-strings -DCHECK_FUNCTION_EXISTS=port_create -fPIE -o CMakeFiles/cmTC_37134.dir/CheckFunctionExistsEx.c.o -c /tmp/mysql/extra/libevent/libevent-2.1.11-stable/cmake/CheckFunctionExistsEx.c
+Linking C executable cmTC_37134
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_37134.dir/link.txt --verbose=1
+/usr/bin/cc -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wno-missing-profile -Wall -Wextra -Wno-unused-parameter -Wstrict-aliasing -Wstrict-prototypes -fno-strict-aliasing -Wmissing-prototypes -Winit-self -Wmissing-field-initializers -Wdeclaration-after-statement -Waddress -Wnormalized=id -Woverride-init -Wlogical-op -Wwrite-strings -DCHECK_FUNCTION_EXISTS=port_create CMakeFiles/cmTC_37134.dir/CheckFunctionExistsEx.c.o -o cmTC_37134  -lm 
+/usr/bin/ld: CMakeFiles/cmTC_37134.dir/CheckFunctionExistsEx.c.o: in function `main':
+CheckFunctionExistsEx.c:(.text+0x10): undefined reference to `port_create'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_37134.dir/build.make:99: cmTC_37134] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_37134/fast] Error 2
+
+
+
+Determining if the function strlcpy exists failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_79a94/fast && /usr/bin/make  -f CMakeFiles/cmTC_79a94.dir/build.make CMakeFiles/cmTC_79a94.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_79a94.dir/CheckFunctionExistsEx.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wno-missing-profile -Wall -Wextra -Wno-unused-parameter -Wstrict-aliasing -Wstrict-prototypes -fno-strict-aliasing -Wmissing-prototypes -Winit-self -Wmissing-field-initializers -Wdeclaration-after-statement -Waddress -Wnormalized=id -Woverride-init -Wlogical-op -Wwrite-strings -DCHECK_FUNCTION_EXISTS=strlcpy -fPIE -o CMakeFiles/cmTC_79a94.dir/CheckFunctionExistsEx.c.o -c /tmp/mysql/extra/libevent/libevent-2.1.11-stable/cmake/CheckFunctionExistsEx.c
+Linking C executable cmTC_79a94
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_79a94.dir/link.txt --verbose=1
+/usr/bin/cc -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wno-missing-profile -Wall -Wextra -Wno-unused-parameter -Wstrict-aliasing -Wstrict-prototypes -fno-strict-aliasing -Wmissing-prototypes -Winit-self -Wmissing-field-initializers -Wdeclaration-after-statement -Waddress -Wnormalized=id -Woverride-init -Wlogical-op -Wwrite-strings -DCHECK_FUNCTION_EXISTS=strlcpy CMakeFiles/cmTC_79a94.dir/CheckFunctionExistsEx.c.o -o cmTC_79a94  -lm 
+/usr/bin/ld: CMakeFiles/cmTC_79a94.dir/CheckFunctionExistsEx.c.o: in function `main':
+CheckFunctionExistsEx.c:(.text+0x10): undefined reference to `strlcpy'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_79a94.dir/build.make:99: cmTC_79a94] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_79a94/fast] Error 2
+
+
+
+Determining if the function sysctl exists failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_f6dfd/fast && /usr/bin/make  -f CMakeFiles/cmTC_f6dfd.dir/build.make CMakeFiles/cmTC_f6dfd.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f6dfd.dir/CheckFunctionExistsEx.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wno-missing-profile -Wall -Wextra -Wno-unused-parameter -Wstrict-aliasing -Wstrict-prototypes -fno-strict-aliasing -Wmissing-prototypes -Winit-self -Wmissing-field-initializers -Wdeclaration-after-statement -Waddress -Wnormalized=id -Woverride-init -Wlogical-op -Wwrite-strings -DCHECK_FUNCTION_EXISTS=sysctl -fPIE -o CMakeFiles/cmTC_f6dfd.dir/CheckFunctionExistsEx.c.o -c /tmp/mysql/extra/libevent/libevent-2.1.11-stable/cmake/CheckFunctionExistsEx.c
+Linking C executable cmTC_f6dfd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f6dfd.dir/link.txt --verbose=1
+/usr/bin/cc -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wno-missing-profile -Wall -Wextra -Wno-unused-parameter -Wstrict-aliasing -Wstrict-prototypes -fno-strict-aliasing -Wmissing-prototypes -Winit-self -Wmissing-field-initializers -Wdeclaration-after-statement -Waddress -Wnormalized=id -Woverride-init -Wlogical-op -Wwrite-strings -DCHECK_FUNCTION_EXISTS=sysctl CMakeFiles/cmTC_f6dfd.dir/CheckFunctionExistsEx.c.o -o cmTC_f6dfd  -lm 
+/usr/bin/ld: CMakeFiles/cmTC_f6dfd.dir/CheckFunctionExistsEx.c.o: in function `main':
+CheckFunctionExistsEx.c:(.text+0x10): undefined reference to `sysctl'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_f6dfd.dir/build.make:99: cmTC_f6dfd] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_f6dfd/fast] Error 2
+
+
+
+Determining if the function arc4random exists failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_f2160/fast && /usr/bin/make  -f CMakeFiles/cmTC_f2160.dir/build.make CMakeFiles/cmTC_f2160.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f2160.dir/CheckFunctionExistsEx.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wno-missing-profile -Wall -Wextra -Wno-unused-parameter -Wstrict-aliasing -Wstrict-prototypes -fno-strict-aliasing -Wmissing-prototypes -Winit-self -Wmissing-field-initializers -Wdeclaration-after-statement -Waddress -Wnormalized=id -Woverride-init -Wlogical-op -Wwrite-strings -DCHECK_FUNCTION_EXISTS=arc4random -fPIE -o CMakeFiles/cmTC_f2160.dir/CheckFunctionExistsEx.c.o -c /tmp/mysql/extra/libevent/libevent-2.1.11-stable/cmake/CheckFunctionExistsEx.c
+Linking C executable cmTC_f2160
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f2160.dir/link.txt --verbose=1
+/usr/bin/cc -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wno-missing-profile -Wall -Wextra -Wno-unused-parameter -Wstrict-aliasing -Wstrict-prototypes -fno-strict-aliasing -Wmissing-prototypes -Winit-self -Wmissing-field-initializers -Wdeclaration-after-statement -Waddress -Wnormalized=id -Woverride-init -Wlogical-op -Wwrite-strings -DCHECK_FUNCTION_EXISTS=arc4random CMakeFiles/cmTC_f2160.dir/CheckFunctionExistsEx.c.o -o cmTC_f2160  -lm 
+/usr/bin/ld: CMakeFiles/cmTC_f2160.dir/CheckFunctionExistsEx.c.o: in function `main':
+CheckFunctionExistsEx.c:(.text+0x10): undefined reference to `arc4random'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_f2160.dir/build.make:99: cmTC_f2160] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_f2160/fast] Error 2
+
+
+
+Determining if the function arc4random_buf exists failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_5f9cb/fast && /usr/bin/make  -f CMakeFiles/cmTC_5f9cb.dir/build.make CMakeFiles/cmTC_5f9cb.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5f9cb.dir/CheckFunctionExistsEx.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wno-missing-profile -Wall -Wextra -Wno-unused-parameter -Wstrict-aliasing -Wstrict-prototypes -fno-strict-aliasing -Wmissing-prototypes -Winit-self -Wmissing-field-initializers -Wdeclaration-after-statement -Waddress -Wnormalized=id -Woverride-init -Wlogical-op -Wwrite-strings -DCHECK_FUNCTION_EXISTS=arc4random_buf -fPIE -o CMakeFiles/cmTC_5f9cb.dir/CheckFunctionExistsEx.c.o -c /tmp/mysql/extra/libevent/libevent-2.1.11-stable/cmake/CheckFunctionExistsEx.c
+Linking C executable cmTC_5f9cb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5f9cb.dir/link.txt --verbose=1
+/usr/bin/cc -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wno-missing-profile -Wall -Wextra -Wno-unused-parameter -Wstrict-aliasing -Wstrict-prototypes -fno-strict-aliasing -Wmissing-prototypes -Winit-self -Wmissing-field-initializers -Wdeclaration-after-statement -Waddress -Wnormalized=id -Woverride-init -Wlogical-op -Wwrite-strings -DCHECK_FUNCTION_EXISTS=arc4random_buf CMakeFiles/cmTC_5f9cb.dir/CheckFunctionExistsEx.c.o -o cmTC_5f9cb  -lm 
+/usr/bin/ld: CMakeFiles/cmTC_5f9cb.dir/CheckFunctionExistsEx.c.o: in function `main':
+CheckFunctionExistsEx.c:(.text+0x10): undefined reference to `arc4random_buf'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_5f9cb.dir/build.make:99: cmTC_5f9cb] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_5f9cb/fast] Error 2
+
+
+
+Determining if the function issetugid exists failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_56790/fast && /usr/bin/make  -f CMakeFiles/cmTC_56790.dir/build.make CMakeFiles/cmTC_56790.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_56790.dir/CheckFunctionExistsEx.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wno-missing-profile -Wall -Wextra -Wno-unused-parameter -Wstrict-aliasing -Wstrict-prototypes -fno-strict-aliasing -Wmissing-prototypes -Winit-self -Wmissing-field-initializers -Wdeclaration-after-statement -Waddress -Wnormalized=id -Woverride-init -Wlogical-op -Wwrite-strings -DCHECK_FUNCTION_EXISTS=issetugid -fPIE -o CMakeFiles/cmTC_56790.dir/CheckFunctionExistsEx.c.o -c /tmp/mysql/extra/libevent/libevent-2.1.11-stable/cmake/CheckFunctionExistsEx.c
+Linking C executable cmTC_56790
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_56790.dir/link.txt --verbose=1
+/usr/bin/cc -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wno-missing-profile -Wall -Wextra -Wno-unused-parameter -Wstrict-aliasing -Wstrict-prototypes -fno-strict-aliasing -Wmissing-prototypes -Winit-self -Wmissing-field-initializers -Wdeclaration-after-statement -Waddress -Wnormalized=id -Woverride-init -Wlogical-op -Wwrite-strings -DCHECK_FUNCTION_EXISTS=issetugid CMakeFiles/cmTC_56790.dir/CheckFunctionExistsEx.c.o -o cmTC_56790  -lm 
+/usr/bin/ld: CMakeFiles/cmTC_56790.dir/CheckFunctionExistsEx.c.o: in function `main':
+CheckFunctionExistsEx.c:(.text+0x10): undefined reference to `issetugid'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_56790.dir/build.make:99: cmTC_56790] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_56790/fast] Error 2
+
+
+
+Determining if the function mach_absolute_time exists failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_9323c/fast && /usr/bin/make  -f CMakeFiles/cmTC_9323c.dir/build.make CMakeFiles/cmTC_9323c.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9323c.dir/CheckFunctionExistsEx.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wno-missing-profile -Wall -Wextra -Wno-unused-parameter -Wstrict-aliasing -Wstrict-prototypes -fno-strict-aliasing -Wmissing-prototypes -Winit-self -Wmissing-field-initializers -Wdeclaration-after-statement -Waddress -Wnormalized=id -Woverride-init -Wlogical-op -Wwrite-strings -DCHECK_FUNCTION_EXISTS=mach_absolute_time -fPIE -o CMakeFiles/cmTC_9323c.dir/CheckFunctionExistsEx.c.o -c /tmp/mysql/extra/libevent/libevent-2.1.11-stable/cmake/CheckFunctionExistsEx.c
+Linking C executable cmTC_9323c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9323c.dir/link.txt --verbose=1
+/usr/bin/cc -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wno-missing-profile -Wall -Wextra -Wno-unused-parameter -Wstrict-aliasing -Wstrict-prototypes -fno-strict-aliasing -Wmissing-prototypes -Winit-self -Wmissing-field-initializers -Wdeclaration-after-statement -Waddress -Wnormalized=id -Woverride-init -Wlogical-op -Wwrite-strings -DCHECK_FUNCTION_EXISTS=mach_absolute_time CMakeFiles/cmTC_9323c.dir/CheckFunctionExistsEx.c.o -o cmTC_9323c  -lm 
+/usr/bin/ld: CMakeFiles/cmTC_9323c.dir/CheckFunctionExistsEx.c.o: in function `main':
+CheckFunctionExistsEx.c:(.text+0x10): undefined reference to `mach_absolute_time'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_9323c.dir/build.make:99: cmTC_9323c] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_9323c/fast] Error 2
+
+
+
+Determining if the function timeradd exists failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_2df38/fast && /usr/bin/make  -f CMakeFiles/cmTC_2df38.dir/build.make CMakeFiles/cmTC_2df38.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2df38.dir/CheckFunctionExistsEx.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wno-missing-profile -Wall -Wextra -Wno-unused-parameter -Wstrict-aliasing -Wstrict-prototypes -fno-strict-aliasing -Wmissing-prototypes -Winit-self -Wmissing-field-initializers -Wdeclaration-after-statement -Waddress -Wnormalized=id -Woverride-init -Wlogical-op -Wwrite-strings -DCHECK_FUNCTION_EXISTS=timeradd -fPIE -o CMakeFiles/cmTC_2df38.dir/CheckFunctionExistsEx.c.o -c /tmp/mysql/extra/libevent/libevent-2.1.11-stable/cmake/CheckFunctionExistsEx.c
+Linking C executable cmTC_2df38
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2df38.dir/link.txt --verbose=1
+/usr/bin/cc -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wno-missing-profile -Wall -Wextra -Wno-unused-parameter -Wstrict-aliasing -Wstrict-prototypes -fno-strict-aliasing -Wmissing-prototypes -Winit-self -Wmissing-field-initializers -Wdeclaration-after-statement -Waddress -Wnormalized=id -Woverride-init -Wlogical-op -Wwrite-strings -DCHECK_FUNCTION_EXISTS=timeradd CMakeFiles/cmTC_2df38.dir/CheckFunctionExistsEx.c.o -o cmTC_2df38  -lm 
+/usr/bin/ld: CMakeFiles/cmTC_2df38.dir/CheckFunctionExistsEx.c.o: in function `main':
+CheckFunctionExistsEx.c:(.text+0x10): undefined reference to `timeradd'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_2df38.dir/build.make:99: cmTC_2df38] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_2df38/fast] Error 2
+
+
+
+Determining if the function timerclear exists failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_3a5a2/fast && /usr/bin/make  -f CMakeFiles/cmTC_3a5a2.dir/build.make CMakeFiles/cmTC_3a5a2.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3a5a2.dir/CheckFunctionExistsEx.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wno-missing-profile -Wall -Wextra -Wno-unused-parameter -Wstrict-aliasing -Wstrict-prototypes -fno-strict-aliasing -Wmissing-prototypes -Winit-self -Wmissing-field-initializers -Wdeclaration-after-statement -Waddress -Wnormalized=id -Woverride-init -Wlogical-op -Wwrite-strings -DCHECK_FUNCTION_EXISTS=timerclear -fPIE -o CMakeFiles/cmTC_3a5a2.dir/CheckFunctionExistsEx.c.o -c /tmp/mysql/extra/libevent/libevent-2.1.11-stable/cmake/CheckFunctionExistsEx.c
+Linking C executable cmTC_3a5a2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3a5a2.dir/link.txt --verbose=1
+/usr/bin/cc -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wno-missing-profile -Wall -Wextra -Wno-unused-parameter -Wstrict-aliasing -Wstrict-prototypes -fno-strict-aliasing -Wmissing-prototypes -Winit-self -Wmissing-field-initializers -Wdeclaration-after-statement -Waddress -Wnormalized=id -Woverride-init -Wlogical-op -Wwrite-strings -DCHECK_FUNCTION_EXISTS=timerclear CMakeFiles/cmTC_3a5a2.dir/CheckFunctionExistsEx.c.o -o cmTC_3a5a2  -lm 
+/usr/bin/ld: CMakeFiles/cmTC_3a5a2.dir/CheckFunctionExistsEx.c.o: in function `main':
+CheckFunctionExistsEx.c:(.text+0x10): undefined reference to `timerclear'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_3a5a2.dir/build.make:99: cmTC_3a5a2] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_3a5a2/fast] Error 2
+
+
+
+Determining if the function timercmp exists failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_2224d/fast && /usr/bin/make  -f CMakeFiles/cmTC_2224d.dir/build.make CMakeFiles/cmTC_2224d.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2224d.dir/CheckFunctionExistsEx.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wno-missing-profile -Wall -Wextra -Wno-unused-parameter -Wstrict-aliasing -Wstrict-prototypes -fno-strict-aliasing -Wmissing-prototypes -Winit-self -Wmissing-field-initializers -Wdeclaration-after-statement -Waddress -Wnormalized=id -Woverride-init -Wlogical-op -Wwrite-strings -DCHECK_FUNCTION_EXISTS=timercmp -fPIE -o CMakeFiles/cmTC_2224d.dir/CheckFunctionExistsEx.c.o -c /tmp/mysql/extra/libevent/libevent-2.1.11-stable/cmake/CheckFunctionExistsEx.c
+Linking C executable cmTC_2224d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2224d.dir/link.txt --verbose=1
+/usr/bin/cc -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wno-missing-profile -Wall -Wextra -Wno-unused-parameter -Wstrict-aliasing -Wstrict-prototypes -fno-strict-aliasing -Wmissing-prototypes -Winit-self -Wmissing-field-initializers -Wdeclaration-after-statement -Waddress -Wnormalized=id -Woverride-init -Wlogical-op -Wwrite-strings -DCHECK_FUNCTION_EXISTS=timercmp CMakeFiles/cmTC_2224d.dir/CheckFunctionExistsEx.c.o -o cmTC_2224d  -lm 
+/usr/bin/ld: CMakeFiles/cmTC_2224d.dir/CheckFunctionExistsEx.c.o: in function `main':
+CheckFunctionExistsEx.c:(.text+0x10): undefined reference to `timercmp'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_2224d.dir/build.make:99: cmTC_2224d] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_2224d/fast] Error 2
+
+
+
+Determining if the function timerisset exists failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_05342/fast && /usr/bin/make  -f CMakeFiles/cmTC_05342.dir/build.make CMakeFiles/cmTC_05342.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_05342.dir/CheckFunctionExistsEx.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wno-missing-profile -Wall -Wextra -Wno-unused-parameter -Wstrict-aliasing -Wstrict-prototypes -fno-strict-aliasing -Wmissing-prototypes -Winit-self -Wmissing-field-initializers -Wdeclaration-after-statement -Waddress -Wnormalized=id -Woverride-init -Wlogical-op -Wwrite-strings -DCHECK_FUNCTION_EXISTS=timerisset -fPIE -o CMakeFiles/cmTC_05342.dir/CheckFunctionExistsEx.c.o -c /tmp/mysql/extra/libevent/libevent-2.1.11-stable/cmake/CheckFunctionExistsEx.c
+Linking C executable cmTC_05342
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_05342.dir/link.txt --verbose=1
+/usr/bin/cc -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wno-missing-profile -Wall -Wextra -Wno-unused-parameter -Wstrict-aliasing -Wstrict-prototypes -fno-strict-aliasing -Wmissing-prototypes -Winit-self -Wmissing-field-initializers -Wdeclaration-after-statement -Waddress -Wnormalized=id -Woverride-init -Wlogical-op -Wwrite-strings -DCHECK_FUNCTION_EXISTS=timerisset CMakeFiles/cmTC_05342.dir/CheckFunctionExistsEx.c.o -o cmTC_05342  -lm 
+/usr/bin/ld: CMakeFiles/cmTC_05342.dir/CheckFunctionExistsEx.c.o: in function `main':
+CheckFunctionExistsEx.c:(.text+0x10): undefined reference to `timerisset'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_05342.dir/build.make:99: cmTC_05342] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_05342/fast] Error 2
+
+
+
+Determining if the prototype gethostbyname_r exists for EVENT__HAVE_GETHOSTBYNAME_R_3_ARG failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_edc02/fast && /usr/bin/make  -f CMakeFiles/cmTC_edc02.dir/build.make CMakeFiles/cmTC_edc02.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_edc02.dir/CheckPrototypeDefinition.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wno-missing-profile -Wall -Wextra -Wno-unused-parameter -Wstrict-aliasing -Wstrict-prototypes -fno-strict-aliasing -Wmissing-prototypes -Winit-self -Wmissing-field-initializers -Wdeclaration-after-statement -Waddress -Wnormalized=id -Woverride-init -Wlogical-op -Wwrite-strings  -fPIE -o CMakeFiles/cmTC_edc02.dir/CheckPrototypeDefinition.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c:14:66: warning: 'struct hostent_data' declared inside parameter list will not be visible outside of this definition or declaration
+   14 | int gethostbyname_r(const char *name, struct hostent *hp, struct hostent_data *hdata) {
+      |                                                                  ^~~~~~~~~~~~
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c:14:5: error: conflicting types for 'gethostbyname_r'; have 'int(const char *, struct hostent *, struct hostent_data *)'
+   14 | int gethostbyname_r(const char *name, struct hostent *hp, struct hostent_data *hdata) {
+      |     ^~~~~~~~~~~~~~~
+In file included from /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c:1:
+/usr/include/netdb.h:177:12: note: previous declaration of 'gethostbyname_r' with type 'int(const char * restrict,  struct hostent * restrict,  char * restrict,  size_t,  struct hostent ** restrict,  int * restrict)' {aka 'int(const char * restrict,  struct hostent * restrict,  char * restrict,  long unsigned int,  struct hostent ** restrict,  int * restrict)'}
+  177 | extern int gethostbyname_r (const char *__restrict __name,
+      |            ^~~~~~~~~~~~~~~
+make[1]: *** [CMakeFiles/cmTC_edc02.dir/build.make:78: CMakeFiles/cmTC_edc02.dir/CheckPrototypeDefinition.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_edc02/fast] Error 2
+
+
+
+#include <netdb.h>
+
+
+static void cmakeRequireSymbol(int dummy, ...) {
+  (void) dummy;
+}
+
+static void checkSymbol(void) {
+#ifndef gethostbyname_r
+  cmakeRequireSymbol(0, &gethostbyname_r);
+#endif
+}
+
+int gethostbyname_r(const char *name, struct hostent *hp, struct hostent_data *hdata) {
+  return 0;
+}
+
+#ifdef __CLASSIC_C__
+int main() {
+  int ac;
+  char*av[];
+#else
+int main(int ac, char *av[]) {
+#endif
+  checkSymbol();
+  if (ac > 1000) {
+    return *av[0];
+  }
+  return 0;
+}
+
+
+Determining if the prototype gethostbyname_r exists for EVENT__HAVE_GETHOSTBYNAME_R_5_ARG failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_16a15/fast && /usr/bin/make  -f CMakeFiles/cmTC_16a15.dir/build.make CMakeFiles/cmTC_16a15.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_16a15.dir/CheckPrototypeDefinition.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wno-missing-profile -Wall -Wextra -Wno-unused-parameter -Wstrict-aliasing -Wstrict-prototypes -fno-strict-aliasing -Wmissing-prototypes -Winit-self -Wmissing-field-initializers -Wdeclaration-after-statement -Waddress -Wnormalized=id -Woverride-init -Wlogical-op -Wwrite-strings  -fPIE -o CMakeFiles/cmTC_16a15.dir/CheckPrototypeDefinition.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c:14:17: error: conflicting types for 'gethostbyname_r'; have 'struct hostent *(const char *, struct hostent *, char *, size_t,  int *)' {aka 'struct hostent *(const char *, struct hostent *, char *, long unsigned int,  int *)'}
+   14 | struct hostent *gethostbyname_r(const char *name, struct hostent *hp, char *buf, size_t buflen, int *herr) {
+      |                 ^~~~~~~~~~~~~~~
+In file included from /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c:1:
+/usr/include/netdb.h:177:12: note: previous declaration of 'gethostbyname_r' with type 'int(const char * restrict,  struct hostent * restrict,  char * restrict,  size_t,  struct hostent ** restrict,  int * restrict)' {aka 'int(const char * restrict,  struct hostent * restrict,  char * restrict,  long unsigned int,  struct hostent ** restrict,  int * restrict)'}
+  177 | extern int gethostbyname_r (const char *__restrict __name,
+      |            ^~~~~~~~~~~~~~~
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c: In function 'gethostbyname_r':
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c:15:10: error: 'NULL' undeclared (first use in this function)
+   15 |   return NULL;
+      |          ^~~~
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c:2:1: note: 'NULL' is defined in header '<stddef.h>'; did you forget to '#include <stddef.h>'?
+    1 | #include <netdb.h>
+  +++ |+#include <stddef.h>
+    2 | 
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c:15:10: note: each undeclared identifier is reported only once for each function it appears in
+   15 |   return NULL;
+      |          ^~~~
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c:16:1: warning: control reaches end of non-void function [-Wreturn-type]
+   16 | }
+      | ^
+make[1]: *** [CMakeFiles/cmTC_16a15.dir/build.make:78: CMakeFiles/cmTC_16a15.dir/CheckPrototypeDefinition.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_16a15/fast] Error 2
+
+
+
+#include <netdb.h>
+
+
+static void cmakeRequireSymbol(int dummy, ...) {
+  (void) dummy;
+}
+
+static void checkSymbol(void) {
+#ifndef gethostbyname_r
+  cmakeRequireSymbol(0, &gethostbyname_r);
+#endif
+}
+
+struct hostent *gethostbyname_r(const char *name, struct hostent *hp, char *buf, size_t buflen, int *herr) {
+  return NULL;
+}
+
+#ifdef __CLASSIC_C__
+int main() {
+  int ac;
+  char*av[];
+#else
+int main(int ac, char *av[]) {
+#endif
+  checkSymbol();
+  if (ac > 1000) {
+    return *av[0];
+  }
+  return 0;
+}
+
+
+Performing C SOURCE FILE Test EVENT__HAVE_DECL_CTL_KERN failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_5ff91/fast && /usr/bin/make  -f CMakeFiles/cmTC_5ff91.dir/build.make CMakeFiles/cmTC_5ff91.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5ff91.dir/src.c.o
+/usr/bin/cc -DEVENT__HAVE_DECL_CTL_KERN -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wno-missing-profile -Wall -Wextra -Wno-unused-parameter -Wstrict-aliasing -Wstrict-prototypes -fno-strict-aliasing -Wmissing-prototypes -Winit-self -Wmissing-field-initializers -Wdeclaration-after-statement -Waddress -Wnormalized=id -Woverride-init -Wlogical-op -Wwrite-strings  -fPIE -o CMakeFiles/cmTC_5ff91.dir/src.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c:2:20: fatal error: sys/sysctl.h: No such file or directory
+    2 |           #include <sys/sysctl.h>
+      |                    ^~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_5ff91.dir/build.make:78: CMakeFiles/cmTC_5ff91.dir/src.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_5ff91/fast] Error 2
+
+
+Source file was:
+
+          #include <sys/sysctl.h>
+        int main() { (void)CTL_KERN; return 0; }
+Performing C SOURCE FILE Test EVENT__HAVE_DECL_KERN_ARND failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_3257e/fast && /usr/bin/make  -f CMakeFiles/cmTC_3257e.dir/build.make CMakeFiles/cmTC_3257e.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3257e.dir/src.c.o
+/usr/bin/cc -DEVENT__HAVE_DECL_KERN_ARND -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wno-missing-profile -Wall -Wextra -Wno-unused-parameter -Wstrict-aliasing -Wstrict-prototypes -fno-strict-aliasing -Wmissing-prototypes -Winit-self -Wmissing-field-initializers -Wdeclaration-after-statement -Waddress -Wnormalized=id -Woverride-init -Wlogical-op -Wwrite-strings  -fPIE -o CMakeFiles/cmTC_3257e.dir/src.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c:2:20: fatal error: sys/sysctl.h: No such file or directory
+    2 |           #include <sys/sysctl.h>
+      |                    ^~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_3257e.dir/build.make:78: CMakeFiles/cmTC_3257e.dir/src.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_3257e/fast] Error 2
+
+
+Source file was:
+
+          #include <sys/sysctl.h>
+        int main() { (void)KERN_ARND; return 0; }
+Performing C SOURCE FILE Test EVENT__HAVE_DECL_KERN_RANDOM failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_bceda/fast && /usr/bin/make  -f CMakeFiles/cmTC_bceda.dir/build.make CMakeFiles/cmTC_bceda.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bceda.dir/src.c.o
+/usr/bin/cc -DEVENT__HAVE_DECL_KERN_RANDOM -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wno-missing-profile -Wall -Wextra -Wno-unused-parameter -Wstrict-aliasing -Wstrict-prototypes -fno-strict-aliasing -Wmissing-prototypes -Winit-self -Wmissing-field-initializers -Wdeclaration-after-statement -Waddress -Wnormalized=id -Woverride-init -Wlogical-op -Wwrite-strings  -fPIE -o CMakeFiles/cmTC_bceda.dir/src.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c:2:20: fatal error: sys/sysctl.h: No such file or directory
+    2 |           #include <sys/sysctl.h>
+      |                    ^~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_bceda.dir/build.make:78: CMakeFiles/cmTC_bceda.dir/src.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_bceda/fast] Error 2
+
+
+Source file was:
+
+          #include <sys/sysctl.h>
+        int main() { (void)KERN_RANDOM; return 0; }
+Performing C SOURCE FILE Test EVENT__HAVE_DECL_RANDOM_UUID failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_6e7a6/fast && /usr/bin/make  -f CMakeFiles/cmTC_6e7a6.dir/build.make CMakeFiles/cmTC_6e7a6.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6e7a6.dir/src.c.o
+/usr/bin/cc -DEVENT__HAVE_DECL_RANDOM_UUID -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wno-missing-profile -Wall -Wextra -Wno-unused-parameter -Wstrict-aliasing -Wstrict-prototypes -fno-strict-aliasing -Wmissing-prototypes -Winit-self -Wmissing-field-initializers -Wdeclaration-after-statement -Waddress -Wnormalized=id -Woverride-init -Wlogical-op -Wwrite-strings  -fPIE -o CMakeFiles/cmTC_6e7a6.dir/src.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c:2:20: fatal error: sys/sysctl.h: No such file or directory
+    2 |           #include <sys/sysctl.h>
+      |                    ^~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_6e7a6.dir/build.make:78: CMakeFiles/cmTC_6e7a6.dir/src.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_6e7a6/fast] Error 2
+
+
+Source file was:
+
+          #include <sys/sysctl.h>
+        int main() { (void)RANDOM_UUID; return 0; }
+Determining size of SSIZE_T failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_ec82e/fast && /usr/bin/make  -f CMakeFiles/cmTC_ec82e.dir/build.make CMakeFiles/cmTC_ec82e.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ec82e.dir/EVENT__SIZEOF_SSIZE_T_UPPER.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wno-missing-profile -Wall -Wextra -Wno-unused-parameter -Wstrict-aliasing -Wstrict-prototypes -fno-strict-aliasing -Wmissing-prototypes -Winit-self -Wmissing-field-initializers -Wdeclaration-after-statement -Waddress -Wnormalized=id -Woverride-init -Wlogical-op -Wwrite-strings  -fPIE -o CMakeFiles/cmTC_ec82e.dir/EVENT__SIZEOF_SSIZE_T_UPPER.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CheckTypeSize/EVENT__SIZEOF_SSIZE_T_UPPER.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CheckTypeSize/EVENT__SIZEOF_SSIZE_T_UPPER.c:33:22: error: 'SSIZE_T' undeclared here (not in a function)
+   33 | #define SIZE (sizeof(SSIZE_T))
+      |                      ^~~~~~~
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CheckTypeSize/EVENT__SIZEOF_SSIZE_T_UPPER.c:35:12: note: in expansion of macro 'SIZE'
+   35 |   ('0' + ((SIZE / 10000)%10)),
+      |            ^~~~
+make[1]: *** [CMakeFiles/cmTC_ec82e.dir/build.make:78: CMakeFiles/cmTC_ec82e.dir/EVENT__SIZEOF_SSIZE_T_UPPER.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_ec82e/fast] Error 2
+
+
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CheckTypeSize/EVENT__SIZEOF_SSIZE_T_UPPER.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+#include "sys/types.h"
+#include "sys/socket.h"
+#include "netinet/in.h"
+#include "sys/un.h"
+#include "fcntl.h"
+#include "sys/time.h"
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__PPC64__)
+# define KEY '_','_','P','P','C','6','4','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__PPC__)
+# define KEY '_','_','P','P','C','_','_'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(SSIZE_T))
+static char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Performing C SOURCE FILE Test EVENT__HAVE_STRUCT_SOCKADDR_IN6_SIN6_LEN failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_0b7e9/fast && /usr/bin/make  -f CMakeFiles/cmTC_0b7e9.dir/build.make CMakeFiles/cmTC_0b7e9.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0b7e9.dir/src.c.o
+/usr/bin/cc -DEVENT__HAVE_STRUCT_SOCKADDR_IN6_SIN6_LEN -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wno-missing-profile -Wall -Wextra -Wno-unused-parameter -Wstrict-aliasing -Wstrict-prototypes -fno-strict-aliasing -Wmissing-prototypes -Winit-self -Wmissing-field-initializers -Wdeclaration-after-statement -Waddress -Wnormalized=id -Woverride-init -Wlogical-op -Wwrite-strings  -fPIE -o CMakeFiles/cmTC_0b7e9.dir/src.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c:6:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+    6 | int main()
+      |     ^~~~
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c: In function 'main':
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c:8:42: error: 'struct sockaddr_in6' has no member named 'sin6_len'
+    8 |   (void)sizeof(((struct sockaddr_in6 *)0)->sin6_len);
+      |                                          ^~
+make[1]: *** [CMakeFiles/cmTC_0b7e9.dir/build.make:78: CMakeFiles/cmTC_0b7e9.dir/src.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_0b7e9/fast] Error 2
+
+
+Source file was:
+
+#include <netinet/in.h>
+#include <sys/socket.h>
+#include <netdb.h>
+
+int main()
+{
+  (void)sizeof(((struct sockaddr_in6 *)0)->sin6_len);
+  return 0;
+}
+
+Performing C SOURCE FILE Test EVENT__HAVE_STRUCT_SOCKADDR_IN_SIN_LEN failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_65ef1/fast && /usr/bin/make  -f CMakeFiles/cmTC_65ef1.dir/build.make CMakeFiles/cmTC_65ef1.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_65ef1.dir/src.c.o
+/usr/bin/cc -DEVENT__HAVE_STRUCT_SOCKADDR_IN_SIN_LEN -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wno-missing-profile -Wall -Wextra -Wno-unused-parameter -Wstrict-aliasing -Wstrict-prototypes -fno-strict-aliasing -Wmissing-prototypes -Winit-self -Wmissing-field-initializers -Wdeclaration-after-statement -Waddress -Wnormalized=id -Woverride-init -Wlogical-op -Wwrite-strings  -fPIE -o CMakeFiles/cmTC_65ef1.dir/src.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c:6:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+    6 | int main()
+      |     ^~~~
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c: In function 'main':
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c:8:42: error: 'struct sockaddr_in6' has no member named 'sin_len'
+    8 |   (void)sizeof(((struct sockaddr_in6 *)0)->sin_len);
+      |                                          ^~
+make[1]: *** [CMakeFiles/cmTC_65ef1.dir/build.make:78: CMakeFiles/cmTC_65ef1.dir/src.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_65ef1/fast] Error 2
+
+
+Source file was:
+
+#include <netinet/in.h>
+#include <sys/socket.h>
+#include <netdb.h>
+
+int main()
+{
+  (void)sizeof(((struct sockaddr_in6 *)0)->sin_len);
+  return 0;
+}
+
+Performing C SOURCE FILE Test EVENT__HAVE_STRUCT_SOCKADDR_STORAGE___SS_FAMILY failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_b874b/fast && /usr/bin/make  -f CMakeFiles/cmTC_b874b.dir/build.make CMakeFiles/cmTC_b874b.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b874b.dir/src.c.o
+/usr/bin/cc -DEVENT__HAVE_STRUCT_SOCKADDR_STORAGE___SS_FAMILY -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wno-missing-profile -Wall -Wextra -Wno-unused-parameter -Wstrict-aliasing -Wstrict-prototypes -fno-strict-aliasing -Wmissing-prototypes -Winit-self -Wmissing-field-initializers -Wdeclaration-after-statement -Waddress -Wnormalized=id -Woverride-init -Wlogical-op -Wwrite-strings  -fPIE -o CMakeFiles/cmTC_b874b.dir/src.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c:6:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+    6 | int main()
+      |     ^~~~
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c: In function 'main':
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c:8:48: error: 'struct sockaddr_storage' has no member named '__ss_family'; did you mean 'ss_family'?
+    8 |   (void)sizeof(((struct sockaddr_storage *)0)->__ss_family);
+      |                                                ^~~~~~~~~~~
+      |                                                ss_family
+make[1]: *** [CMakeFiles/cmTC_b874b.dir/build.make:78: CMakeFiles/cmTC_b874b.dir/src.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_b874b/fast] Error 2
+
+
+Source file was:
+
+#include <netinet/in.h>
+#include <sys/socket.h>
+#include <netdb.h>
+
+int main()
+{
+  (void)sizeof(((struct sockaddr_storage *)0)->__ss_family);
+  return 0;
+}
+
+Performing C++ SOURCE FILE Test HAVE_CXX_W_implicit_int_float_conversion failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_dc5b6/fast && /usr/bin/make  -f CMakeFiles/cmTC_dc5b6.dir/build.make CMakeFiles/cmTC_dc5b6.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_dc5b6.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_CXX_W_implicit_int_float_conversion -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -std=c++17 -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -march=armv8-a+crc -Wno-missing-profile  -Wimplicit-int-float-conversion -fPIE -o CMakeFiles/cmTC_dc5b6.dir/src.cxx.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command-line option '-Wimplicit-int-float-conversion'; did you mean '-Wdeprecated-enum-float-conversion'?
+make[1]: *** [CMakeFiles/cmTC_dc5b6.dir/build.make:78: CMakeFiles/cmTC_dc5b6.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_dc5b6/fast] Error 2
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_W_array_compare failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_82f17/fast && /usr/bin/make  -f CMakeFiles/cmTC_82f17.dir/build.make CMakeFiles/cmTC_82f17.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_82f17.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_CXX_W_array_compare -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -std=c++17 -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -march=armv8-a+crc -Wno-missing-profile  -Warray-compare -fPIE -o CMakeFiles/cmTC_82f17.dir/src.cxx.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command-line option '-Warray-compare'
+make[1]: *** [CMakeFiles/cmTC_82f17.dir/build.make:78: CMakeFiles/cmTC_82f17.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_82f17/fast] Error 2
+
+
+Source file was:
+int main(void) { return 0; }
+Determining if the include file libudev.h exists failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_23cad/fast && /usr/bin/make  -f CMakeFiles/cmTC_23cad.dir/build.make CMakeFiles/cmTC_23cad.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_23cad.dir/CheckIncludeFile.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics  -fPIE -o CMakeFiles/cmTC_23cad.dir/CheckIncludeFile.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: libudev.h: No such file or directory
+    1 | #include <libudev.h>
+      |          ^~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_23cad.dir/build.make:78: CMakeFiles/cmTC_23cad.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_23cad/fast] Error 2
+
+
+
+Performing C++ SOURCE FILE Test HAVE_CXX_W_unused_lambda_capture failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_0c453/fast && /usr/bin/make  -f CMakeFiles/cmTC_0c453.dir/build.make CMakeFiles/cmTC_0c453.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_0c453.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_CXX_W_unused_lambda_capture -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -std=c++17 -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -march=armv8-a+crc -Wno-array-bounds -Wno-char-subscripts -Wno-stringop-overflow -Wno-missing-profile -Wno-char-subscripts  -Wunused-lambda-capture -fPIE -o CMakeFiles/cmTC_0c453.dir/src.cxx.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command-line option '-Wunused-lambda-capture'
+make[1]: *** [CMakeFiles/cmTC_0c453.dir/build.make:78: CMakeFiles/cmTC_0c453.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_0c453/fast] Error 2
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_W_nontrivial_memcall failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_47045/fast && /usr/bin/make  -f CMakeFiles/cmTC_47045.dir/build.make CMakeFiles/cmTC_47045.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_47045.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_CXX_W_nontrivial_memcall -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -std=c++17 -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -march=armv8-a+crc -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Woverloaded-virtual -Wcast-qual -Wimplicit-fallthrough=5 -Wstringop-truncation -Wsuggest-override -Wmissing-include-dirs -Wextra-semi -Wlogical-op -Werror  -Wnontrivial-memcall -fPIE -o CMakeFiles/cmTC_47045.dir/src.cxx.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command-line option '-Wnontrivial-memcall'
+make[1]: *** [CMakeFiles/cmTC_47045.dir/build.make:78: CMakeFiles/cmTC_47045.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_47045/fast] Error 2
+
+
+Source file was:
+int main(void) { return 0; }
+Determining if the function processor_bind exists failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_c997b/fast && /usr/bin/make  -f CMakeFiles/cmTC_c997b.dir/build.make CMakeFiles/cmTC_c997b.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c997b.dir/CheckFunctionExists.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Wwrite-strings -Wjump-misses-init -Wstringop-truncation -Wmissing-include-dirs -Werror -fno-strict-aliasing -DCHECK_FUNCTION_EXISTS=processor_bind -fPIE -o CMakeFiles/cmTC_c997b.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c997b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c997b.dir/link.txt --verbose=1
+/usr/bin/cc -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Wwrite-strings -Wjump-misses-init -Wstringop-truncation -Wmissing-include-dirs -Werror -fno-strict-aliasing -DCHECK_FUNCTION_EXISTS=processor_bind CMakeFiles/cmTC_c997b.dir/CheckFunctionExists.c.o -o cmTC_c997b  -lm 
+/usr/bin/ld: CMakeFiles/cmTC_c997b.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x10): undefined reference to `processor_bind'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_c997b.dir/build.make:99: cmTC_c997b] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_c997b/fast] Error 2
+
+
+
+Determining if the function atomic_swap_32 exists failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_d5211/fast && /usr/bin/make  -f CMakeFiles/cmTC_d5211.dir/build.make CMakeFiles/cmTC_d5211.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d5211.dir/CheckFunctionExists.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Wwrite-strings -Wjump-misses-init -Wstringop-truncation -Wmissing-include-dirs -Werror -fno-strict-aliasing -DCHECK_FUNCTION_EXISTS=atomic_swap_32 -fPIE -o CMakeFiles/cmTC_d5211.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_d5211
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d5211.dir/link.txt --verbose=1
+/usr/bin/cc -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Wwrite-strings -Wjump-misses-init -Wstringop-truncation -Wmissing-include-dirs -Werror -fno-strict-aliasing -DCHECK_FUNCTION_EXISTS=atomic_swap_32 CMakeFiles/cmTC_d5211.dir/CheckFunctionExists.c.o -o cmTC_d5211  -lm 
+/usr/bin/ld: CMakeFiles/cmTC_d5211.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x10): undefined reference to `atomic_swap_32'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_d5211.dir/build.make:99: cmTC_d5211] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_d5211/fast] Error 2
+
+
+
+Determining if the function priocntl exists failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_ceaf4/fast && /usr/bin/make  -f CMakeFiles/cmTC_ceaf4.dir/build.make CMakeFiles/cmTC_ceaf4.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ceaf4.dir/CheckFunctionExists.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Wwrite-strings -Wjump-misses-init -Wstringop-truncation -Wmissing-include-dirs -Werror -fno-strict-aliasing -DCHECK_FUNCTION_EXISTS=priocntl -fPIE -o CMakeFiles/cmTC_ceaf4.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_ceaf4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ceaf4.dir/link.txt --verbose=1
+/usr/bin/cc -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Wwrite-strings -Wjump-misses-init -Wstringop-truncation -Wmissing-include-dirs -Werror -fno-strict-aliasing -DCHECK_FUNCTION_EXISTS=priocntl CMakeFiles/cmTC_ceaf4.dir/CheckFunctionExists.c.o -o cmTC_ceaf4  -lm 
+/usr/bin/ld: CMakeFiles/cmTC_ceaf4.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x10): undefined reference to `priocntl'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_ceaf4.dir/build.make:99: cmTC_ceaf4] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_ceaf4/fast] Error 2
+
+
+
+Determining if the function processor_affinity exists failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_e238a/fast && /usr/bin/make  -f CMakeFiles/cmTC_e238a.dir/build.make CMakeFiles/cmTC_e238a.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e238a.dir/CheckFunctionExists.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Wwrite-strings -Wjump-misses-init -Wstringop-truncation -Wmissing-include-dirs -Werror -fno-strict-aliasing -DCHECK_FUNCTION_EXISTS=processor_affinity -fPIE -o CMakeFiles/cmTC_e238a.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e238a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e238a.dir/link.txt --verbose=1
+/usr/bin/cc -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Wwrite-strings -Wjump-misses-init -Wstringop-truncation -Wmissing-include-dirs -Werror -fno-strict-aliasing -DCHECK_FUNCTION_EXISTS=processor_affinity CMakeFiles/cmTC_e238a.dir/CheckFunctionExists.c.o -o cmTC_e238a  -lm 
+/usr/bin/ld: CMakeFiles/cmTC_e238a.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x10): undefined reference to `processor_affinity'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_e238a.dir/build.make:99: cmTC_e238a] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_e238a/fast] Error 2
+
+
+
+Determining if the function cpuset_setaffinity exists failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_6a471/fast && /usr/bin/make  -f CMakeFiles/cmTC_6a471.dir/build.make CMakeFiles/cmTC_6a471.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6a471.dir/CheckFunctionExists.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Wwrite-strings -Wjump-misses-init -Wstringop-truncation -Wmissing-include-dirs -Werror -fno-strict-aliasing -DCHECK_FUNCTION_EXISTS=cpuset_setaffinity -fPIE -o CMakeFiles/cmTC_6a471.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_6a471
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6a471.dir/link.txt --verbose=1
+/usr/bin/cc -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Wwrite-strings -Wjump-misses-init -Wstringop-truncation -Wmissing-include-dirs -Werror -fno-strict-aliasing -DCHECK_FUNCTION_EXISTS=cpuset_setaffinity CMakeFiles/cmTC_6a471.dir/CheckFunctionExists.c.o -o cmTC_6a471  -lm 
+/usr/bin/ld: CMakeFiles/cmTC_6a471.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x10): undefined reference to `cpuset_setaffinity'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_6a471.dir/build.make:99: cmTC_6a471] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_6a471/fast] Error 2
+
+
+
+Determining if the memset_s exist failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_83413/fast && /usr/bin/make  -f CMakeFiles/cmTC_83413.dir/build.make CMakeFiles/cmTC_83413.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_83413.dir/CheckSymbolExists.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Wwrite-strings -Wjump-misses-init -Wstringop-truncation -Wmissing-include-dirs   -fPIE -o CMakeFiles/cmTC_83413.dir/CheckSymbolExists.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function 'main':
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: 'memset_s' undeclared (first use in this function); did you mean 'memset'?
+    8 |   return ((int*)(&memset_s))[argc];
+      |                   ^~~~~~~~
+      |                   memset
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckSymbolExists.c:4:14: warning: parameter 'argc' set but not used [-Wunused-but-set-parameter]
+    4 | int main(int argc, char** argv)
+      |          ~~~~^~~~
+make[1]: *** [CMakeFiles/cmTC_83413.dir/build.make:78: CMakeFiles/cmTC_83413.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_83413/fast] Error 2
+
+
+File /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <string.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef memset_s
+  return ((int*)(&memset_s))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if files atomic.h exist failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_e59bb/fast && /usr/bin/make  -f CMakeFiles/cmTC_e59bb.dir/build.make CMakeFiles/cmTC_e59bb.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e59bb.dir/HAVE_ATOMIC_H.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Wwrite-strings -Wjump-misses-init -Wstringop-truncation -Wmissing-include-dirs -Werror -fno-strict-aliasing  -fPIE -o CMakeFiles/cmTC_e59bb.dir/HAVE_ATOMIC_H.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CheckIncludeFiles/HAVE_ATOMIC_H.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CheckIncludeFiles/HAVE_ATOMIC_H.c:2:10: fatal error: atomic.h: No such file or directory
+    2 | #include <atomic.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_e59bb.dir/build.make:78: CMakeFiles/cmTC_e59bb.dir/HAVE_ATOMIC_H.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_e59bb/fast] Error 2
+
+
+Source:
+/* */
+#include <atomic.h>
+
+
+int main(void){return 0;}
+
+Determining if files Processtopologyapi.h exist failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_045ee/fast && /usr/bin/make  -f CMakeFiles/cmTC_045ee.dir/build.make CMakeFiles/cmTC_045ee.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_045ee.dir/HAVE_PROCESSTOPOLOGYAPI_H.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Wwrite-strings -Wjump-misses-init -Wstringop-truncation -Wmissing-include-dirs -Werror -fno-strict-aliasing  -fPIE -o CMakeFiles/cmTC_045ee.dir/HAVE_PROCESSTOPOLOGYAPI_H.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CheckIncludeFiles/HAVE_PROCESSTOPOLOGYAPI_H.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CheckIncludeFiles/HAVE_PROCESSTOPOLOGYAPI_H.c:2:10: fatal error: Processtopologyapi.h: No such file or directory
+    2 | #include <Processtopologyapi.h>
+      |          ^~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_045ee.dir/build.make:78: CMakeFiles/cmTC_045ee.dir/HAVE_PROCESSTOPOLOGYAPI_H.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_045ee/fast] Error 2
+
+
+Source:
+/* */
+#include <Processtopologyapi.h>
+
+
+int main(void){return 0;}
+
+Determining if files Processthreadsapi.h exist failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_380b4/fast && /usr/bin/make  -f CMakeFiles/cmTC_380b4.dir/build.make CMakeFiles/cmTC_380b4.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_380b4.dir/HAVE_PROCESSTHREADSAPI_H.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Wwrite-strings -Wjump-misses-init -Wstringop-truncation -Wmissing-include-dirs -Werror -fno-strict-aliasing  -fPIE -o CMakeFiles/cmTC_380b4.dir/HAVE_PROCESSTHREADSAPI_H.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CheckIncludeFiles/HAVE_PROCESSTHREADSAPI_H.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CheckIncludeFiles/HAVE_PROCESSTHREADSAPI_H.c:2:10: fatal error: Processthreadsapi.h: No such file or directory
+    2 | #include <Processthreadsapi.h>
+      |          ^~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_380b4.dir/build.make:78: CMakeFiles/cmTC_380b4.dir/HAVE_PROCESSTHREADSAPI_H.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_380b4/fast] Error 2
+
+
+Source:
+/* */
+#include <Processthreadsapi.h>
+
+
+int main(void){return 0;}
+
+Determining if files ncursesw.h exist failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_50e19/fast && /usr/bin/make  -f CMakeFiles/cmTC_50e19.dir/build.make CMakeFiles/cmTC_50e19.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_50e19.dir/HAVE_NCURSESW_H.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Wwrite-strings -Wjump-misses-init -Wstringop-truncation -Wmissing-include-dirs -Werror -fno-strict-aliasing  -fPIE -o CMakeFiles/cmTC_50e19.dir/HAVE_NCURSESW_H.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CheckIncludeFiles/HAVE_NCURSESW_H.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CheckIncludeFiles/HAVE_NCURSESW_H.c:2:10: fatal error: ncursesw.h: No such file or directory
+    2 | #include <ncursesw.h>
+      |          ^~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_50e19.dir/build.make:78: CMakeFiles/cmTC_50e19.dir/HAVE_NCURSESW_H.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_50e19/fast] Error 2
+
+
+Source:
+/* */
+#include <ncursesw.h>
+
+
+int main(void){return 0;}
+
+Determining if files ncurses/curses.h exist failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_2cb30/fast && /usr/bin/make  -f CMakeFiles/cmTC_2cb30.dir/build.make CMakeFiles/cmTC_2cb30.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2cb30.dir/HAVE_NCURSES_CURSES_H.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Wwrite-strings -Wjump-misses-init -Wstringop-truncation -Wmissing-include-dirs -Werror -fno-strict-aliasing  -fPIE -o CMakeFiles/cmTC_2cb30.dir/HAVE_NCURSES_CURSES_H.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CheckIncludeFiles/HAVE_NCURSES_CURSES_H.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CheckIncludeFiles/HAVE_NCURSES_CURSES_H.c:2:10: fatal error: ncurses/curses.h: No such file or directory
+    2 | #include <ncurses/curses.h>
+      |          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_2cb30.dir/build.make:78: CMakeFiles/cmTC_2cb30.dir/HAVE_NCURSES_CURSES_H.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_2cb30/fast] Error 2
+
+
+Source:
+/* */
+#include <ncurses/curses.h>
+
+
+int main(void){return 0;}
+
+Determining if files xfs/xfs.h exist failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_be6f7/fast && /usr/bin/make  -f CMakeFiles/cmTC_be6f7.dir/build.make CMakeFiles/cmTC_be6f7.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_be6f7.dir/HAVE_XFS_XFS_H.c.o
+/usr/bin/cc -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Wwrite-strings -Wjump-misses-init -Wstringop-truncation -Wmissing-include-dirs -Werror -fno-strict-aliasing  -fPIE -o CMakeFiles/cmTC_be6f7.dir/HAVE_XFS_XFS_H.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CheckIncludeFiles/HAVE_XFS_XFS_H.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CheckIncludeFiles/HAVE_XFS_XFS_H.c:2:10: fatal error: xfs/xfs.h: No such file or directory
+    2 | #include <xfs/xfs.h>
+      |          ^~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_be6f7.dir/build.make:78: CMakeFiles/cmTC_be6f7.dir/HAVE_XFS_XFS_H.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_be6f7/fast] Error 2
+
+
+Source:
+/* */
+#include <xfs/xfs.h>
+
+
+int main(void){return 0;}
+
+Performing C SOURCE FILE Test HAVE__BITSCANFORWARD failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_c31a5/fast && /usr/bin/make  -f CMakeFiles/cmTC_c31a5.dir/build.make CMakeFiles/cmTC_c31a5.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c31a5.dir/src.c.o
+/usr/bin/cc -DHAVE__BITSCANFORWARD -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Wwrite-strings -Wjump-misses-init -Wstringop-truncation -Wmissing-include-dirs -Werror -fno-strict-aliasing  -fPIE -o CMakeFiles/cmTC_c31a5.dir/src.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c:2:10: fatal error: intrin.h: No such file or directory
+    2 | #include <intrin.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_c31a5.dir/build.make:78: CMakeFiles/cmTC_c31a5.dir/src.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_c31a5/fast] Error 2
+
+
+Source file was:
+
+#include <intrin.h>
+unsigned long A = 7;
+int main()
+{
+  unsigned long a;
+  unsigned char res = _BitScanForward(&a, A);
+  return (int)a;
+}
+Performing C SOURCE FILE Test HAVE__BITSCANREVERSE failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_59f5d/fast && /usr/bin/make  -f CMakeFiles/cmTC_59f5d.dir/build.make CMakeFiles/cmTC_59f5d.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_59f5d.dir/src.c.o
+/usr/bin/cc -DHAVE__BITSCANREVERSE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Wwrite-strings -Wjump-misses-init -Wstringop-truncation -Wmissing-include-dirs -Werror -fno-strict-aliasing  -fPIE -o CMakeFiles/cmTC_59f5d.dir/src.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c:2:10: fatal error: intrin.h: No such file or directory
+    2 | #include <intrin.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_59f5d.dir/build.make:78: CMakeFiles/cmTC_59f5d.dir/src.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_59f5d/fast] Error 2
+
+
+Source file was:
+
+#include <intrin.h>
+unsigned long A = 7;
+int main()
+{
+  unsigned long a;
+  unsigned char res = _BitScanReverse(&a, A);
+  return (int)a;
+}
+Performing C++ SOURCE FILE Test HAVE_MAC_OS_X_THREAD_INFO failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_c8d01/fast && /usr/bin/make  -f CMakeFiles/cmTC_c8d01.dir/build.make CMakeFiles/cmTC_c8d01.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_c8d01.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_MAC_OS_X_THREAD_INFO -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -std=c++17 -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -march=armv8-a+crc -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Woverloaded-virtual -Wcast-qual -Wimplicit-fallthrough=5 -Wstringop-truncation -Wsuggest-override -Wmissing-include-dirs -Wextra-semi -Wlogical-op -Werror -fno-strict-aliasing  -fPIE -o CMakeFiles/cmTC_c8d01.dir/src.cxx.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.cxx
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.cxx:2:10: fatal error: mach/mach_init.h: No such file or directory
+    2 | #include <mach/mach_init.h>
+      |          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_c8d01.dir/build.make:78: CMakeFiles/cmTC_c8d01.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_c8d01/fast] Error 2
+
+
+Source file was:
+
+#include <mach/mach_init.h>
+#include <mach/thread_act.h>
+#include <mach/mach_port.h>
+int main()
+{
+mach_port_t thread_port;
+kern_return_t ret_code;
+mach_msg_type_number_t basic_info_count;
+thread_basic_info_data_t basic_info;
+mach_port_t current_task = mach_task_self();
+
+thread_port = mach_thread_self();
+ret_code = thread_info(thread_port,
+                       THREAD_BASIC_INFO,
+                       (thread_info_t) &basic_info,
+                       &basic_info_count);
+mach_port_deallocate(current_task, thread_port);
+return ret_code;
+}
+Performing C SOURCE FILE Test HAVE_SOLARIS_AFFINITY failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_836c6/fast && /usr/bin/make  -f CMakeFiles/cmTC_836c6.dir/build.make CMakeFiles/cmTC_836c6.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_836c6.dir/src.c.o
+/usr/bin/cc -DHAVE_SOLARIS_AFFINITY -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Wwrite-strings -Wjump-misses-init -Wstringop-truncation -Wmissing-include-dirs -Werror -fno-strict-aliasing  -fPIE -o CMakeFiles/cmTC_836c6.dir/src.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c:3:10: fatal error: sys/lwp.h: No such file or directory
+    3 | #include <sys/lwp.h>
+      |          ^~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_836c6.dir/build.make:78: CMakeFiles/cmTC_836c6.dir/src.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_836c6/fast] Error 2
+
+
+Source file was:
+
+#include <sys/types.h>
+#include <sys/lwp.h>
+#include <sys/processor.h>
+#include <sys/procset.h>
+int main()
+{
+  processorid_t cpu_id = (processorid_t)0;
+  id_t tid = _lwp_self();
+  processor_bind(P_LWPID, tid, cpu_id, 0);
+}
+Performing C SOURCE FILE Test HAVE_XDR_OPS_X_PUTINT32 failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_3afee/fast && /usr/bin/make  -f CMakeFiles/cmTC_3afee.dir/build.make CMakeFiles/cmTC_3afee.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3afee.dir/src.c.o
+/usr/bin/cc -DHAVE_XDR_OPS_X_PUTINT32 -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/usr/include/tirpc -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Wwrite-strings -Wjump-misses-init -Wstringop-truncation -Wmissing-include-dirs -Werror -Wno-error -fPIE -o CMakeFiles/cmTC_3afee.dir/src.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c: In function 'main':
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c:6:37: error: 'struct xdr_ops' has no member named 'x_putint32'
+    6 |   (void)sizeof(((struct xdr_ops *)0)->x_putint32);
+      |                                     ^~
+make[1]: *** [CMakeFiles/cmTC_3afee.dir/build.make:78: CMakeFiles/cmTC_3afee.dir/src.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_3afee/fast] Error 2
+
+
+Source file was:
+
+#include <rpc/xdr.h>
+
+int main()
+{
+  (void)sizeof(((struct xdr_ops *)0)->x_putint32);
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE_XDR_OPS_X_GETINT32 failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_71d94/fast && /usr/bin/make  -f CMakeFiles/cmTC_71d94.dir/build.make CMakeFiles/cmTC_71d94.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_71d94.dir/src.c.o
+/usr/bin/cc -DHAVE_XDR_OPS_X_GETINT32 -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/usr/include/tirpc -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Wwrite-strings -Wjump-misses-init -Wstringop-truncation -Wmissing-include-dirs -Werror -Wno-error -fPIE -o CMakeFiles/cmTC_71d94.dir/src.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c: In function 'main':
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c:6:37: error: 'struct xdr_ops' has no member named 'x_getint32'
+    6 |   (void)sizeof(((struct xdr_ops *)0)->x_getint32);
+      |                                     ^~
+make[1]: *** [CMakeFiles/cmTC_71d94.dir/build.make:78: CMakeFiles/cmTC_71d94.dir/src.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_71d94/fast] Error 2
+
+
+Source file was:
+
+#include <rpc/xdr.h>
+
+int main()
+{
+  (void)sizeof(((struct xdr_ops *)0)->x_getint32);
+  return 0;
+}
+
+Performing C SOURCE FILE Test OLD_XDR failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_9dc57/fast && /usr/bin/make  -f CMakeFiles/cmTC_9dc57.dir/build.make CMakeFiles/cmTC_9dc57.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9dc57.dir/src.c.o
+/usr/bin/cc -DOLD_XDR -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Wwrite-strings -Wjump-misses-init -Wstringop-truncation -Wmissing-include-dirs -Werror -Werror=sign-conversion -fPIE -o CMakeFiles/cmTC_9dc57.dir/src.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c:2:14: fatal error: rpc/xdr.h: No such file or directory
+    2 |     #include <rpc/xdr.h>
+      |              ^~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_9dc57.dir/build.make:78: CMakeFiles/cmTC_9dc57.dir/src.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_9dc57/fast] Error 2
+
+
+Source file was:
+
+    #include <rpc/xdr.h>
+    int main() { XDR xdr; xdr.x_handy = -1; return (int)xdr.x_handy; }
+    
+Performing C SOURCE FILE Test X_PUTLONG_NOT_USE_CONST failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_6778b/fast && /usr/bin/make  -f CMakeFiles/cmTC_6778b.dir/build.make CMakeFiles/cmTC_6778b.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6778b.dir/src.c.o
+/usr/bin/cc -DX_PUTLONG_NOT_USE_CONST -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Wwrite-strings -Wjump-misses-init -Wstringop-truncation -Wmissing-include-dirs -Werror -Werror=sign-conversion -Werror=incompatible-pointer-types -fPIE -o CMakeFiles/cmTC_6778b.dir/src.c.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.c:2:14: fatal error: rpc/xdr.h: No such file or directory
+    2 |     #include <rpc/xdr.h>
+      |              ^~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_6778b.dir/build.make:78: CMakeFiles/cmTC_6778b.dir/src.c.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_6778b/fast] Error 2
+
+
+Source file was:
+
+    #include <rpc/xdr.h>
+    bool_t putlong(XDR* xdr, long *longp)
+                   { return (bool_t)(*longp + xdr->x_handy); }
+    int main() {
+      XDR xdr;
+      struct xdr_ops ops;
+      long l;
+
+      ops.x_putlong = putlong;
+      return (int)ops.x_putlong(&xdr, &l);
+    }
+    
+Performing C++ SOURCE FILE Test HAVE_CXX_W_cast_function_type_mismatch failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_10071/fast && /usr/bin/make  -f CMakeFiles/cmTC_10071.dir/build.make CMakeFiles/cmTC_10071.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_10071.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_CXX_W_cast_function_type_mismatch -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -std=c++17 -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -march=armv8-a+crc -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Woverloaded-virtual -Wcast-qual -Wimplicit-fallthrough=5 -Wstringop-truncation -Wsuggest-override -Wmissing-include-dirs -Wextra-semi -Wlogical-op -Werror  -Wcast-function-type-mismatch -fPIE -o CMakeFiles/cmTC_10071.dir/src.cxx.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command-line option '-Wcast-function-type-mismatch'; did you mean '-Wcast-function-type'?
+make[1]: *** [CMakeFiles/cmTC_10071.dir/build.make:78: CMakeFiles/cmTC_10071.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_10071/fast] Error 2
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_W_shadow_field failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_36cdb/fast && /usr/bin/make  -f CMakeFiles/cmTC_36cdb.dir/build.make CMakeFiles/cmTC_36cdb.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_36cdb.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_CXX_W_shadow_field -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -std=c++17 -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -march=armv8-a+crc -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Woverloaded-virtual -Wcast-qual -Wimplicit-fallthrough=5 -Wstringop-truncation -Wsuggest-override -Wmissing-include-dirs -Wextra-semi -Wlogical-op -Werror  -Wshadow-field -fPIE -o CMakeFiles/cmTC_36cdb.dir/src.cxx.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command-line option '-Wshadow-field'; did you mean '-Wshadow-ivar'?
+make[1]: *** [CMakeFiles/cmTC_36cdb.dir/build.make:78: CMakeFiles/cmTC_36cdb.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_36cdb/fast] Error 2
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_W_sfinae_incomplete failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_2335c/fast && /usr/bin/make  -f CMakeFiles/cmTC_2335c.dir/build.make CMakeFiles/cmTC_2335c.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_2335c.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_CXX_W_sfinae_incomplete -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -std=c++17 -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -march=armv8-a+crc -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Woverloaded-virtual -Wcast-qual -Wimplicit-fallthrough=5 -Wstringop-truncation -Wsuggest-override -Wmissing-include-dirs -Wextra-semi -Wlogical-op -Werror  -Wsfinae-incomplete -fPIE -o CMakeFiles/cmTC_2335c.dir/src.cxx.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command-line option '-Wsfinae-incomplete'; did you mean '-Wdelete-incomplete'?
+make[1]: *** [CMakeFiles/cmTC_2335c.dir/build.make:78: CMakeFiles/cmTC_2335c.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_2335c/fast] Error 2
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_HAS_DEPRECATED_ATTR failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_c54cb/fast && /usr/bin/make  -f CMakeFiles/cmTC_c54cb.dir/build.make CMakeFiles/cmTC_c54cb.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_c54cb.dir/src.cxx.o
+/usr/bin/c++ -DCOMPILER_HAS_DEPRECATED_ATTR -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -std=c++17 -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -march=armv8-a+crc -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Woverloaded-virtual -Wcast-qual -Wimplicit-fallthrough=5 -Wstringop-truncation -Wsuggest-override -Wmissing-include-dirs -Wextra-semi -Wlogical-op -Werror  -fPIE -o CMakeFiles/cmTC_c54cb.dir/src.cxx.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.cxx
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.cxx: In function 'int main()':
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.cxx:2:33: error: 'int somefunc()' is deprecated [-Werror=deprecated-declarations]
+    2 |     int main() { return somefunc();}
+      |                         ~~~~~~~~^~
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.cxx:1:37: note: declared here
+    1 | __attribute__((__deprecated__)) int somefunc() { return 0; }
+      |                                     ^~~~~~~~
+cc1plus: all warnings being treated as errors
+make[1]: *** [CMakeFiles/cmTC_c54cb.dir/build.make:78: CMakeFiles/cmTC_c54cb.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_c54cb/fast] Error 2
+
+
+Source file was:
+__attribute__((__deprecated__)) int somefunc() { return 0; }
+    int main() { return somefunc();}
+Performing C++ SOURCE FILE Test COMPILER_HAS_DEPRECATED failed with the following output:
+Change Dir: /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_c4f0f/fast && /usr/bin/make  -f CMakeFiles/cmTC_c4f0f.dir/build.make CMakeFiles/cmTC_c4f0f.dir/build
+make[1]: Entering directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_c4f0f.dir/src.cxx.o
+/usr/bin/c++ -DCOMPILER_HAS_DEPRECATED -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -std=c++17 -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -march=armv8-a+crc -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Woverloaded-virtual -Wcast-qual -Wimplicit-fallthrough=5 -Wstringop-truncation -Wsuggest-override -Wmissing-include-dirs -Wextra-semi -Wlogical-op -Werror  -fPIE -o CMakeFiles/cmTC_c4f0f.dir/src.cxx.o -c /tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.cxx
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.cxx:1:11: error: expected constructor, destructor, or type conversion before '(' token
+    1 | __declspec(deprecated) int somefunc() { return 0; }
+      |           ^
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.cxx: In function 'int main()':
+/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp/src.cxx:2:25: error: 'somefunc' was not declared in this scope
+    2 |     int main() { return somefunc();}
+      |                         ^~~~~~~~
+make[1]: *** [CMakeFiles/cmTC_c4f0f.dir/build.make:78: CMakeFiles/cmTC_c4f0f.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/tmp/mysql/cmake-build-mysql-docker/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_c4f0f/fast] Error 2
+
+
+Source file was:
+__declspec(deprecated) int somefunc() { return 0; }
+    int main() { return somefunc();}

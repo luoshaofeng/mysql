@@ -1,0 +1,105 @@
+{
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"ADD_CUSTOM_TARGET",
+			"MY_ADD_CUSTOM_TARGET",
+			"ADD_CUSTOM_COMMAND"
+		],
+		"files" : 
+		[
+			"cmake/add_custom_target.cmake",
+			"scripts/sys_schema/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 221,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 62,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 209,
+				"parent" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "comp_sql::@de1a740d5dc98ffd5d0e"
+		},
+		{
+			"id" : "all_sys_schema::@7ed8a01c35c996bc5d71"
+		}
+	],
+	"id" : "sql_commands::@7ed8a01c35c996bc5d71",
+	"name" : "sql_commands",
+	"paths" : 
+	{
+		"build" : "scripts/sys_schema",
+		"source" : "scripts/sys_schema"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2,
+				3
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "cmake-build-mysql-docker/scripts/sys_schema/CMakeFiles/sql_commands",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-mysql-docker/scripts/sys_schema/CMakeFiles/sql_commands.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-mysql-docker/scripts/sys_schema/sql_commands.h.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-mysql-docker/scripts/sys_schema/ALL_SYS_SCHEMA.sql.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

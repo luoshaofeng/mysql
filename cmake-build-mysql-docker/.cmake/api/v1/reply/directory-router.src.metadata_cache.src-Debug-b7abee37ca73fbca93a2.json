@@ -1,0 +1,72 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"INSTALL",
+			"add_harness_plugin"
+		],
+		"files" : 
+		[
+			"router/src/metadata_cache/src/CMakeLists.txt",
+			"router/cmake/Plugin.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 69,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 79,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 162,
+				"parent" : 2
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Router",
+			"destination" : "lib/mysqlrouter/private",
+			"paths" : 
+			[
+				"library_output_directory/libmysqlrouter_metadata_cache.so.1"
+			],
+			"targetId" : "metadata_cache::@a6e54a9991d6732a3c5c",
+			"targetIndex" : 502,
+			"targetInstallNamelink" : "skip",
+			"type" : "target"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Router",
+			"destination" : "lib/mysqlrouter",
+			"paths" : 
+			[
+				"plugin_output_directory/metadata_cache.so"
+			],
+			"targetId" : "metadata_cache_plugin::@a6e54a9991d6732a3c5c",
+			"targetIndex" : 504,
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "router/src/metadata_cache/src",
+		"source" : "router/src/metadata_cache/src"
+	}
+}

@@ -1,0 +1,121 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"INSTALL",
+			"INSTALL_SCRIPT"
+		],
+		"files" : 
+		[
+			"support-files/CMakeLists.txt",
+			"cmake/install_macros.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 28,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 52,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 81,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 57,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 81,
+				"parent" : 4
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 63,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 80,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Development",
+			"destination" : "share/aclocal",
+			"paths" : 
+			[
+				"support-files/mysql.m4"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Server_Scripts",
+			"destination" : "support-files",
+			"paths" : 
+			[
+				"cmake-build-mysql-docker/support-files/mysql.server"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 5,
+			"component" : "Server_Scripts",
+			"destination" : "support-files",
+			"paths" : 
+			[
+				"support-files/mysqld_multi.server"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 6,
+			"component" : "Server_Scripts",
+			"destination" : "support-files",
+			"paths" : 
+			[
+				"cmake-build-mysql-docker/support-files/mysql-log-rotate"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 7,
+			"component" : "Router",
+			"destination" : ".",
+			"paths" : 
+			[
+				"cmake-build-mysql-docker/support-files/mysqlrouter-log-rotate"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "support-files",
+		"source" : "support-files"
+	}
+}

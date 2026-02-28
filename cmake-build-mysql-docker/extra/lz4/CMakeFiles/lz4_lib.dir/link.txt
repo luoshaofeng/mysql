@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../archive_output_directory/liblz4_lib.a CMakeFiles/lz4_lib.dir/lz4-1.10.0/lib/lz4.c.o CMakeFiles/lz4_lib.dir/lz4-1.10.0/lib/lz4frame.c.o CMakeFiles/lz4_lib.dir/lz4-1.10.0/lib/lz4hc.c.o CMakeFiles/lz4_lib.dir/lz4-1.10.0/lib/xxhash.c.o
+/usr/bin/ranlib ../../archive_output_directory/liblz4_lib.a

@@ -1,0 +1,72 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"INSTALL",
+			"ADD_HARNESS_PLUGIN"
+		],
+		"files" : 
+		[
+			"router/src/connection_pool/src/CMakeLists.txt",
+			"router/cmake/Plugin.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 60,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 69,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 162,
+				"parent" : 2
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Router",
+			"destination" : "lib/mysqlrouter/private",
+			"paths" : 
+			[
+				"library_output_directory/libmysqlrouter_connection_pool.so.1"
+			],
+			"targetId" : "connection_pool::@2e4889409431ba051e61",
+			"targetIndex" : 248,
+			"targetInstallNamelink" : "skip",
+			"type" : "target"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Router",
+			"destination" : "lib/mysqlrouter",
+			"paths" : 
+			[
+				"plugin_output_directory/connection_pool.so"
+			],
+			"targetId" : "connection_pool_plugin::@2e4889409431ba051e61",
+			"targetIndex" : 249,
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "router/src/connection_pool/src",
+		"source" : "router/src/connection_pool/src"
+	}
+}

@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../../archive_output_directory/librouter_mysqlxmessages_exports.a CMakeFiles/router_mysqlxmessages_exports_objlib.dir/mysqlxmessages_exports.cc.o
+/usr/bin/ranlib ../../../../archive_output_directory/librouter_mysqlxmessages_exports.a

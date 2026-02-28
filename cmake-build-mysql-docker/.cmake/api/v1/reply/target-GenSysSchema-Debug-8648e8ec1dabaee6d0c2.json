@@ -1,0 +1,80 @@
+{
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"ADD_CUSTOM_TARGET",
+			"MY_ADD_CUSTOM_TARGET"
+		],
+		"files" : 
+		[
+			"cmake/add_custom_target.cmake",
+			"scripts/sys_schema/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 231,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 62,
+				"parent" : 1
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"id" : "sql_commands::@7ed8a01c35c996bc5d71"
+		}
+	],
+	"id" : "GenSysSchema::@7ed8a01c35c996bc5d71",
+	"name" : "GenSysSchema",
+	"paths" : 
+	{
+		"build" : "scripts/sys_schema",
+		"source" : "scripts/sys_schema"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "cmake-build-mysql-docker/scripts/sys_schema/CMakeFiles/GenSysSchema",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-mysql-docker/scripts/sys_schema/CMakeFiles/GenSysSchema.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

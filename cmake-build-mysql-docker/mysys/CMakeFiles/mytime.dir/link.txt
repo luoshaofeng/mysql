@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../archive_output_directory/libmytime.a CMakeFiles/mytime_objlib.dir/my_time.cc.o CMakeFiles/mytime_objlib.dir/my_systime.cc.o
+/usr/bin/ranlib ../archive_output_directory/libmytime.a

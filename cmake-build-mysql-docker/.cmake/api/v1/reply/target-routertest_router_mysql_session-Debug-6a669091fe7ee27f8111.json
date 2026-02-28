@@ -1,0 +1,669 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "runtime_output_directory/routertest_router_mysql_session"
+		}
+	],
+	"backtrace" : 4,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"ADD_EXECUTABLE",
+			"MYSQL_ADD_EXECUTABLE",
+			"_ADD_TEST_FILE",
+			"ADD_HARNESS_TEST_FILE",
+			"TARGET_LINK_LIBRARIES",
+			"ADD_DEFINITIONS",
+			"INCLUDE",
+			"MYSQL_CHECK_SSL",
+			"SET_TARGET_PROPERTIES",
+			"INCLUDE_DIRECTORIES",
+			"TARGET_INCLUDE_DIRECTORIES",
+			"MYSQL_USE_BUNDLED_PROTOBUF",
+			"MYSQL_CHECK_PROTOBUF",
+			"MYSQL_USE_BUNDLED_EDITLINE",
+			"MYSQL_CHECK_EDITLINE"
+		],
+		"files" : 
+		[
+			"cmake/mysql_add_executable.cmake",
+			"router/cmake/testing.cmake",
+			"router/src/router/tests/CMakeLists.txt",
+			"cmake/boost.cmake",
+			"CMakeLists.txt",
+			"cmake/ssl.cmake",
+			"cmake/os/Linux.cmake",
+			"router/cmake/configure.cmake",
+			"router/CMakeLists.txt",
+			"cmake/protobuf.cmake",
+			"cmake/readline.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 129,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 68,
+				"parent" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 120,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 128,
+				"parent" : 3
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 2
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 2
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 131,
+				"parent" : 2
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 131,
+				"parent" : 2
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 131,
+				"parent" : 2
+			},
+			{
+				"file" : 4
+			},
+			{
+				"command" : 6,
+				"file" : 4,
+				"line" : 1608,
+				"parent" : 10
+			},
+			{
+				"file" : 3,
+				"parent" : 11
+			},
+			{
+				"command" : 5,
+				"file" : 3,
+				"line" : 335,
+				"parent" : 12
+			},
+			{
+				"command" : 7,
+				"file" : 4,
+				"line" : 1848,
+				"parent" : 10
+			},
+			{
+				"command" : 5,
+				"file" : 5,
+				"line" : 411,
+				"parent" : 14
+			},
+			{
+				"command" : 5,
+				"file" : 4,
+				"line" : 1634,
+				"parent" : 10
+			},
+			{
+				"command" : 8,
+				"file" : 2,
+				"line" : 140,
+				"parent" : 0
+			},
+			{
+				"command" : 6,
+				"file" : 4,
+				"line" : 744,
+				"parent" : 10
+			},
+			{
+				"file" : 6,
+				"parent" : 18
+			},
+			{
+				"command" : 5,
+				"file" : 6,
+				"line" : 93,
+				"parent" : 19
+			},
+			{
+				"command" : 5,
+				"file" : 6,
+				"line" : 90,
+				"parent" : 19
+			},
+			{
+				"command" : 5,
+				"file" : 4,
+				"line" : 1633,
+				"parent" : 10
+			},
+			{
+				"command" : 5,
+				"file" : 4,
+				"line" : 1632,
+				"parent" : 10
+			},
+			{
+				"command" : 5,
+				"file" : 4,
+				"line" : 1631,
+				"parent" : 10
+			},
+			{
+				"command" : 9,
+				"file" : 4,
+				"line" : 1650,
+				"parent" : 10
+			},
+			{
+				"file" : 8
+			},
+			{
+				"command" : 6,
+				"file" : 8,
+				"line" : 105,
+				"parent" : 26
+			},
+			{
+				"file" : 7,
+				"parent" : 27
+			},
+			{
+				"command" : 9,
+				"file" : 7,
+				"line" : 27,
+				"parent" : 28
+			},
+			{
+				"command" : 9,
+				"file" : 8,
+				"line" : 110,
+				"parent" : 26
+			},
+			{
+				"command" : 10,
+				"file" : 1,
+				"line" : 140,
+				"parent" : 2
+			},
+			{
+				"command" : 10,
+				"file" : 1,
+				"line" : 140,
+				"parent" : 2
+			},
+			{
+				"command" : 12,
+				"file" : 4,
+				"line" : 1981,
+				"parent" : 10
+			},
+			{
+				"command" : 11,
+				"file" : 9,
+				"line" : 122,
+				"parent" : 33
+			},
+			{
+				"command" : 9,
+				"file" : 9,
+				"line" : 112,
+				"parent" : 34
+			},
+			{
+				"command" : 14,
+				"file" : 4,
+				"line" : 1952,
+				"parent" : 10
+			},
+			{
+				"command" : 13,
+				"file" : 10,
+				"line" : 221,
+				"parent" : 36
+			},
+			{
+				"command" : 9,
+				"file" : 10,
+				"line" : 125,
+				"parent" : 37
+			},
+			{
+				"command" : 10,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 2
+			},
+			{
+				"command" : 10,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 2
+			},
+			{
+				"command" : 10,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 2
+			},
+			{
+				"command" : 10,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 2
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-std=c++17 -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -march=armv8-a+crc -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Woverloaded-virtual -Wcast-qual -Wimplicit-fallthrough=5 -Wstringop-truncation  -Wmissing-include-dirs -Wextra-semi -Wlogical-op -Werror -DSAFE_MUTEX -DENABLED_DEBUG_SYNC -g -fPIE"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 13,
+					"define" : "BOOST_NO_CXX98_FUNCTION_BASE"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "HAVE_EXT_BACKTRACE"
+				},
+				{
+					"backtrace" : 15,
+					"define" : "HAVE_TLSv13"
+				},
+				{
+					"backtrace" : 16,
+					"define" : "LZ4_DISABLE_DEPRECATE_WARNINGS"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "RAPIDJSON_HAS_STDSTRING=1"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "RAPIDJSON_NO_SIZETYPEDEFINE"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "RAPIDJSON_SCHEMA_USE_INTERNALREGEX=0"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "RAPIDJSON_SCHEMA_USE_STDREGEX=1"
+				},
+				{
+					"backtrace" : 17,
+					"define" : "ROUTER_LIB_STATIC_DEFINE=1"
+				},
+				{
+					"backtrace" : 20,
+					"define" : "_FILE_OFFSET_BITS=64"
+				},
+				{
+					"backtrace" : 21,
+					"define" : "_GNU_SOURCE"
+				},
+				{
+					"backtrace" : 22,
+					"define" : "_USE_MATH_DEFINES"
+				},
+				{
+					"backtrace" : 23,
+					"define" : "__STDC_FORMAT_MACROS"
+				},
+				{
+					"backtrace" : 24,
+					"define" : "__STDC_LIMIT_MACROS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 25,
+					"path" : "/tmp/mysql/cmake-build-mysql-docker"
+				},
+				{
+					"backtrace" : 25,
+					"path" : "/tmp/mysql/cmake-build-mysql-docker/include"
+				},
+				{
+					"backtrace" : 25,
+					"path" : "/tmp/mysql"
+				},
+				{
+					"backtrace" : 25,
+					"path" : "/tmp/mysql/include"
+				},
+				{
+					"backtrace" : 29,
+					"path" : "/tmp/mysql/cmake-build-mysql-docker/router"
+				},
+				{
+					"backtrace" : 30,
+					"path" : "/tmp/mysql/cmake-build-mysql-docker/router/include"
+				},
+				{
+					"backtrace" : 31,
+					"path" : "/tmp/mysql/router/src/router/src/../include"
+				},
+				{
+					"backtrace" : 31,
+					"path" : "/tmp/mysql/cmake-build-mysql-docker/router/src/router/src/../include"
+				},
+				{
+					"backtrace" : 31,
+					"path" : "/tmp/mysql/router/src/harness/src/../include"
+				},
+				{
+					"backtrace" : 31,
+					"path" : "/tmp/mysql/cmake-build-mysql-docker/router/src/harness/src/src_SHARED"
+				},
+				{
+					"backtrace" : 31,
+					"path" : "/tmp/mysql/extra/libbacktrace/include"
+				},
+				{
+					"backtrace" : 31,
+					"path" : "/tmp/mysql/cmake-build-mysql-docker/router/src/harness/src/../include"
+				},
+				{
+					"backtrace" : 31,
+					"path" : "/tmp/mysql/router/src/io/src/../include"
+				},
+				{
+					"backtrace" : 31,
+					"path" : "/tmp/mysql/cmake-build-mysql-docker/router/src/io/src/../include"
+				},
+				{
+					"backtrace" : 31,
+					"path" : "/tmp/mysql/router/src/harness/include"
+				},
+				{
+					"backtrace" : 32,
+					"path" : "/tmp/mysql/router/src/router/tests/../src"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/tmp/mysql/router/src/harness/shared/include"
+				},
+				{
+					"backtrace" : 35,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/protobuf/protobuf-24.4/src"
+				},
+				{
+					"backtrace" : 38,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/libedit/libedit-20240808-3.1/src/editline"
+				},
+				{
+					"backtrace" : 39,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/googletest/googletest-1.17.0/googlemock"
+				},
+				{
+					"backtrace" : 40,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/googletest/googletest-1.17.0/googlemock/include"
+				},
+				{
+					"backtrace" : 41,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/googletest/googletest-1.17.0/googletest"
+				},
+				{
+					"backtrace" : 42,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/googletest/googletest-1.17.0/googletest/include"
+				},
+				{
+					"backtrace" : 31,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/zlib/zlib-1.3.1"
+				},
+				{
+					"backtrace" : 31,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/cmake-build-mysql-docker/extra/zlib/zlib-1.3.1"
+				},
+				{
+					"backtrace" : 31,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/zstd/zstd-1.5.7/lib"
+				},
+				{
+					"backtrace" : 31,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/rapidjson/include"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 8,
+			"id" : "gmock::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 9,
+			"id" : "gtest::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "backtrace::@72fe72e27e394ec41d76"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "zlib::@132acbef7a17cf08553b"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "zstd::@4852f3e90c5b3a8fc4e8"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "strings::@89d0016ae4e25e06fd39"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "mytime::@64e0e5023d60a36b555e"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "mysqlclient::@804198ce8b9bd67f3a0d"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "harness-library::@27553637d7cd8e81ae3b"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "test-helpers::@480e77c69a6b1b1baeb4"
+		}
+	],
+	"id" : "routertest_router_mysql_session::@8bb2e5c9a46d2dc27447",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-std=c++17 -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -march=armv8-a+crc -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Woverloaded-virtual -Wcast-qual -Wimplicit-fallthrough=5 -Wstringop-truncation  -Wmissing-include-dirs -Wextra-semi -Wlogical-op -Werror -DSAFE_MUTEX -DENABLED_DEBUG_SYNC -g",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-Wl,--build-id=sha1",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/tmp/mysql/cmake-build-mysql-docker/library_output_directory",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "../../harness/shared/libtest-helpers.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "../../../../archive_output_directory/libmysqlclient.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 7,
+				"fragment" : "../../../../library_output_directory/libmysqlharness.so.1",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "../../../../libgmock.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 9,
+				"fragment" : "../../../../libgtest.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-ldl",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../../../archive_output_directory/libmysys.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../../../archive_output_directory/libstrings.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../../../archive_output_directory/libmysys.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../../../archive_output_directory/libstrings.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../../../archive_output_directory/libmytime.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../../../archive_output_directory/libzlib.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../../../archive_output_directory/libzstd.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../../../archive_output_directory/libbacktrace.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/lib/aarch64-linux-gnu/libresolv.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lm",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/lib/aarch64-linux-gnu/libssl.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/lib/aarch64-linux-gnu/libcrypto.so",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "routertest_router_mysql_session",
+	"nameOnDisk" : "routertest_router_mysql_session",
+	"paths" : 
+	{
+		"build" : "router/src/router/tests",
+		"source" : "router/src/router/tests"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "router/src/router/tests/test_mysql_session.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "router/src/router/src/common/mysql_session.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "router/src/router/src/common/log_filter.cc",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

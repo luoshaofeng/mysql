@@ -1,0 +1,130 @@
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/usr/bin/make -DCMAKE_C_COMPILER=/usr/bin/cc -DCMAKE_CXX_COMPILER=/usr/bin/c++ -DWITH_BOOST=/opt/boost -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" -S /tmp/mysql -B /tmp/mysql/cmake-build-mysql-docker
+-- Running cmake version 3.22.1
+-- Found Git: /usr/bin/git (found version "2.34.1") 
+-- CMAKE_MODULE_PATH is /tmp/mysql/cmake
+-- MySQL 8.0.45
+-- Source directory /tmp/mysql
+-- Binary directory /tmp/mysql/cmake-build-mysql-docker
+-- CMAKE_GENERATOR: Unix Makefiles
+-- SIZEOF_VOIDP 8
+-- Found verified platform LINUX for libbacktrace
+-- Packaging as: mysql-8.0.45-Linux-aarch64
+-- Cannot use lld on this platform
+-- Local boost dir /opt/boost/boost_1_77_0
+-- Found /opt/boost/boost_1_77_0/boost/version.hpp 
+-- BOOST_VERSION_NUMBER is #define BOOST_VERSION 107700
+-- BOOST_INCLUDE_DIR /opt/boost/boost_1_77_0
+-- NUMA library missing or required version not available
+-- ARMv8 crc32 intrinsic support available
+-- Using libbacktrace on LINUX
+-- ZLIB_VERSION (bundled) is 1.3.1
+-- ZLIB_INCLUDE_DIR /tmp/mysql/extra/zlib/zlib-1.3.1
+-- ZSTD_VERSION (bundled) is 1.5.7
+-- ZSTD_INCLUDE_DIR /tmp/mysql/extra/zstd/zstd-1.5.7/lib
+-- ZSTD_LEGACY_SUPPORT not defined!
+-- OPENSSL_VERSION (system) is 3.0.2
+-- The openssl command does not support zlib
+-- OPENSSL_INCLUDE_DIR = /usr/include
+-- OPENSSL_LIBRARY = /usr/lib/aarch64-linux-gnu/libssl.so
+-- CRYPTO_LIBRARY = /usr/lib/aarch64-linux-gnu/libcrypto.so
+-- OPENSSL_LIB_DIR = 
+-- OPENSSL_VERSION_MAJOR = 3
+-- OPENSSL_VERSION_MINOR = 0
+-- OPENSSL_FIX_VERSION = 2
+-- SSL_LIBRARIES = /usr/lib/aarch64-linux-gnu/libssl.so;/usr/lib/aarch64-linux-gnu/libcrypto.so
+-- KERBEROS path is none, disabling kerberos support.
+-- HAVE_KRB5_KRB5_H  
+-- KERBEROS_LIBRARIES  
+-- AWK_EXECUTABLE is /usr/bin/awk
+CMake Warning at cmake/sasl.cmake:276 (MESSAGE):
+  Could not find SASL
+Call Stack (most recent call first):
+  CMakeLists.txt:1868 (MYSQL_CHECK_SASL)
+
+
+CMake Warning at cmake/ldap.cmake:159 (MESSAGE):
+  Could not find LDAP
+Call Stack (most recent call first):
+  CMakeLists.txt:1872 (MYSQL_CHECK_LDAP)
+
+
+-- Found Git: /usr/bin/git  
+-- LIBEVENT_VERSION (bundled) 2.1.11
+-- LIBEVENT_INCLUDE_DIRS /tmp/mysql/extra/libevent/libevent-2.1.11-stable/include;/tmp/mysql/cmake-build-mysql-docker/extra/libevent/libevent-2.1.11-stable/include
+-- LIBEVENT_LIBRARIES event_core;event_extra;event_openssl;event_pthreads
+-- LZ4_VERSION (bundled) is 1.10.0
+-- LZ4_INCLUDE_DIR /tmp/mysql/extra/lz4/lz4-1.10.0/lib
+-- ICU_VERSION (bundled) is 77
+-- ICU_INCLUDE_DIRS /tmp/mysql/extra/icu/icu-release-77-1/source/common;/tmp/mysql/extra/icu/icu-release-77-1/source/stubdata;/tmp/mysql/extra/icu/icu-release-77-1/source/i18n
+-- ICU_LIBRARIES icui18n;icuuc;icustubdata
+-- PROTOBUF_VERSION (bundled) is 4.24.4
+-- PROTOBUF_INCLUDE_DIR /tmp/mysql/extra/protobuf/protobuf-24.4/src
+-- PROTOBUF_PROTOC_EXECUTABLE protoc
+-- WITH_CURL=none, not using any curl library.
+-- RAPIDJSON_INCLUDE_DIR /tmp/mysql/extra/rapidjson/include
+-- RAPIDJSON_MAJOR_VERSION is 1
+-- RAPIDJSON_MINOR_VERSION is 1
+-- FIDO_VERSION (bundled) is 1.15.0
+-- CMAKE_MODULE_LINKER_FLAGS_DEBUG  -Wl,-rpath,'$ORIGIN/../../private'
+-- CMAKE_SHARED_LINKER_FLAGS_DEBUG  -Wl,-rpath,'$ORIGIN/../../private'
+-- mysys_objlib depends on ext::zlib
+-- mysys_objlib depends on ext::zstd
+CMake Warning at cmake/fido2.cmake:70 (MESSAGE):
+  Cannot find development libraries.  You need to install the required
+  packages:
+
+    Debian/Ubuntu:              apt install libudev-dev
+    RedHat/Fedora/Oracle Linux: yum install libudev-devel
+    SuSE:                       zypper install libudev-devel
+
+Call Stack (most recent call first):
+  CMakeLists.txt:2107 (WARN_MISSING_SYSTEM_UDEV)
+
+
+-- clientlib_objlib depends on ext::zlib
+-- Found Unix DNS SRV APIs
+-- Skipping the LDAP client authentication plugin
+-- Skipping FIDO client authentication plugin.
+-- Skipping the KERBEROS client authentication plugin.
+-- Skipping the OCI authentication client plugin.
+-- Library mysqlclient depends on OSLIBS m;/usr/lib/aarch64-linux-gnu/libssl.so;/usr/lib/aarch64-linux-gnu/libcrypto.so
+-- MERGE_CONVENIENCE_LIBRARIES TARGET mysqlclient
+-- MERGE_CONVENIENCE_LIBRARIES LIBS clientlib;mytime;strings;vio;mysys;zlib;zstd;backtrace
+-- Building ndbcluster plugin
+-- Excluding Cluster Java components
+-- ndbgeneral_objlib depends on ext::zlib
+-- ndbapi_objlib depends on ext::zlib
+-- LIBS_TO_MERGE mysys;mytime;ndbapi;ndbgeneral;ndblogger;ndbmgmapi;ndbmgmcommon;ndbportlib;ndbsignaldata;ndbtrace;ndbtransport;strings;zlib;backtrace
+-- Library ndbclient_static depends on OSLIBS m;/usr/lib/aarch64-linux-gnu/libssl.so;/usr/lib/aarch64-linux-gnu/libcrypto.so
+-- MERGE_CONVENIENCE_LIBRARIES TARGET ndbclient_static
+-- MERGE_CONVENIENCE_LIBRARIES LIBS mysys;mytime;ndbapi;ndbgeneral;ndblogger;ndbmgmapi;ndbmgmcommon;ndbportlib;ndbsignaldata;ndbtrace;ndbtransport;strings;zlib;backtrace
+-- RPC_INCLUDE_DIRS /usr/include/tirpc
+-- MYSQLX - Text log of protobuf messages enabled
+-- json_client_library_objlib depends on ext::zlib
+-- Library json_binlog_static depends on OSLIBS m;/usr/lib/aarch64-linux-gnu/libssl.so;/usr/lib/aarch64-linux-gnu/libcrypto.so
+-- MERGE_CONVENIENCE_LIBRARIES TARGET json_binlog_static
+-- MERGE_CONVENIENCE_LIBRARIES LIBS json_client_library;mysys;mytime;strings
+-- LINK_FLAGS for mysqld  -Wl,--build-id=sha1 -Wl,-rpath,'$ORIGIN/../lib/private'
+-- BISON outputs /tmp/mysql/cmake-build-mysql-docker/sql/sql_yacc.cc;/tmp/mysql/cmake-build-mysql-docker/sql/sql_yacc.h
+-- BISON outputs /tmp/mysql/cmake-build-mysql-docker/sql/sql_hints.yy.cc;/tmp/mysql/cmake-build-mysql-docker/sql/sql_hints.yy.h
+-- CONFIG_CLIENT_LIBS -lssl -lcrypto -lresolv -lm
+-- CONFIG_LIBS_PRIVATE  -lresolv -lm
+-- INSTALL mysqlclient.pc lib/pkgconfig
+-- MySQL 8.0.45
+-- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
+-- CMAKE_BUILD_TYPE: Debug
+-- COMPILE_DEFINITIONS: _GNU_SOURCE;_FILE_OFFSET_BITS=64;BOOST_NO_CXX98_FUNCTION_BASE;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;_USE_MATH_DEFINES;LZ4_DISABLE_DEPRECATE_WARNINGS;HAVE_TLSv13
+-- CMAKE_C_FLAGS: -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Wwrite-strings -Wjump-misses-init -Wstringop-truncation -Wmissing-include-dirs -Werror
+-- CMAKE_CXX_FLAGS: -std=c++17 -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -march=armv8-a+crc -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Woverloaded-virtual -Wcast-qual -Wimplicit-fallthrough=5 -Wstringop-truncation -Wsuggest-override -Wmissing-include-dirs -Wextra-semi -Wlogical-op -Werror
+-- CMAKE_CXX_FLAGS_DEBUG: -DSAFE_MUTEX -DENABLED_DEBUG_SYNC -g
+-- CMAKE_CXX_FLAGS_RELWITHDEBINFO: -ffunction-sections -fdata-sections -O2 -g -DNDEBUG -g1
+-- CMAKE_CXX_FLAGS_RELEASE: -ffunction-sections -fdata-sections -O3 -DNDEBUG
+-- CMAKE_CXX_FLAGS_MINSIZEREL: -ffunction-sections -fdata-sections -Os -DNDEBUG
+-- CMAKE_C_LINK_FLAGS: 
+-- CMAKE_CXX_LINK_FLAGS: 
+-- CMAKE_EXE_LINKER_FLAGS 
+-- CMAKE_MODULE_LINKER_FLAGS 
+-- CMAKE_SHARED_LINKER_FLAGS 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /tmp/mysql/cmake-build-mysql-docker

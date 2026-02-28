@@ -1,0 +1,107 @@
+{
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"ADD_CUSTOM_TARGET",
+			"ADD_DEPENDENCIES"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt",
+			"plugin/group_replication/libmysqlgcs/CMakeLists.txt",
+			"sql/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 2229,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 2230,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 245,
+				"parent" : 3
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 2231,
+				"parent" : 0
+			},
+			{
+				"file" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 1401,
+				"parent" : 6
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "protobuf_generated_all::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "xcom_rpcgen_headers::@0943ec7f8775def64fa6"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "GenError::@d3b0ab015cfc9b043577"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "GenServerSource::@e985624cb5cf1aba6ab1"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "GenDigestServerSource::@e985624cb5cf1aba6ab1"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "GenKeywordList::@e985624cb5cf1aba6ab1"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "GenFixPrivs::@de1a740d5dc98ffd5d0e"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "GenBootstrapPriv::@de1a740d5dc98ffd5d0e"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "GenSysSchema::@7ed8a01c35c996bc5d71"
+		}
+	],
+	"id" : "clang_tidy_prerequisites::@6890427a1f51a3e7e1df",
+	"name" : "clang_tidy_prerequisites",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

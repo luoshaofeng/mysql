@@ -1,0 +1,349 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "plugin_output_directory/component_test_reference_cache.so"
+		}
+	],
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"ADD_LIBRARY",
+			"MYSQL_ADD_COMPONENT",
+			"ADD_DEPENDENCIES",
+			"ADD_COMPILE_OPTIONS",
+			"ADD_WSHADOW_WARNING",
+			"TARGET_COMPILE_OPTIONS",
+			"REMOVE_DEFINITIONS",
+			"TARGET_COMPILE_DEFINITIONS",
+			"INCLUDE_DIRECTORIES",
+			"MYSQL_USE_BUNDLED_PROTOBUF",
+			"MYSQL_CHECK_PROTOBUF",
+			"MYSQL_USE_BUNDLED_EDITLINE",
+			"MYSQL_CHECK_EDITLINE"
+		],
+		"files" : 
+		[
+			"cmake/component.cmake",
+			"unittest/gunit/components/mysql_server/CMakeLists.txt",
+			"cmake/maintainer.cmake",
+			"unittest/CMakeLists.txt",
+			"CMakeLists.txt",
+			"cmake/protobuf.cmake",
+			"cmake/readline.cmake",
+			"unittest/gunit/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 90,
+				"parent" : 1
+			},
+			{
+				"file" : 3
+			},
+			{
+				"command" : 4,
+				"file" : 3,
+				"line" : 24,
+				"parent" : 4
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 204,
+				"parent" : 5
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 116,
+				"parent" : 1
+			},
+			{
+				"command" : 6,
+				"file" : 1,
+				"line" : 28,
+				"parent" : 0
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 79,
+				"parent" : 1
+			},
+			{
+				"file" : 4
+			},
+			{
+				"command" : 8,
+				"file" : 4,
+				"line" : 1650,
+				"parent" : 10
+			},
+			{
+				"command" : 8,
+				"file" : 1,
+				"line" : 24,
+				"parent" : 0
+			},
+			{
+				"command" : 10,
+				"file" : 4,
+				"line" : 1981,
+				"parent" : 10
+			},
+			{
+				"command" : 9,
+				"file" : 5,
+				"line" : 122,
+				"parent" : 13
+			},
+			{
+				"command" : 8,
+				"file" : 5,
+				"line" : 112,
+				"parent" : 14
+			},
+			{
+				"command" : 12,
+				"file" : 4,
+				"line" : 1952,
+				"parent" : 10
+			},
+			{
+				"command" : 11,
+				"file" : 6,
+				"line" : 221,
+				"parent" : 16
+			},
+			{
+				"command" : 8,
+				"file" : 6,
+				"line" : 125,
+				"parent" : 17
+			},
+			{
+				"file" : 7
+			},
+			{
+				"command" : 8,
+				"file" : 7,
+				"line" : 39,
+				"parent" : 19
+			},
+			{
+				"command" : 8,
+				"file" : 7,
+				"line" : 41,
+				"parent" : 19
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-std=c++17 -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -march=armv8-a+crc -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Woverloaded-virtual -Wcast-qual -Wimplicit-fallthrough=5 -Wstringop-truncation  -Wmissing-include-dirs -Wextra-semi -Wlogical-op -Werror -DSAFE_MUTEX -DENABLED_DEBUG_SYNC -g -fPIC"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "-Wshadow=local"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-fvisibility=hidden"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 8,
+					"define" : "BOOST_NO_CXX98_FUNCTION_BASE"
+				},
+				{
+					"backtrace" : 8,
+					"define" : "DATA_DIR=\"/tmp/mysql/cmake-build-mysql-docker/unittest/gunit\""
+				},
+				{
+					"backtrace" : 8,
+					"define" : "ERRMSG_DIR=\"/tmp/mysql/cmake-build-mysql-docker/share\""
+				},
+				{
+					"backtrace" : 8,
+					"define" : "EXTRA_CODE_FOR_UNIT_TESTING"
+				},
+				{
+					"backtrace" : 8,
+					"define" : "HAVE_TLSv13"
+				},
+				{
+					"backtrace" : 8,
+					"define" : "LZ4_DISABLE_DEPRECATE_WARNINGS"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "MYSQL_COMPONENT"
+				},
+				{
+					"backtrace" : 8,
+					"define" : "_FILE_OFFSET_BITS=64"
+				},
+				{
+					"backtrace" : 8,
+					"define" : "_GNU_SOURCE"
+				},
+				{
+					"backtrace" : 8,
+					"define" : "_USE_MATH_DEFINES"
+				},
+				{
+					"backtrace" : 8,
+					"define" : "__STDC_FORMAT_MACROS"
+				},
+				{
+					"backtrace" : 8,
+					"define" : "__STDC_LIMIT_MACROS"
+				},
+				{
+					"define" : "component_test_reference_cache_EXPORTS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 11,
+					"path" : "/tmp/mysql/cmake-build-mysql-docker"
+				},
+				{
+					"backtrace" : 11,
+					"path" : "/tmp/mysql/cmake-build-mysql-docker/include"
+				},
+				{
+					"backtrace" : 11,
+					"path" : "/tmp/mysql"
+				},
+				{
+					"backtrace" : 11,
+					"path" : "/tmp/mysql/include"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "/tmp/mysql/components/example"
+				},
+				{
+					"backtrace" : 15,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/protobuf/protobuf-24.4/src"
+				},
+				{
+					"backtrace" : 18,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/libedit/libedit-20240808-3.1/src/editline"
+				},
+				{
+					"backtrace" : 20,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/include/boost_1_77_0/patches"
+				},
+				{
+					"backtrace" : 20,
+					"isSystem" : true,
+					"path" : "/opt/boost/boost_1_77_0"
+				},
+				{
+					"backtrace" : 21,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/googletest/googletest-1.17.0/googlemock"
+				},
+				{
+					"backtrace" : 21,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/googletest/googletest-1.17.0/googlemock/include"
+				},
+				{
+					"backtrace" : 21,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/googletest/googletest-1.17.0/googletest"
+				},
+				{
+					"backtrace" : 21,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/googletest/googletest-1.17.0/googletest/include"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "GenError::@d3b0ab015cfc9b043577"
+		}
+	],
+	"id" : "component_test_reference_cache::@9f50cc37595f4e609916",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-Wl,-rpath,'$ORIGIN/../../private'",
+				"role" : "flags"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "component_test_reference_cache",
+	"nameOnDisk" : "component_test_reference_cache.so",
+	"paths" : 
+	{
+		"build" : "unittest/gunit/components/mysql_server",
+		"source" : "unittest/gunit/components/mysql_server"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "unittest/gunit/components/mysql_server/test_reference_cache.cc",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "MODULE_LIBRARY"
+}

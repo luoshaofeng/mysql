@@ -1,0 +1,838 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "storage/ndb/src/common/util/CMakeFiles/ndbgeneral_objlib.dir/BaseString.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/util/CMakeFiles/ndbgeneral_objlib.dir/Bitmask.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/util/CMakeFiles/ndbgeneral_objlib.dir/CharsetMap.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/util/CMakeFiles/ndbgeneral_objlib.dir/CharsetMapImpl.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/util/CMakeFiles/ndbgeneral_objlib.dir/Checksum.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/util/CMakeFiles/ndbgeneral_objlib.dir/ConfigValues.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/util/CMakeFiles/ndbgeneral_objlib.dir/File.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/util/CMakeFiles/ndbgeneral_objlib.dir/InputStream.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/util/CMakeFiles/ndbgeneral_objlib.dir/LogBuffer.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/util/CMakeFiles/ndbgeneral_objlib.dir/NdbOut.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/util/CMakeFiles/ndbgeneral_objlib.dir/NdbPack.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/util/CMakeFiles/ndbgeneral_objlib.dir/NdbSocket.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/util/CMakeFiles/ndbgeneral_objlib.dir/NdbSqlUtil.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/util/CMakeFiles/ndbgeneral_objlib.dir/ndb_az31.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/util/CMakeFiles/ndbgeneral_objlib.dir/ndb_ndbxfrm1.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/util/CMakeFiles/ndbgeneral_objlib.dir/ndb_openssl3_compat.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/util/CMakeFiles/ndbgeneral_objlib.dir/ndb_openssl_evp.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/util/CMakeFiles/ndbgeneral_objlib.dir/ndb_zlib.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/util/CMakeFiles/ndbgeneral_objlib.dir/ndbxfrm_file.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/util/CMakeFiles/ndbgeneral_objlib.dir/OutputStream.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/util/CMakeFiles/ndbgeneral_objlib.dir/OwnProcessInfo.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/util/CMakeFiles/ndbgeneral_objlib.dir/Parser.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/util/CMakeFiles/ndbgeneral_objlib.dir/ProcessInfo.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/util/CMakeFiles/ndbgeneral_objlib.dir/Properties.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/util/CMakeFiles/ndbgeneral_objlib.dir/SimpleProperties.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/util/CMakeFiles/ndbgeneral_objlib.dir/SocketAuthenticator.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/util/CMakeFiles/ndbgeneral_objlib.dir/SocketClient.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/util/CMakeFiles/ndbgeneral_objlib.dir/SocketServer.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/util/CMakeFiles/ndbgeneral_objlib.dir/Vector.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/util/CMakeFiles/ndbgeneral_objlib.dir/basename.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/util/CMakeFiles/ndbgeneral_objlib.dir/cstrbuf.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/util/CMakeFiles/ndbgeneral_objlib.dir/decimal_utils.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/util/CMakeFiles/ndbgeneral_objlib.dir/md5_hash.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/util/CMakeFiles/ndbgeneral_objlib.dir/ndb_init.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/util/CMakeFiles/ndbgeneral_objlib.dir/ndb_opts.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/util/CMakeFiles/ndbgeneral_objlib.dir/ndb_rand.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/util/CMakeFiles/ndbgeneral_objlib.dir/parse_mask.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/util/CMakeFiles/ndbgeneral_objlib.dir/random.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/util/CMakeFiles/ndbgeneral_objlib.dir/require.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/util/CMakeFiles/ndbgeneral_objlib.dir/socket_io.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/util/CMakeFiles/ndbgeneral_objlib.dir/version.cpp.o"
+		}
+	],
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"ADD_LIBRARY",
+			"ADD_CONVENIENCE_LIBRARY",
+			"ADD_DEFINITIONS",
+			"INCLUDE",
+			"MYSQL_CHECK_SSL",
+			"INCLUDE_DIRECTORIES",
+			"MYSQL_USE_BUNDLED_PROTOBUF",
+			"MYSQL_CHECK_PROTOBUF",
+			"MYSQL_USE_BUNDLED_EDITLINE",
+			"MYSQL_CHECK_EDITLINE",
+			"TARGET_INCLUDE_DIRECTORIES"
+		],
+		"files" : 
+		[
+			"cmake/libutils.cmake",
+			"storage/ndb/src/common/util/CMakeLists.txt",
+			"cmake/boost.cmake",
+			"CMakeLists.txt",
+			"storage/ndb/ndb_configure.cmake",
+			"storage/ndb/CMakeLists.txt",
+			"cmake/ssl.cmake",
+			"cmake/os/Linux.cmake",
+			"cmake/protobuf.cmake",
+			"cmake/readline.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 35,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 183,
+				"parent" : 1
+			},
+			{
+				"file" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 3,
+				"line" : 1608,
+				"parent" : 3
+			},
+			{
+				"file" : 2,
+				"parent" : 4
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 335,
+				"parent" : 5
+			},
+			{
+				"file" : 5
+			},
+			{
+				"command" : 3,
+				"file" : 5,
+				"line" : 172,
+				"parent" : 7
+			},
+			{
+				"file" : 4,
+				"parent" : 8
+			},
+			{
+				"command" : 2,
+				"file" : 4,
+				"line" : 244,
+				"parent" : 9
+			},
+			{
+				"command" : 4,
+				"file" : 3,
+				"line" : 1848,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 411,
+				"parent" : 11
+			},
+			{
+				"command" : 2,
+				"file" : 3,
+				"line" : 1634,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 34,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 3,
+				"line" : 744,
+				"parent" : 3
+			},
+			{
+				"file" : 7,
+				"parent" : 15
+			},
+			{
+				"command" : 2,
+				"file" : 7,
+				"line" : 93,
+				"parent" : 16
+			},
+			{
+				"command" : 2,
+				"file" : 7,
+				"line" : 90,
+				"parent" : 16
+			},
+			{
+				"command" : 2,
+				"file" : 3,
+				"line" : 1633,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 3,
+				"line" : 1632,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 3,
+				"line" : 1631,
+				"parent" : 3
+			},
+			{
+				"command" : 5,
+				"file" : 3,
+				"line" : 1650,
+				"parent" : 3
+			},
+			{
+				"command" : 5,
+				"file" : 5,
+				"line" : 121,
+				"parent" : 7
+			},
+			{
+				"command" : 5,
+				"file" : 5,
+				"line" : 174,
+				"parent" : 7
+			},
+			{
+				"command" : 5,
+				"file" : 1,
+				"line" : 25,
+				"parent" : 0
+			},
+			{
+				"command" : 7,
+				"file" : 3,
+				"line" : 1981,
+				"parent" : 3
+			},
+			{
+				"command" : 6,
+				"file" : 8,
+				"line" : 122,
+				"parent" : 26
+			},
+			{
+				"command" : 5,
+				"file" : 8,
+				"line" : 112,
+				"parent" : 27
+			},
+			{
+				"command" : 9,
+				"file" : 3,
+				"line" : 1952,
+				"parent" : 3
+			},
+			{
+				"command" : 8,
+				"file" : 9,
+				"line" : 221,
+				"parent" : 29
+			},
+			{
+				"command" : 5,
+				"file" : 9,
+				"line" : 125,
+				"parent" : 30
+			},
+			{
+				"command" : 10,
+				"file" : 0,
+				"line" : 239,
+				"parent" : 1
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-std=c++17 -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -march=armv8-a+crc -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Woverloaded-virtual -Wcast-qual -Wimplicit-fallthrough=5 -Wstringop-truncation -Wsuggest-override -Wmissing-include-dirs -Wextra-semi -Wlogical-op -Werror -fno-strict-aliasing -DSAFE_MUTEX -DENABLED_DEBUG_SYNC -g -DACC_SAFE_QUEUE -DAPI_TRACE -DARRAY_GUARD -DERROR_INSERT -DNDB_DEBUG -DVM_TRACE -fPIC"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 6,
+					"define" : "BOOST_NO_CXX98_FUNCTION_BASE"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "HAVE_NDB_CONFIG_H"
+				},
+				{
+					"backtrace" : 12,
+					"define" : "HAVE_TLSv13"
+				},
+				{
+					"backtrace" : 13,
+					"define" : "LZ4_DISABLE_DEPRECATE_WARNINGS"
+				},
+				{
+					"backtrace" : 14,
+					"define" : "NO_DUMMY_DECL"
+				},
+				{
+					"backtrace" : 17,
+					"define" : "_FILE_OFFSET_BITS=64"
+				},
+				{
+					"backtrace" : 18,
+					"define" : "_GNU_SOURCE"
+				},
+				{
+					"backtrace" : 19,
+					"define" : "_USE_MATH_DEFINES"
+				},
+				{
+					"backtrace" : 20,
+					"define" : "__STDC_FORMAT_MACROS"
+				},
+				{
+					"backtrace" : 21,
+					"define" : "__STDC_LIMIT_MACROS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 22,
+					"path" : "/tmp/mysql/cmake-build-mysql-docker"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/tmp/mysql/cmake-build-mysql-docker/include"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/tmp/mysql"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/tmp/mysql/include"
+				},
+				{
+					"backtrace" : 23,
+					"path" : "/tmp/mysql/storage/ndb/include"
+				},
+				{
+					"backtrace" : 24,
+					"path" : "/tmp/mysql/storage/ndb/include/util"
+				},
+				{
+					"backtrace" : 24,
+					"path" : "/tmp/mysql/storage/ndb/include/portlib"
+				},
+				{
+					"backtrace" : 24,
+					"path" : "/tmp/mysql/storage/ndb/include/debugger"
+				},
+				{
+					"backtrace" : 24,
+					"path" : "/tmp/mysql/storage/ndb/include/transporter"
+				},
+				{
+					"backtrace" : 24,
+					"path" : "/tmp/mysql/storage/ndb/include/kernel"
+				},
+				{
+					"backtrace" : 24,
+					"path" : "/tmp/mysql/storage/ndb/include/mgmapi"
+				},
+				{
+					"backtrace" : 24,
+					"path" : "/tmp/mysql/storage/ndb/include/mgmcommon"
+				},
+				{
+					"backtrace" : 24,
+					"path" : "/tmp/mysql/storage/ndb/include/ndbapi"
+				},
+				{
+					"backtrace" : 24,
+					"path" : "/tmp/mysql/storage/ndb/include/logger"
+				},
+				{
+					"backtrace" : 24,
+					"path" : "/tmp/mysql/cmake-build-mysql-docker/storage/ndb/include"
+				},
+				{
+					"backtrace" : 25,
+					"path" : "/tmp/mysql/storage/ndb/src/common/util"
+				},
+				{
+					"backtrace" : 28,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/protobuf/protobuf-24.4/src"
+				},
+				{
+					"backtrace" : 31,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/libedit/libedit-20240808-3.1/src/editline"
+				},
+				{
+					"backtrace" : 32,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/zlib/zlib-1.3.1"
+				},
+				{
+					"backtrace" : 32,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/cmake-build-mysql-docker/extra/zlib/zlib-1.3.1"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				40
+			]
+		}
+	],
+	"id" : "ndbgeneral_objlib::@5828f8ae88ebb712709f",
+	"name" : "ndbgeneral_objlib",
+	"paths" : 
+	{
+		"build" : "storage/ndb/src/common/util",
+		"source" : "storage/ndb/src/common/util"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				40
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/util/BaseString.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/util/Bitmask.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/util/CharsetMap.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/util/CharsetMapImpl.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/util/Checksum.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/util/ConfigValues.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/util/File.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/util/InputStream.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/util/LogBuffer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/util/NdbOut.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/util/NdbPack.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/util/NdbSocket.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/util/NdbSqlUtil.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/util/ndb_az31.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/util/ndb_ndbxfrm1.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/util/ndb_openssl3_compat.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/util/ndb_openssl_evp.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/util/ndb_zlib.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/util/ndbxfrm_file.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/util/OutputStream.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/util/OwnProcessInfo.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/util/Parser.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/util/ProcessInfo.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/util/Properties.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/util/SimpleProperties.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/util/SocketAuthenticator.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/util/SocketClient.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/util/SocketServer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/util/Vector.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/util/basename.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/util/cstrbuf.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/util/decimal_utils.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/util/md5_hash.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/util/ndb_init.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/util/ndb_opts.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/util/ndb_rand.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/util/parse_mask.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/util/random.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/util/require.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/util/socket_io.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/util/version.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "OBJECT_LIBRARY"
+}

@@ -1,0 +1,1003 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "archive_output_directory/libmysqlpump_lib.a"
+		}
+	],
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"ADD_LIBRARY",
+			"ADD_STATIC_LIBRARY",
+			"TARGET_LINK_LIBRARIES",
+			"ADD_COMPILE_OPTIONS",
+			"ADD_WSHADOW_WARNING",
+			"ADD_DEFINITIONS",
+			"INCLUDE",
+			"MYSQL_CHECK_SSL",
+			"INCLUDE_DIRECTORIES",
+			"MYSQL_USE_BUNDLED_PROTOBUF",
+			"MYSQL_CHECK_PROTOBUF",
+			"MYSQL_USE_BUNDLED_EDITLINE",
+			"MYSQL_CHECK_EDITLINE",
+			"TARGET_SOURCES"
+		],
+		"files" : 
+		[
+			"cmake/libutils.cmake",
+			"client/dump/CMakeLists.txt",
+			"cmake/maintainer.cmake",
+			"client/CMakeLists.txt",
+			"cmake/boost.cmake",
+			"CMakeLists.txt",
+			"cmake/ssl.cmake",
+			"cmake/os/Linux.cmake",
+			"cmake/protobuf.cmake",
+			"cmake/readline.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 109,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 85,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 134,
+				"parent" : 1
+			},
+			{
+				"file" : 3
+			},
+			{
+				"command" : 4,
+				"file" : 3,
+				"line" : 24,
+				"parent" : 4
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 204,
+				"parent" : 5
+			},
+			{
+				"command" : 5,
+				"file" : 1,
+				"line" : 27,
+				"parent" : 0
+			},
+			{
+				"file" : 5
+			},
+			{
+				"command" : 6,
+				"file" : 5,
+				"line" : 1608,
+				"parent" : 8
+			},
+			{
+				"file" : 4,
+				"parent" : 9
+			},
+			{
+				"command" : 5,
+				"file" : 4,
+				"line" : 335,
+				"parent" : 10
+			},
+			{
+				"command" : 7,
+				"file" : 5,
+				"line" : 1848,
+				"parent" : 8
+			},
+			{
+				"command" : 5,
+				"file" : 6,
+				"line" : 411,
+				"parent" : 12
+			},
+			{
+				"command" : 5,
+				"file" : 5,
+				"line" : 1634,
+				"parent" : 8
+			},
+			{
+				"command" : 6,
+				"file" : 5,
+				"line" : 744,
+				"parent" : 8
+			},
+			{
+				"file" : 7,
+				"parent" : 15
+			},
+			{
+				"command" : 5,
+				"file" : 7,
+				"line" : 93,
+				"parent" : 16
+			},
+			{
+				"command" : 5,
+				"file" : 7,
+				"line" : 90,
+				"parent" : 16
+			},
+			{
+				"command" : 5,
+				"file" : 5,
+				"line" : 1633,
+				"parent" : 8
+			},
+			{
+				"command" : 5,
+				"file" : 5,
+				"line" : 1632,
+				"parent" : 8
+			},
+			{
+				"command" : 5,
+				"file" : 5,
+				"line" : 1631,
+				"parent" : 8
+			},
+			{
+				"command" : 8,
+				"file" : 5,
+				"line" : 1650,
+				"parent" : 8
+			},
+			{
+				"command" : 10,
+				"file" : 5,
+				"line" : 1981,
+				"parent" : 8
+			},
+			{
+				"command" : 9,
+				"file" : 8,
+				"line" : 122,
+				"parent" : 23
+			},
+			{
+				"command" : 8,
+				"file" : 8,
+				"line" : 112,
+				"parent" : 24
+			},
+			{
+				"command" : 12,
+				"file" : 5,
+				"line" : 1952,
+				"parent" : 8
+			},
+			{
+				"command" : 11,
+				"file" : 9,
+				"line" : 221,
+				"parent" : 26
+			},
+			{
+				"command" : 8,
+				"file" : 9,
+				"line" : 125,
+				"parent" : 27
+			},
+			{
+				"command" : 8,
+				"file" : 1,
+				"line" : 32,
+				"parent" : 0
+			},
+			{
+				"command" : 13,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 1
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-std=c++17 -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -march=armv8-a+crc -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Woverloaded-virtual -Wcast-qual -Wimplicit-fallthrough=5 -Wstringop-truncation -Wsuggest-override -Wmissing-include-dirs -Wextra-semi -Wlogical-op -Werror -DSAFE_MUTEX -DENABLED_DEBUG_SYNC -g -fPIC"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "-Wshadow=local"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 7,
+					"define" : "BOOST_ALL_NO_LIB"
+				},
+				{
+					"backtrace" : 11,
+					"define" : "BOOST_NO_CXX98_FUNCTION_BASE"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "BOOST_SYSTEM_NO_DEPRECATED"
+				},
+				{
+					"backtrace" : 13,
+					"define" : "HAVE_TLSv13"
+				},
+				{
+					"backtrace" : 14,
+					"define" : "LZ4_DISABLE_DEPRECATE_WARNINGS"
+				},
+				{
+					"backtrace" : 17,
+					"define" : "_FILE_OFFSET_BITS=64"
+				},
+				{
+					"backtrace" : 18,
+					"define" : "_GNU_SOURCE"
+				},
+				{
+					"backtrace" : 19,
+					"define" : "_USE_MATH_DEFINES"
+				},
+				{
+					"backtrace" : 20,
+					"define" : "__STDC_FORMAT_MACROS"
+				},
+				{
+					"backtrace" : 21,
+					"define" : "__STDC_LIMIT_MACROS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 22,
+					"path" : "/tmp/mysql/cmake-build-mysql-docker"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/tmp/mysql/cmake-build-mysql-docker/include"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/tmp/mysql"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/tmp/mysql/include"
+				},
+				{
+					"backtrace" : 25,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/protobuf/protobuf-24.4/src"
+				},
+				{
+					"backtrace" : 28,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/libedit/libedit-20240808-3.1/src/editline"
+				},
+				{
+					"backtrace" : 29,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/include/boost_1_77_0/patches"
+				},
+				{
+					"backtrace" : 29,
+					"isSystem" : true,
+					"path" : "/opt/boost/boost_1_77_0"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/lz4/lz4-1.10.0/lib"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/zlib/zlib-1.3.1"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/cmake-build-mysql-docker/extra/zlib/zlib-1.3.1"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				40,
+				41,
+				42,
+				43,
+				44,
+				45,
+				46,
+				47,
+				48,
+				49,
+				50,
+				51,
+				53,
+				54,
+				55,
+				56,
+				57,
+				58,
+				59,
+				60,
+				61,
+				62,
+				63
+			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-std=c++17 -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -march=armv8-a+crc -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Woverloaded-virtual -Wcast-qual -Wimplicit-fallthrough=5 -Wstringop-truncation -Wsuggest-override -Wmissing-include-dirs -Wextra-semi -Wlogical-op -Werror -DSAFE_MUTEX -DENABLED_DEBUG_SYNC -g -fPIC"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "-Wshadow=local"
+				},
+				{
+					"fragment" : "-Wno-unused-result"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 7,
+					"define" : "BOOST_ALL_NO_LIB"
+				},
+				{
+					"backtrace" : 11,
+					"define" : "BOOST_NO_CXX98_FUNCTION_BASE"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "BOOST_SYSTEM_NO_DEPRECATED"
+				},
+				{
+					"backtrace" : 13,
+					"define" : "HAVE_TLSv13"
+				},
+				{
+					"backtrace" : 14,
+					"define" : "LZ4_DISABLE_DEPRECATE_WARNINGS"
+				},
+				{
+					"backtrace" : 17,
+					"define" : "_FILE_OFFSET_BITS=64"
+				},
+				{
+					"backtrace" : 18,
+					"define" : "_GNU_SOURCE"
+				},
+				{
+					"backtrace" : 19,
+					"define" : "_USE_MATH_DEFINES"
+				},
+				{
+					"backtrace" : 20,
+					"define" : "__STDC_FORMAT_MACROS"
+				},
+				{
+					"backtrace" : 21,
+					"define" : "__STDC_LIMIT_MACROS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 22,
+					"path" : "/tmp/mysql/cmake-build-mysql-docker"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/tmp/mysql/cmake-build-mysql-docker/include"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/tmp/mysql"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/tmp/mysql/include"
+				},
+				{
+					"backtrace" : 25,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/protobuf/protobuf-24.4/src"
+				},
+				{
+					"backtrace" : 28,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/libedit/libedit-20240808-3.1/src/editline"
+				},
+				{
+					"backtrace" : 29,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/include/boost_1_77_0/patches"
+				},
+				{
+					"backtrace" : 29,
+					"isSystem" : true,
+					"path" : "/opt/boost/boost_1_77_0"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/lz4/lz4-1.10.0/lib"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/zlib/zlib-1.3.1"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/cmake-build-mysql-docker/extra/zlib/zlib-1.3.1"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				52
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "zlib::@132acbef7a17cf08553b"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "lz4_lib::@ae00474e3be8614f4a83"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "mysqlclient::@804198ce8b9bd67f3a0d"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "client_base::@7c7795c8b88c3e8997d2"
+		}
+	],
+	"id" : "mysqlpump_lib::@8ee55e1ccce08a4c2877",
+	"name" : "mysqlpump_lib",
+	"nameOnDisk" : "libmysqlpump_lib.a",
+	"paths" : 
+	{
+		"build" : "client/dump",
+		"source" : "client/dump"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				40,
+				41,
+				42,
+				43,
+				44,
+				45,
+				46,
+				47,
+				48,
+				49,
+				50,
+				51,
+				52,
+				53,
+				54,
+				55,
+				56,
+				57,
+				58,
+				59,
+				60,
+				61,
+				62,
+				63
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/abstract_chain_element.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/abstract_connection_provider.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/abstract_crawler.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/abstract_data_formatter_wrapper.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/abstract_data_object.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/abstract_database_dump_task.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/abstract_dump_task.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/abstract_mysql_chain_element_extension.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/abstract_object_reader_wrapper.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/abstract_output_writer_wrapper.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/abstract_plain_sql_object.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/abstract_plain_sql_object_dump_task.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/abstract_progress_reporter.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/abstract_progress_watcher.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/abstract_simple_dump_task.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/abstract_table_dump_task.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/chain_data.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/column_statistic.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/composite_message_handler.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/compression_lz4_writer.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/compression_zlib_writer.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/database.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/database_end_dump_task.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/database_start_dump_task.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/dump_end_dump_task.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/dump_start_dump_task.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/event_scheduler_event.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/field.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/file_writer.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/i_chain_element.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/i_dump_task.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/i_progress_reporter.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/item_processing_data.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/mysql_chain_element_options.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/mysql_crawler.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/mysql_field.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/mysql_function.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/mysql_object_reader.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/mysql_object_reader_options.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/mysqldump_tool_chain_maker.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/mysqldump_tool_chain_maker_options.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/object_filter.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/object_queue.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/pattern_matcher.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/privilege.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/row.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/row_group_dump_task.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/simple_id_generator.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/single_transaction_connection_provider.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/sql_formatter.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/sql_formatter_options.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/standard_progress_watcher.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 1,
+			"path" : "client/dump/standard_writer.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/stored_procedure.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/table.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/table_deferred_indexes_dump_task.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/table_definition_dump_task.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/table_rows_dump_task.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/tables_definition_ready_dump_task.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/thread.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/thread_group.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/thread_specific_connection_provider.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/trigger.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 30,
+			"compileGroupIndex" : 0,
+			"path" : "client/dump/view.cc",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

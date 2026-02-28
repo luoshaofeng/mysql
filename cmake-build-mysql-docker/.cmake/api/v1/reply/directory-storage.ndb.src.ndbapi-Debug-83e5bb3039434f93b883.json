@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "storage/ndb/src/ndbapi",
+		"source" : "storage/ndb/src/ndbapi"
+	}
+}

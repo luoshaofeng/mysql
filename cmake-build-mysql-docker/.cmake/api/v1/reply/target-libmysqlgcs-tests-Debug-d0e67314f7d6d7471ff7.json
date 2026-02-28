@@ -1,0 +1,165 @@
+{
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"ADD_CUSTOM_TARGET"
+		],
+		"files" : 
+		[
+			"unittest/gunit/libmysqlgcs/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 124,
+				"parent" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"id" : "mysqlgcs::@0943ec7f8775def64fa6"
+		},
+		{
+			"id" : "gcs_message-t::@1dbd4b6730a16d7c67e5"
+		},
+		{
+			"id" : "gcs_tagged_lock-t::@1dbd4b6730a16d7c67e5"
+		},
+		{
+			"id" : "gcs_logging-t::@1dbd4b6730a16d7c67e5"
+		},
+		{
+			"id" : "gcs_logging_system-t::@1dbd4b6730a16d7c67e5"
+		},
+		{
+			"id" : "gcs_parameters-t::@1dbd4b6730a16d7c67e5"
+		},
+		{
+			"id" : "gcs_xcom_notification-t::@1dbd4b6730a16d7c67e5"
+		},
+		{
+			"id" : "gcs_xcom_utils-t::@1dbd4b6730a16d7c67e5"
+		},
+		{
+			"id" : "gcs_msg_stages-t::@1dbd4b6730a16d7c67e5"
+		},
+		{
+			"id" : "gcs_allowlist-t::@1dbd4b6730a16d7c67e5"
+		},
+		{
+			"id" : "gcs_xcom_group_management-t::@1dbd4b6730a16d7c67e5"
+		},
+		{
+			"id" : "gcs_xcom_state_exchange-t::@1dbd4b6730a16d7c67e5"
+		},
+		{
+			"id" : "gcs_packet-t::@1dbd4b6730a16d7c67e5"
+		},
+		{
+			"id" : "gcs_xcom_communication_interface-t::@1dbd4b6730a16d7c67e5"
+		},
+		{
+			"id" : "gcs_xcom_interface_unit-t::@1dbd4b6730a16d7c67e5"
+		},
+		{
+			"id" : "gcs_xcom_statistics_interface-t::@1dbd4b6730a16d7c67e5"
+		},
+		{
+			"id" : "gcs_xcom_group_member_information-t::@1dbd4b6730a16d7c67e5"
+		},
+		{
+			"id" : "gcs_mpsc_queue-t::@1dbd4b6730a16d7c67e5"
+		},
+		{
+			"id" : "gcs_xcom_input_queue-t::@1dbd4b6730a16d7c67e5"
+		},
+		{
+			"id" : "gcs_xcom_networking-t::@1dbd4b6730a16d7c67e5"
+		},
+		{
+			"id" : "gcs_xcom_xcom_base-t::@1dbd4b6730a16d7c67e5"
+		},
+		{
+			"id" : "gcs_xcom_xcom_transport-t::@1dbd4b6730a16d7c67e5"
+		},
+		{
+			"id" : "gcs_xcom_communication_protocol_changer-t::@1dbd4b6730a16d7c67e5"
+		},
+		{
+			"id" : "gcs_xcom_xcom_cache-t::@1dbd4b6730a16d7c67e5"
+		},
+		{
+			"id" : "gcs_xcom_control_interface-t::@1dbd4b6730a16d7c67e5"
+		},
+		{
+			"id" : "gcs_xcom_view_identifier-t::@1dbd4b6730a16d7c67e5"
+		},
+		{
+			"id" : "gcs_message_stage_fragmentation-t::@1dbd4b6730a16d7c67e5"
+		},
+		{
+			"id" : "gcs_xcom_site_def-t::@1dbd4b6730a16d7c67e5"
+		},
+		{
+			"id" : "gcs_xcom_expels_in_progress-t::@1dbd4b6730a16d7c67e5"
+		},
+		{
+			"id" : "gcs_xcom_network_provider-t::@1dbd4b6730a16d7c67e5"
+		},
+		{
+			"id" : "gcs_xcom_network_provider_manager-t::@1dbd4b6730a16d7c67e5"
+		},
+		{
+			"id" : "gcs_xcom_xcom_single_writer-t::@1dbd4b6730a16d7c67e5"
+		}
+	],
+	"id" : "libmysqlgcs-tests::@1dbd4b6730a16d7c67e5",
+	"name" : "libmysqlgcs-tests",
+	"paths" : 
+	{
+		"build" : "unittest/gunit/libmysqlgcs",
+		"source" : "unittest/gunit/libmysqlgcs"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "cmake-build-mysql-docker/unittest/gunit/libmysqlgcs/CMakeFiles/libmysqlgcs-tests",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-mysql-docker/unittest/gunit/libmysqlgcs/CMakeFiles/libmysqlgcs-tests.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

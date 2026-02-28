@@ -1,0 +1,89 @@
+{
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"ADD_CUSTOM_TARGET",
+			"ADD_OBJDUMP_TARGET",
+			"MYSQL_ADD_PLUGIN"
+		],
+		"files" : 
+		[
+			"cmake/fileutils.cmake",
+			"cmake/plugin.cmake",
+			"plugin/group_replication/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 184,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 327,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 220,
+				"parent" : 2
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "group_replication::@b3c0bd3bd661b2f6c124"
+		}
+	],
+	"id" : "show_group_replication::@b3c0bd3bd661b2f6c124",
+	"name" : "show_group_replication",
+	"paths" : 
+	{
+		"build" : "plugin/group_replication",
+		"source" : "plugin/group_replication"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "cmake-build-mysql-docker/plugin/group_replication/CMakeFiles/show_group_replication",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-mysql-docker/plugin/group_replication/CMakeFiles/show_group_replication.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

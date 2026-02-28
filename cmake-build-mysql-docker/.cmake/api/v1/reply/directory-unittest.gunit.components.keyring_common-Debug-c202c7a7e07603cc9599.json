@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "unittest/gunit/components/keyring_common",
+		"source" : "unittest/gunit/components/keyring_common"
+	}
+}

@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../lib/libchangestreams_standalone_static.a CMakeFiles/changestreams_standalone_static.dir/__/lib/mysql/cs/reader/binary/mysqlproto.cpp.o CMakeFiles/changestreams_standalone_static.dir/__/lib/mysql/cs/reader/binary/tracker.cpp.o CMakeFiles/changestreams_standalone_static.dir/__/lib/mysql/cs/reader/state.cpp.o
+/usr/bin/ranlib ../../lib/libchangestreams_standalone_static.a

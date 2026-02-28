@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../../../archive_output_directory/libndblogger.a CMakeFiles/ndblogger_objlib.dir/BufferedLogHandler.cpp.o CMakeFiles/ndblogger_objlib.dir/ConsoleLogHandler.cpp.o CMakeFiles/ndblogger_objlib.dir/FileLogHandler.cpp.o CMakeFiles/ndblogger_objlib.dir/LogHandler.cpp.o CMakeFiles/ndblogger_objlib.dir/LogHandlerList.cpp.o CMakeFiles/ndblogger_objlib.dir/Logger.cpp.o CMakeFiles/ndblogger_objlib.dir/SysLogHandler.cpp.o
+/usr/bin/ranlib ../../../../../archive_output_directory/libndblogger.a

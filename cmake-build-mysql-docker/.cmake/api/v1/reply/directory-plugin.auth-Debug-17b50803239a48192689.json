@@ -1,0 +1,241 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"INSTALL",
+			"MYSQL_INSTALL_TARGET",
+			"MYSQL_ADD_PLUGIN"
+		],
+		"files" : 
+		[
+			"cmake/install_macros.cmake",
+			"cmake/plugin.cmake",
+			"plugin/auth/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 26,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 272,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 31,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 272,
+				"parent" : 4
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 5
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 37,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 272,
+				"parent" : 7
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 8
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 43,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 272,
+				"parent" : 10
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 11
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 48,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 272,
+				"parent" : 13
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 14
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 54,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 272,
+				"parent" : 16
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 17
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 70,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 272,
+				"parent" : 19
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 20
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 3,
+			"component" : "Test",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/auth.so"
+			],
+			"targetId" : "auth::@30dff829e8d5e8a1e669",
+			"targetIndex" : 149,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 6,
+			"component" : "Test",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/auth_test_plugin.so"
+			],
+			"targetId" : "auth_test_plugin::@30dff829e8d5e8a1e669",
+			"targetIndex" : 151,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 9,
+			"component" : "Test",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/qa_auth_interface.so"
+			],
+			"targetId" : "qa_auth_interface::@30dff829e8d5e8a1e669",
+			"targetIndex" : 667,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 12,
+			"component" : "Test",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/qa_auth_server.so"
+			],
+			"targetId" : "qa_auth_server::@30dff829e8d5e8a1e669",
+			"targetIndex" : 668,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "Test",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/qa_auth_client.so"
+			],
+			"targetId" : "qa_auth_client::@30dff829e8d5e8a1e669",
+			"targetIndex" : 666,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 18,
+			"component" : "Server",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/mysql_no_login.so"
+			],
+			"targetId" : "mysql_no_login::@30dff829e8d5e8a1e669",
+			"targetIndex" : 536,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 21,
+			"component" : "Server",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/auth_socket.so"
+			],
+			"targetId" : "auth_socket::@30dff829e8d5e8a1e669",
+			"targetIndex" : 150,
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "plugin/auth",
+		"source" : "plugin/auth"
+	}
+}

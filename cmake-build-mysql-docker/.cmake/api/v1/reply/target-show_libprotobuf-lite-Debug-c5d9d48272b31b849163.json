@@ -1,0 +1,93 @@
+{
+	"backtrace" : 4,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"ADD_CUSTOM_TARGET",
+			"ADD_OBJDUMP_TARGET",
+			"include"
+		],
+		"files" : 
+		[
+			"cmake/fileutils.cmake",
+			"extra/protobuf/protobuf-24.4/cmake/libprotobuf-lite.cmake",
+			"extra/protobuf/protobuf-24.4/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 298,
+				"parent" : 0
+			},
+			{
+				"file" : 1,
+				"parent" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 51,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 220,
+				"parent" : 3
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "libprotobuf-lite::@11d4bd9adc70fb0e9b8f"
+		}
+	],
+	"id" : "show_libprotobuf-lite::@11d4bd9adc70fb0e9b8f",
+	"name" : "show_libprotobuf-lite",
+	"paths" : 
+	{
+		"build" : "extra/protobuf/protobuf-24.4",
+		"source" : "extra/protobuf/protobuf-24.4"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 4,
+			"isGenerated" : true,
+			"path" : "cmake-build-mysql-docker/extra/protobuf/protobuf-24.4/CMakeFiles/show_libprotobuf-lite",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-mysql-docker/extra/protobuf/protobuf-24.4/CMakeFiles/show_libprotobuf-lite.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

@@ -1,0 +1,61 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"INSTALL",
+			"MYSQL_INSTALL_TARGET",
+			"MYSQL_ADD_EXECUTABLE"
+		],
+		"files" : 
+		[
+			"cmake/install_macros.cmake",
+			"cmake/mysql_add_executable.cmake",
+			"components/test/keyring_encryption_test/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 50,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 266,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 2
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 3,
+			"component" : "Test",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"runtime_output_directory/mysql_keyring_encryption_test"
+			],
+			"targetId" : "mysql_keyring_encryption_test::@adf860d01044c33e9d0b",
+			"targetIndex" : 534,
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "components/test/keyring_encryption_test",
+		"source" : "components/test/keyring_encryption_test"
+	}
+}

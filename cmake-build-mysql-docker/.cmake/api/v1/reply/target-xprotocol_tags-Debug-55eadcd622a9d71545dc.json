@@ -1,0 +1,112 @@
+{
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"ADD_CUSTOM_TARGET",
+			"MY_ADD_CUSTOM_TARGET",
+			"ADD_CUSTOM_COMMAND"
+		],
+		"files" : 
+		[
+			"cmake/add_custom_target.cmake",
+			"plugin/x/protocol/plugin/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 83,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 62,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 69,
+				"parent" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "protoc::@11d4bd9adc70fb0e9b8f"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "xprotocol_plugin::@a6639a947f5b90e4f724"
+		}
+	],
+	"id" : "xprotocol_tags::@a6639a947f5b90e4f724",
+	"name" : "xprotocol_tags",
+	"paths" : 
+	{
+		"build" : "plugin/x/protocol/plugin",
+		"source" : "plugin/x/protocol/plugin"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				2,
+				3
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "cmake-build-mysql-docker/plugin/x/generated/xprotocol_tags.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "cmake-build-mysql-docker/plugin/x/protocol/plugin/CMakeFiles/xprotocol_tags",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-mysql-docker/plugin/x/generated/xprotocol_tags.h.rule",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-mysql-docker/plugin/x/protocol/plugin/CMakeFiles/xprotocol_tags.rule",
+			"sourceGroupIndex" : 2
+		}
+	],
+	"type" : "UTILITY"
+}

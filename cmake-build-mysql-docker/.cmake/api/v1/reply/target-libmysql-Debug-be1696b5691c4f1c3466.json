@@ -1,0 +1,513 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "library_output_directory/libmysqlclient.so"
+		}
+	],
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"ADD_LIBRARY",
+			"MERGE_LIBRARIES_SHARED",
+			"INSTALL",
+			"MYSQL_INSTALL_TARGET",
+			"TARGET_LINK_LIBRARIES",
+			"ADD_COMPILE_OPTIONS",
+			"ADD_WSHADOW_WARNING",
+			"ADD_DEFINITIONS",
+			"INCLUDE",
+			"MYSQL_CHECK_SSL",
+			"INCLUDE_DIRECTORIES",
+			"MYSQL_USE_BUNDLED_PROTOBUF",
+			"MYSQL_CHECK_PROTOBUF",
+			"MYSQL_USE_BUNDLED_EDITLINE",
+			"MYSQL_CHECK_EDITLINE"
+		],
+		"files" : 
+		[
+			"cmake/libutils.cmake",
+			"libmysql/CMakeLists.txt",
+			"cmake/install_macros.cmake",
+			"cmake/maintainer.cmake",
+			"cmake/boost.cmake",
+			"CMakeLists.txt",
+			"cmake/ssl.cmake",
+			"cmake/os/Linux.cmake",
+			"cmake/protobuf.cmake",
+			"cmake/readline.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 351,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 314,
+				"parent" : 1
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 391,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 117,
+				"parent" : 3
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 342,
+				"parent" : 1
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 345,
+				"parent" : 1
+			},
+			{
+				"command" : 6,
+				"file" : 1,
+				"line" : 24,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 3,
+				"line" : 204,
+				"parent" : 7
+			},
+			{
+				"file" : 5
+			},
+			{
+				"command" : 8,
+				"file" : 5,
+				"line" : 1608,
+				"parent" : 9
+			},
+			{
+				"file" : 4,
+				"parent" : 10
+			},
+			{
+				"command" : 7,
+				"file" : 4,
+				"line" : 335,
+				"parent" : 11
+			},
+			{
+				"command" : 9,
+				"file" : 5,
+				"line" : 1848,
+				"parent" : 9
+			},
+			{
+				"command" : 7,
+				"file" : 6,
+				"line" : 411,
+				"parent" : 13
+			},
+			{
+				"command" : 7,
+				"file" : 5,
+				"line" : 1634,
+				"parent" : 9
+			},
+			{
+				"command" : 8,
+				"file" : 5,
+				"line" : 744,
+				"parent" : 9
+			},
+			{
+				"file" : 7,
+				"parent" : 16
+			},
+			{
+				"command" : 7,
+				"file" : 7,
+				"line" : 93,
+				"parent" : 17
+			},
+			{
+				"command" : 7,
+				"file" : 7,
+				"line" : 90,
+				"parent" : 17
+			},
+			{
+				"command" : 7,
+				"file" : 5,
+				"line" : 1633,
+				"parent" : 9
+			},
+			{
+				"command" : 7,
+				"file" : 5,
+				"line" : 1632,
+				"parent" : 9
+			},
+			{
+				"command" : 7,
+				"file" : 5,
+				"line" : 1631,
+				"parent" : 9
+			},
+			{
+				"command" : 10,
+				"file" : 5,
+				"line" : 1650,
+				"parent" : 9
+			},
+			{
+				"command" : 12,
+				"file" : 5,
+				"line" : 1981,
+				"parent" : 9
+			},
+			{
+				"command" : 11,
+				"file" : 8,
+				"line" : 122,
+				"parent" : 24
+			},
+			{
+				"command" : 10,
+				"file" : 8,
+				"line" : 112,
+				"parent" : 25
+			},
+			{
+				"command" : 14,
+				"file" : 5,
+				"line" : 1952,
+				"parent" : 9
+			},
+			{
+				"command" : 13,
+				"file" : 9,
+				"line" : 221,
+				"parent" : 27
+			},
+			{
+				"command" : 10,
+				"file" : 9,
+				"line" : 125,
+				"parent" : 28
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Wwrite-strings -Wjump-misses-init -Wstringop-truncation -Wmissing-include-dirs -Werror -DSAFE_MUTEX -DENABLED_DEBUG_SYNC -g -fPIC   -D CLIENT_PROTOCOL_TRACING"
+				},
+				{
+					"backtrace" : 8,
+					"fragment" : "-Wshadow=local"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 12,
+					"define" : "BOOST_NO_CXX98_FUNCTION_BASE"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "HAVE_EXT_BACKTRACE"
+				},
+				{
+					"backtrace" : 14,
+					"define" : "HAVE_TLSv13"
+				},
+				{
+					"backtrace" : 15,
+					"define" : "LZ4_DISABLE_DEPRECATE_WARNINGS"
+				},
+				{
+					"backtrace" : 18,
+					"define" : "_FILE_OFFSET_BITS=64"
+				},
+				{
+					"backtrace" : 19,
+					"define" : "_GNU_SOURCE"
+				},
+				{
+					"backtrace" : 20,
+					"define" : "_USE_MATH_DEFINES"
+				},
+				{
+					"backtrace" : 21,
+					"define" : "__STDC_FORMAT_MACROS"
+				},
+				{
+					"backtrace" : 22,
+					"define" : "__STDC_LIMIT_MACROS"
+				},
+				{
+					"define" : "libmysql_EXPORTS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 23,
+					"path" : "/tmp/mysql/cmake-build-mysql-docker"
+				},
+				{
+					"backtrace" : 23,
+					"path" : "/tmp/mysql/cmake-build-mysql-docker/include"
+				},
+				{
+					"backtrace" : 23,
+					"path" : "/tmp/mysql"
+				},
+				{
+					"backtrace" : 23,
+					"path" : "/tmp/mysql/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/tmp/mysql/extra/libbacktrace/include"
+				},
+				{
+					"backtrace" : 26,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/protobuf/protobuf-24.4/src"
+				},
+				{
+					"backtrace" : 29,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/libedit/libedit-20240808-3.1/src/editline"
+				},
+				{
+					"backtrace" : 5,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/zlib/zlib-1.3.1"
+				},
+				{
+					"backtrace" : 5,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/cmake-build-mysql-docker/extra/zlib/zlib-1.3.1"
+				},
+				{
+					"backtrace" : 5,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/zstd/zstd-1.5.7/lib"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 5,
+			"id" : "backtrace::@72fe72e27e394ec41d76"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "zlib::@132acbef7a17cf08553b"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "zstd::@4852f3e90c5b3a8fc4e8"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "strings::@89d0016ae4e25e06fd39"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "vio::@c062e1da8e129617a875"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "mytime::@64e0e5023d60a36b555e"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "clientlib::@804198ce8b9bd67f3a0d"
+		}
+	],
+	"id" : "libmysql::@804198ce8b9bd67f3a0d",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 4,
+				"path" : "lib"
+			},
+			{
+				"backtrace" : 4,
+				"path" : "lib"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "/usr/local/mysql"
+		}
+	},
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-Wl,-rpath,'$ORIGIN/../../private'   -Wl,-u,mysql_affected_rows -Wl,-u,mysql_autocommit -Wl,-u,mysql_change_user -Wl,-u,mysql_character_set_name -Wl,-u,mysql_close -Wl,-u,mysql_commit -Wl,-u,mysql_data_seek -Wl,-u,mysql_debug -Wl,-u,mysql_dump_debug_info -Wl,-u,mysql_eof -Wl,-u,mysql_errno -Wl,-u,mysql_error -Wl,-u,mysql_escape_string -Wl,-u,mysql_fetch_field -Wl,-u,mysql_fetch_field_direct -Wl,-u,mysql_fetch_fields -Wl,-u,mysql_fetch_lengths -Wl,-u,mysql_fetch_row -Wl,-u,mysql_field_count -Wl,-u,mysql_field_seek -Wl,-u,mysql_field_tell -Wl,-u,mysql_free_result -Wl,-u,mysql_get_client_info -Wl,-u,mysql_get_client_version -Wl,-u,mysql_get_host_info -Wl,-u,mysql_get_proto_info -Wl,-u,mysql_get_server_info -Wl,-u,mysql_get_ssl_cipher -Wl,-u,mysql_hex_string -Wl,-u,mysql_info -Wl,-u,mysql_init -Wl,-u,mysql_insert_id -Wl,-u,mysql_kill -Wl,-u,mysql_list_dbs -Wl,-u,mysql_list_fields -Wl,-u,mysql_list_processes -Wl,-u,mysql_list_tables -Wl,-u,mysql_more_results -Wl,-u,mysql_next_result -Wl,-u,mysql_num_fields -Wl,-u,mysql_num_rows -Wl,-u,mysql_options -Wl,-u,mysql_ping -Wl,-u,mysql_query -Wl,-u,mysql_set_server_option -Wl,-u,mysql_stmt_bind_param -Wl,-u,mysql_stmt_bind_result -Wl,-u,mysql_stmt_execute -Wl,-u,mysql_stmt_fetch -Wl,-u,mysql_stmt_fetch_column -Wl,-u,mysql_stmt_param_count -Wl,-u,mysql_stmt_param_metadata -Wl,-u,mysql_stmt_result_metadata -Wl,-u,mysql_thread_end -Wl,-u,mysql_thread_init -Wl,-u,mysql_read_query_result -Wl,-u,mysql_real_connect -Wl,-u,mysql_real_escape_string -Wl,-u,mysql_real_escape_string_quote -Wl,-u,mysql_real_query -Wl,-u,mysql_refresh -Wl,-u,mysql_rollback -Wl,-u,mysql_row_seek -Wl,-u,mysql_row_tell -Wl,-u,mysql_select_db -Wl,-u,mysql_stmt_send_long_data -Wl,-u,mysql_client_find_plugin -Wl,-u,mysql_client_register_plugin -Wl,-u,mysql_get_character_set_info -Wl,-u,mysql_get_option -Wl,-u,mysql_get_server_version -Wl,-u,mysql_load_plugin -Wl,-u,mysql_load_plugin_v -Wl,-u,mysql_options4 -Wl,-u,mysql_plugin_options -Wl,-u,mysql_reset_connection -Wl,-u,mysql_reset_server_public_key -Wl,-u,mysql_result_metadata -Wl,-u,mysql_send_query -Wl,-u,mysql_server_end -Wl,-u,mysql_server_init -Wl,-u,mysql_session_track_get_first -Wl,-u,mysql_session_track_get_next -Wl,-u,mysql_set_character_set -Wl,-u,mysql_set_local_infile_default -Wl,-u,mysql_set_local_infile_handler -Wl,-u,mysql_shutdown -Wl,-u,mysql_sqlstate -Wl,-u,mysql_ssl_set -Wl,-u,mysql_stat -Wl,-u,mysql_stmt_affected_rows -Wl,-u,mysql_stmt_attr_get -Wl,-u,mysql_stmt_attr_set -Wl,-u,mysql_stmt_close -Wl,-u,mysql_stmt_data_seek -Wl,-u,mysql_stmt_errno -Wl,-u,mysql_stmt_error -Wl,-u,mysql_stmt_field_count -Wl,-u,mysql_stmt_free_result -Wl,-u,mysql_stmt_init -Wl,-u,mysql_stmt_insert_id -Wl,-u,mysql_stmt_next_result -Wl,-u,mysql_stmt_num_rows -Wl,-u,mysql_stmt_prepare -Wl,-u,mysql_stmt_reset -Wl,-u,mysql_stmt_row_seek -Wl,-u,mysql_stmt_row_tell -Wl,-u,mysql_stmt_sqlstate -Wl,-u,mysql_stmt_store_result -Wl,-u,mysql_store_result -Wl,-u,mysql_thread_id -Wl,-u,mysql_thread_safe -Wl,-u,mysql_use_result -Wl,-u,mysql_warning_count -Wl,-u,mysql_real_connect_dns_srv -Wl,-u,mysql_bind_param -Wl,-u,mysql_plugin_get_option -Wl,-u,mysql_get_ssl_session_reused -Wl,-u,mysql_get_ssl_session_data -Wl,-u,mysql_free_ssl_session_data -Wl,-u,mysql_binlog_close -Wl,-u,mysql_binlog_fetch -Wl,-u,mysql_binlog_open -Wl,-u,get_tty_password -Wl,-u,my_load_defaults -Wl,-u,handle_options -Wl,-u,my_make_scrambled_password -Wl,-u,mysql_fetch_row_nonblocking -Wl,-u,mysql_free_result_nonblocking -Wl,-u,mysql_next_result_nonblocking -Wl,-u,mysql_real_connect_nonblocking -Wl,-u,mysql_real_query_nonblocking -Wl,-u,mysql_send_query_nonblocking -Wl,-u,mysql_store_result_nonblocking -Wl,-z,defs -Wl,--version-script=/tmp/mysql/cmake-build-mysql-docker/libmysql/libmysql.ver",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "../archive_output_directory/libclientlib.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "../archive_output_directory/libmytime.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "../archive_output_directory/libstrings.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "../archive_output_directory/libvio.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "../archive_output_directory/libmysys.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "../archive_output_directory/libzlib.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "../archive_output_directory/libzstd.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "../archive_output_directory/libbacktrace.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/usr/lib/aarch64-linux-gnu/libssl.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/usr/lib/aarch64-linux-gnu/libcrypto.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/usr/lib/aarch64-linux-gnu/libresolv.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "../archive_output_directory/libstrings.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "../archive_output_directory/libmysys.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "../archive_output_directory/libmytime.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "../archive_output_directory/libbacktrace.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "../archive_output_directory/libzlib.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "../archive_output_directory/libzstd.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lm",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/usr/lib/aarch64-linux-gnu/libssl.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/usr/lib/aarch64-linux-gnu/libcrypto.so",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "libmysql",
+	"nameOnDisk" : "libmysqlclient.so",
+	"paths" : 
+	{
+		"build" : "libmysql",
+		"source" : "libmysql"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "cmake-build-mysql-docker/libmysql/libmysql_dummy.c",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "SHARED_LIBRARY"
+}

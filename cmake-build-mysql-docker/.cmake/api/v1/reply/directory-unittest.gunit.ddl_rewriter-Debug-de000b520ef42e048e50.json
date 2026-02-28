@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "unittest/gunit/ddl_rewriter",
+		"source" : "unittest/gunit/ddl_rewriter"
+	}
+}

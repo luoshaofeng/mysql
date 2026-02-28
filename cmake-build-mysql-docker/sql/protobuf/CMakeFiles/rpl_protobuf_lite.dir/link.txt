@@ -1,0 +1,2 @@
+/usr/bin/ar qc librpl_protobuf_lite.a CMakeFiles/rpl_protobuf_lite.dir/generated/protobuf_lite/replication_asynchronous_connection_failover.pb.cc.o
+/usr/bin/ranlib librpl_protobuf_lite.a

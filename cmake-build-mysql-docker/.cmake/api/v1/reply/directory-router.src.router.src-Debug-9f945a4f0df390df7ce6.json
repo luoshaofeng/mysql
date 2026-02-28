@@ -1,0 +1,110 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"INSTALL",
+			"MYSQL_INSTALL_TARGET",
+			"MYSQL_ADD_EXECUTABLE"
+		],
+		"files" : 
+		[
+			"cmake/install_macros.cmake",
+			"cmake/mysql_add_executable.cmake",
+			"router/src/router/src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 128,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 266,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 2,
+				"line" : 147,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 154,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 266,
+				"parent" : 5
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 6
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 3,
+			"component" : "Router",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"runtime_output_directory/mysqlrouter"
+			],
+			"targetId" : "mysqlrouter::@6ed13d653485996da371",
+			"targetIndex" : 554,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "Router",
+			"destination" : "lib/mysqlrouter/private",
+			"paths" : 
+			[
+				"library_output_directory/libmysqlrouter.so.1"
+			],
+			"targetId" : "router_lib::@6ed13d653485996da371",
+			"targetIndex" : 688,
+			"targetInstallNamelink" : "skip",
+			"type" : "target"
+		},
+		{
+			"backtrace" : 7,
+			"component" : "Router",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"runtime_output_directory/mysqlrouter_keyring"
+			],
+			"targetId" : "mysqlrouter_keyring::@6ed13d653485996da371",
+			"targetIndex" : 556,
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "router/src/router/src",
+		"source" : "router/src/router/src"
+	}
+}

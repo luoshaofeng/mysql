@@ -1,0 +1,61 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"INSTALL",
+			"MYSQL_INSTALL_TARGET",
+			"MYSQL_ADD_COMPONENT"
+		],
+		"files" : 
+		[
+			"cmake/install_macros.cmake",
+			"cmake/component.cmake",
+			"plugin/x/tests/components/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 25,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 2
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 3,
+			"component" : "Test",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/component_mysqlx_global_reset.so"
+			],
+			"targetId" : "component_mysqlx_global_reset::@bcd6d1b7cd723ea2e2a3",
+			"targetIndex" : 197,
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "plugin/x/tests/components",
+		"source" : "plugin/x/tests/components"
+	}
+}

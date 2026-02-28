@@ -1,0 +1,117 @@
+{
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"ADD_CUSTOM_TARGET",
+			"ADD_DEPENDENCIES",
+			"MYSQL_PROTOBUF_GENERATE_CPP_LIBRARY"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt",
+			"cmake/protobuf_proto_compile.cmake",
+			"plugin/group_replication/protobuf/CMakeLists.txt",
+			"plugin/x/protocol/protobuf/CMakeLists.txt",
+			"sql/protobuf/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 2195,
+				"parent" : 0
+			},
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 35,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 202,
+				"parent" : 3
+			},
+			{
+				"file" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 3,
+				"line" : 63,
+				"parent" : 5
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 202,
+				"parent" : 6
+			},
+			{
+				"command" : 2,
+				"file" : 3,
+				"line" : 76,
+				"parent" : 5
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 202,
+				"parent" : 8
+			},
+			{
+				"file" : 4
+			},
+			{
+				"command" : 2,
+				"file" : 4,
+				"line" : 33,
+				"parent" : 10
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 202,
+				"parent" : 11
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "gr_protobuf_lite_HEADERS::@c9bfdddd5002456a5f52"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "mysqlxmessages_HEADERS::@0fd4830209ca3980be17"
+		},
+		{
+			"backtrace" : 9,
+			"id" : "mysqlxmessages_lite_HEADERS::@0fd4830209ca3980be17"
+		},
+		{
+			"backtrace" : 12,
+			"id" : "rpl_protobuf_lite_HEADERS::@a0ab54e7738c6b465057"
+		}
+	],
+	"id" : "protobuf_generated_all::@6890427a1f51a3e7e1df",
+	"name" : "protobuf_generated_all",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

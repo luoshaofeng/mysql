@@ -1,0 +1,931 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"INSTALL",
+			"MYSQL_INSTALL_TARGET",
+			"MYSQL_ADD_COMPONENT"
+		],
+		"files" : 
+		[
+			"cmake/install_macros.cmake",
+			"cmake/component.cmake",
+			"components/test/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 28,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 33,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 4
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 5
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 38,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 7
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 8
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 43,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 10
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 11
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 48,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 13
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 14
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 53,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 16
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 17
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 58,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 19
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 20
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 63,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 22
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 23
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 68,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 25
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 26
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 73,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 28
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 29
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 31
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 32
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 83,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 34
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 35
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 88,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 37
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 38
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 93,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 40
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 41
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 98,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 43
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 44
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 103,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 46
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 47
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 108,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 49
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 50
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 113,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 52
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 53
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 118,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 55
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 56
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 123,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 58
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 59
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 128,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 61
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 62
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 133,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 64
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 65
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 138,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 67
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 68
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 143,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 70
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 71
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 148,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 73
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 74
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 154,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 76
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 77
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 159,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 79
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 80
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 164,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 82
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 83
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 169,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 85
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 86
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 174,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 88
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 89
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 3,
+			"component" : "Test",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/component_test_udf_registration.so"
+			],
+			"targetId" : "component_test_udf_registration::@ce0ba1ce342bc938eff1",
+			"targetIndex" : 232,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 6,
+			"component" : "Test",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/component_udf_reg_3_func.so"
+			],
+			"targetId" : "component_udf_reg_3_func::@ce0ba1ce342bc938eff1",
+			"targetIndex" : 234,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 9,
+			"component" : "Test",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/component_udf_reg_only_3_func.so"
+			],
+			"targetId" : "component_udf_reg_only_3_func::@ce0ba1ce342bc938eff1",
+			"targetIndex" : 238,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 12,
+			"component" : "Test",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/component_udf_unreg_3_func.so"
+			],
+			"targetId" : "component_udf_unreg_3_func::@ce0ba1ce342bc938eff1",
+			"targetIndex" : 240,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "Test",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/component_udf_reg_int_func.so"
+			],
+			"targetId" : "component_udf_reg_int_func::@ce0ba1ce342bc938eff1",
+			"targetIndex" : 236,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 18,
+			"component" : "Test",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/component_udf_unreg_int_func.so"
+			],
+			"targetId" : "component_udf_unreg_int_func::@ce0ba1ce342bc938eff1",
+			"targetIndex" : 241,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 21,
+			"component" : "Test",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/component_udf_reg_int_same_func.so"
+			],
+			"targetId" : "component_udf_reg_int_same_func::@ce0ba1ce342bc938eff1",
+			"targetIndex" : 237,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 24,
+			"component" : "Test",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/component_udf_reg_real_func.so"
+			],
+			"targetId" : "component_udf_reg_real_func::@ce0ba1ce342bc938eff1",
+			"targetIndex" : 239,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 27,
+			"component" : "Test",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/component_udf_unreg_real_func.so"
+			],
+			"targetId" : "component_udf_unreg_real_func::@ce0ba1ce342bc938eff1",
+			"targetIndex" : 242,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 30,
+			"component" : "Test",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/component_udf_reg_avg_func.so"
+			],
+			"targetId" : "component_udf_reg_avg_func::@ce0ba1ce342bc938eff1",
+			"targetIndex" : 235,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 33,
+			"component" : "Test",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/component_test_sys_var_service.so"
+			],
+			"targetId" : "component_test_sys_var_service::@ce0ba1ce342bc938eff1",
+			"targetIndex" : 226,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 36,
+			"component" : "Test",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/component_test_sys_var_service_same.so"
+			],
+			"targetId" : "component_test_sys_var_service_same::@ce0ba1ce342bc938eff1",
+			"targetIndex" : 228,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 39,
+			"component" : "Test",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/component_test_sys_var_service_int.so"
+			],
+			"targetId" : "component_test_sys_var_service_int::@ce0ba1ce342bc938eff1",
+			"targetIndex" : 227,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 42,
+			"component" : "Test",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/component_test_sys_var_service_str.so"
+			],
+			"targetId" : "component_test_sys_var_service_str::@ce0ba1ce342bc938eff1",
+			"targetIndex" : 229,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 45,
+			"component" : "Test",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/component_test_status_var_service.so"
+			],
+			"targetId" : "component_test_status_var_service::@ce0ba1ce342bc938eff1",
+			"targetIndex" : 218,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 48,
+			"component" : "Test",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/component_test_status_var_service_int.so"
+			],
+			"targetId" : "component_test_status_var_service_int::@ce0ba1ce342bc938eff1",
+			"targetIndex" : 219,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 51,
+			"component" : "Test",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/component_test_status_var_service_str.so"
+			],
+			"targetId" : "component_test_status_var_service_str::@ce0ba1ce342bc938eff1",
+			"targetIndex" : 221,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 54,
+			"component" : "Test",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/component_test_status_var_service_reg_only.so"
+			],
+			"targetId" : "component_test_status_var_service_reg_only::@ce0ba1ce342bc938eff1",
+			"targetIndex" : 220,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 57,
+			"component" : "Test",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/component_test_status_var_service_unreg_only.so"
+			],
+			"targetId" : "component_test_status_var_service_unreg_only::@ce0ba1ce342bc938eff1",
+			"targetIndex" : 222,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 60,
+			"component" : "Test",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/component_test_system_variable_source.so"
+			],
+			"targetId" : "component_test_system_variable_source::@ce0ba1ce342bc938eff1",
+			"targetIndex" : 230,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 63,
+			"component" : "Test",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/component_test_host_application_signal.so"
+			],
+			"targetId" : "component_test_host_application_signal::@ce0ba1ce342bc938eff1",
+			"targetIndex" : 206,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 66,
+			"component" : "Test",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/component_test_audit_api_message.so"
+			],
+			"targetId" : "component_test_audit_api_message::@ce0ba1ce342bc938eff1",
+			"targetIndex" : 203,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 69,
+			"component" : "Test",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/component_test_mysql_runtime_error.so"
+			],
+			"targetId" : "component_test_mysql_runtime_error::@ce0ba1ce342bc938eff1",
+			"targetIndex" : 209,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 72,
+			"component" : "Test",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/component_test_mysql_current_thread_reader.so"
+			],
+			"targetId" : "component_test_mysql_current_thread_reader::@ce0ba1ce342bc938eff1",
+			"targetIndex" : 208,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 75,
+			"component" : "Test",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/component_test_component_deinit.so"
+			],
+			"targetId" : "component_test_component_deinit::@ce0ba1ce342bc938eff1",
+			"targetIndex" : 205,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 78,
+			"component" : "Test",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/component_test_mysql_system_variable_set.so"
+			],
+			"targetId" : "component_test_mysql_system_variable_set::@ce0ba1ce342bc938eff1",
+			"targetIndex" : 210,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 81,
+			"component" : "Test",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/component_test_sensitive_system_variables.so"
+			],
+			"targetId" : "component_test_sensitive_system_variables::@ce0ba1ce342bc938eff1",
+			"targetIndex" : 215,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 84,
+			"component" : "Test",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/component_test_mysql_command_services.so"
+			],
+			"targetId" : "component_test_mysql_command_services::@ce0ba1ce342bc938eff1",
+			"targetIndex" : 207,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 87,
+			"component" : "Test",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/component_test_status_var_reader.so"
+			],
+			"targetId" : "component_test_status_var_reader::@ce0ba1ce342bc938eff1",
+			"targetIndex" : 217,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 90,
+			"component" : "Test",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/component_test_mysql_thd_store_service.so"
+			],
+			"targetId" : "component_test_mysql_thd_store_service::@ce0ba1ce342bc938eff1",
+			"targetIndex" : 211,
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "components/test",
+		"source" : "components/test"
+	}
+}

@@ -1,0 +1,1351 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/AccLock.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/AllocNodeId.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/AlterIndx.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/AlterIndxImpl.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/AlterTab.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/AlterTable.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/ApiVersion.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/BackupImpl.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/BackupSignalData.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/BuildIndx.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/BuildIndxImpl.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/CloseComReqConf.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/CntrStart.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/ContinueB.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/CopyGCI.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/CreateEvnt.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/CreateFK.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/CreateFragmentation.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/CreateIndx.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/CreateIndxImpl.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/CreateTab.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/CreateTable.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/CreateTrig.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/CreateTrigImpl.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/DbinfoScan.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/DictTabInfo.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/DihContinueB.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/DisconnectRep.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/DropFK.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/DropIndx.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/DropIndxImpl.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/DropTab.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/DropTable.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/DropTrig.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/DropTrigImpl.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/FailRep.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/FireTrigOrd.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/FsAppendReq.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/FsCloseReq.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/FsConf.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/FsOpenReq.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/FsReadWriteReq.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/FsRef.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/GCP.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/GetConfig.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/GetTabInfo.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/IndexStatSignal.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/IndxAttrInfo.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/IndxKeyInfo.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/IsolateOrd.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/LCP.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/LocalRouteOrd.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/LqhFrag.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/LqhKey.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/LqhTrans.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/MasterLCP.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/NFCompleteRep.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/NdbSttor.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/NdbfsContinueB.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/NodePing.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/PackedSignal.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/PrepDropTab.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/PrepFailReqRef.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/ProcessInfoRep.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/ReadNodesConf.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/RestoreImpl.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/ScanFrag.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/ScanTab.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/SchemaTrans.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/SchemaTransImpl.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/SignalDataPrint.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/SignalDroppedRep.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/SignalNames.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/StartRec.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/SumaImpl.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/SystemError.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/TcIndx.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/TcKeyConf.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/TcKeyRef.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/TcKeyReq.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/TcRollbackRep.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/TrigAttrInfo.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/TrpKeepAlive.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/TupCommit.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/TupKey.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/TuxMaint.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/UtilDelete.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/UtilExecute.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/UtilLock.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/UtilPrepare.cpp.o"
+		},
+		{
+			"path" : "storage/ndb/src/common/debugger/signaldata/CMakeFiles/ndbsignaldata_objlib.dir/UtilSequence.cpp.o"
+		}
+	],
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"ADD_LIBRARY",
+			"ADD_CONVENIENCE_LIBRARY",
+			"ADD_DEFINITIONS",
+			"INCLUDE",
+			"MYSQL_CHECK_SSL",
+			"INCLUDE_DIRECTORIES",
+			"MYSQL_USE_BUNDLED_PROTOBUF",
+			"MYSQL_CHECK_PROTOBUF",
+			"MYSQL_USE_BUNDLED_EDITLINE",
+			"MYSQL_CHECK_EDITLINE"
+		],
+		"files" : 
+		[
+			"cmake/libutils.cmake",
+			"storage/ndb/src/common/debugger/signaldata/CMakeLists.txt",
+			"cmake/boost.cmake",
+			"CMakeLists.txt",
+			"storage/ndb/ndb_configure.cmake",
+			"storage/ndb/CMakeLists.txt",
+			"cmake/ssl.cmake",
+			"cmake/os/Linux.cmake",
+			"cmake/protobuf.cmake",
+			"cmake/readline.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 24,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 183,
+				"parent" : 1
+			},
+			{
+				"file" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 3,
+				"line" : 1608,
+				"parent" : 3
+			},
+			{
+				"file" : 2,
+				"parent" : 4
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 335,
+				"parent" : 5
+			},
+			{
+				"file" : 5
+			},
+			{
+				"command" : 3,
+				"file" : 5,
+				"line" : 172,
+				"parent" : 7
+			},
+			{
+				"file" : 4,
+				"parent" : 8
+			},
+			{
+				"command" : 2,
+				"file" : 4,
+				"line" : 244,
+				"parent" : 9
+			},
+			{
+				"command" : 4,
+				"file" : 3,
+				"line" : 1848,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 411,
+				"parent" : 11
+			},
+			{
+				"command" : 2,
+				"file" : 3,
+				"line" : 1634,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 3,
+				"line" : 744,
+				"parent" : 3
+			},
+			{
+				"file" : 7,
+				"parent" : 14
+			},
+			{
+				"command" : 2,
+				"file" : 7,
+				"line" : 93,
+				"parent" : 15
+			},
+			{
+				"command" : 2,
+				"file" : 7,
+				"line" : 90,
+				"parent" : 15
+			},
+			{
+				"command" : 2,
+				"file" : 3,
+				"line" : 1633,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 3,
+				"line" : 1632,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 3,
+				"line" : 1631,
+				"parent" : 3
+			},
+			{
+				"command" : 5,
+				"file" : 3,
+				"line" : 1650,
+				"parent" : 3
+			},
+			{
+				"command" : 5,
+				"file" : 5,
+				"line" : 121,
+				"parent" : 7
+			},
+			{
+				"command" : 5,
+				"file" : 5,
+				"line" : 174,
+				"parent" : 7
+			},
+			{
+				"command" : 7,
+				"file" : 3,
+				"line" : 1981,
+				"parent" : 3
+			},
+			{
+				"command" : 6,
+				"file" : 8,
+				"line" : 122,
+				"parent" : 24
+			},
+			{
+				"command" : 5,
+				"file" : 8,
+				"line" : 112,
+				"parent" : 25
+			},
+			{
+				"command" : 9,
+				"file" : 3,
+				"line" : 1952,
+				"parent" : 3
+			},
+			{
+				"command" : 8,
+				"file" : 9,
+				"line" : 221,
+				"parent" : 27
+			},
+			{
+				"command" : 5,
+				"file" : 9,
+				"line" : 125,
+				"parent" : 28
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-std=c++17 -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -march=armv8-a+crc -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Woverloaded-virtual -Wcast-qual -Wimplicit-fallthrough=5 -Wstringop-truncation -Wsuggest-override -Wmissing-include-dirs -Wextra-semi -Wlogical-op -Werror -fno-strict-aliasing -DSAFE_MUTEX -DENABLED_DEBUG_SYNC -g -DACC_SAFE_QUEUE -DAPI_TRACE -DARRAY_GUARD -DERROR_INSERT -DNDB_DEBUG -DVM_TRACE -fPIC"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 6,
+					"define" : "BOOST_NO_CXX98_FUNCTION_BASE"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "HAVE_NDB_CONFIG_H"
+				},
+				{
+					"backtrace" : 12,
+					"define" : "HAVE_TLSv13"
+				},
+				{
+					"backtrace" : 13,
+					"define" : "LZ4_DISABLE_DEPRECATE_WARNINGS"
+				},
+				{
+					"backtrace" : 16,
+					"define" : "_FILE_OFFSET_BITS=64"
+				},
+				{
+					"backtrace" : 17,
+					"define" : "_GNU_SOURCE"
+				},
+				{
+					"backtrace" : 18,
+					"define" : "_USE_MATH_DEFINES"
+				},
+				{
+					"backtrace" : 19,
+					"define" : "__STDC_FORMAT_MACROS"
+				},
+				{
+					"backtrace" : 20,
+					"define" : "__STDC_LIMIT_MACROS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 21,
+					"path" : "/tmp/mysql/cmake-build-mysql-docker"
+				},
+				{
+					"backtrace" : 21,
+					"path" : "/tmp/mysql/cmake-build-mysql-docker/include"
+				},
+				{
+					"backtrace" : 21,
+					"path" : "/tmp/mysql"
+				},
+				{
+					"backtrace" : 21,
+					"path" : "/tmp/mysql/include"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/tmp/mysql/storage/ndb/include"
+				},
+				{
+					"backtrace" : 23,
+					"path" : "/tmp/mysql/storage/ndb/include/util"
+				},
+				{
+					"backtrace" : 23,
+					"path" : "/tmp/mysql/storage/ndb/include/portlib"
+				},
+				{
+					"backtrace" : 23,
+					"path" : "/tmp/mysql/storage/ndb/include/debugger"
+				},
+				{
+					"backtrace" : 23,
+					"path" : "/tmp/mysql/storage/ndb/include/transporter"
+				},
+				{
+					"backtrace" : 23,
+					"path" : "/tmp/mysql/storage/ndb/include/kernel"
+				},
+				{
+					"backtrace" : 23,
+					"path" : "/tmp/mysql/storage/ndb/include/mgmapi"
+				},
+				{
+					"backtrace" : 23,
+					"path" : "/tmp/mysql/storage/ndb/include/mgmcommon"
+				},
+				{
+					"backtrace" : 23,
+					"path" : "/tmp/mysql/storage/ndb/include/ndbapi"
+				},
+				{
+					"backtrace" : 23,
+					"path" : "/tmp/mysql/storage/ndb/include/logger"
+				},
+				{
+					"backtrace" : 23,
+					"path" : "/tmp/mysql/cmake-build-mysql-docker/storage/ndb/include"
+				},
+				{
+					"backtrace" : 26,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/protobuf/protobuf-24.4/src"
+				},
+				{
+					"backtrace" : 29,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/libedit/libedit-20240808-3.1/src/editline"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				40,
+				41,
+				42,
+				43,
+				44,
+				45,
+				46,
+				47,
+				48,
+				49,
+				50,
+				51,
+				52,
+				53,
+				54,
+				55,
+				56,
+				57,
+				58,
+				59,
+				60,
+				61,
+				62,
+				63,
+				64,
+				65,
+				66,
+				67,
+				68,
+				69,
+				70,
+				71,
+				72,
+				73,
+				74,
+				75,
+				76,
+				77,
+				78,
+				79,
+				80,
+				81,
+				82,
+				83,
+				84,
+				85,
+				86,
+				87,
+				88,
+				89,
+				90
+			]
+		}
+	],
+	"id" : "ndbsignaldata_objlib::@2d1b8b442280d7ac2ece",
+	"name" : "ndbsignaldata_objlib",
+	"paths" : 
+	{
+		"build" : "storage/ndb/src/common/debugger/signaldata",
+		"source" : "storage/ndb/src/common/debugger/signaldata"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				40,
+				41,
+				42,
+				43,
+				44,
+				45,
+				46,
+				47,
+				48,
+				49,
+				50,
+				51,
+				52,
+				53,
+				54,
+				55,
+				56,
+				57,
+				58,
+				59,
+				60,
+				61,
+				62,
+				63,
+				64,
+				65,
+				66,
+				67,
+				68,
+				69,
+				70,
+				71,
+				72,
+				73,
+				74,
+				75,
+				76,
+				77,
+				78,
+				79,
+				80,
+				81,
+				82,
+				83,
+				84,
+				85,
+				86,
+				87,
+				88,
+				89,
+				90
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/AccLock.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/AllocNodeId.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/AlterIndx.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/AlterIndxImpl.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/AlterTab.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/AlterTable.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/ApiVersion.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/BackupImpl.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/BackupSignalData.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/BuildIndx.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/BuildIndxImpl.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/CloseComReqConf.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/CntrStart.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/ContinueB.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/CopyGCI.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/CreateEvnt.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/CreateFK.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/CreateFragmentation.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/CreateIndx.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/CreateIndxImpl.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/CreateTab.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/CreateTable.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/CreateTrig.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/CreateTrigImpl.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/DbinfoScan.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/DictTabInfo.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/DihContinueB.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/DisconnectRep.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/DropFK.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/DropIndx.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/DropIndxImpl.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/DropTab.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/DropTable.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/DropTrig.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/DropTrigImpl.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/FailRep.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/FireTrigOrd.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/FsAppendReq.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/FsCloseReq.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/FsConf.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/FsOpenReq.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/FsReadWriteReq.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/FsRef.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/GCP.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/GetConfig.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/GetTabInfo.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/IndexStatSignal.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/IndxAttrInfo.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/IndxKeyInfo.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/IsolateOrd.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/LCP.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/LocalRouteOrd.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/LqhFrag.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/LqhKey.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/LqhTrans.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/MasterLCP.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/NFCompleteRep.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/NdbSttor.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/NdbfsContinueB.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/NodePing.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/PackedSignal.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/PrepDropTab.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/PrepFailReqRef.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/ProcessInfoRep.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/ReadNodesConf.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/RestoreImpl.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/ScanFrag.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/ScanTab.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/SchemaTrans.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/SchemaTransImpl.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/SignalDataPrint.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/SignalDroppedRep.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/SignalNames.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/StartRec.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/SumaImpl.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/SystemError.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/TcIndx.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/TcKeyConf.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/TcKeyRef.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/TcKeyReq.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/TcRollbackRep.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/TrigAttrInfo.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/TrpKeepAlive.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/TupCommit.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/TupKey.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/TuxMaint.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/UtilDelete.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/UtilExecute.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/UtilLock.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/UtilPrepare.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "storage/ndb/src/common/debugger/signaldata/UtilSequence.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "OBJECT_LIBRARY"
+}

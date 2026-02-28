@@ -1,0 +1,2 @@
+/usr/bin/ar qc librpl_commit_order_queue_lib.a CMakeFiles/rpl_commit_order_queue_lib.dir/__/__/sql/changestreams/apply/commit_order_queue.cc.o
+/usr/bin/ranlib librpl_commit_order_queue_lib.a

@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../../archive_output_directory/libndbmgmapi.a CMakeFiles/ndbmgmapi_objlib.dir/mgmapi.cpp.o CMakeFiles/ndbmgmapi_objlib.dir/mgmapi_error.cpp.o CMakeFiles/ndbmgmapi_objlib.dir/ndb_logevent.cpp.o CMakeFiles/ndbmgmapi_objlib.dir/mgmapi_configuration.cpp.o CMakeFiles/ndbmgmapi_objlib.dir/LocalConfig.cpp.o CMakeFiles/ndbmgmapi_objlib.dir/ndbd_exit_codes.cpp.o
+/usr/bin/ranlib ../../../../archive_output_directory/libndbmgmapi.a

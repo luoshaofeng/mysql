@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "extra/libevent/libevent-2.1.11-stable",
+		"source" : "extra/libevent/libevent-2.1.11-stable"
+	}
+}

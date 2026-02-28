@@ -1,0 +1,61 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"INSTALL",
+			"MYSQL_INSTALL_TARGET",
+			"MYSQL_ADD_EXECUTABLE"
+		],
+		"files" : 
+		[
+			"cmake/install_macros.cmake",
+			"cmake/mysql_add_executable.cmake",
+			"plugin/x/tests/driver/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 38,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 266,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 2
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 3,
+			"component" : "Test",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"runtime_output_directory/mysqlxtest"
+			],
+			"targetId" : "mysqlxtest::@5ed7974531d19c1b2dfb",
+			"targetIndex" : 571,
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "plugin/x/tests/driver",
+		"source" : "plugin/x/tests/driver"
+	}
+}

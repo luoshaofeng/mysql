@@ -1,0 +1,2 @@
+/usr/bin/ar qc librouter_frontend_lib.a CMakeFiles/router_frontend_lib.dir/router_app.cc.o CMakeFiles/router_frontend_lib.dir/config_generator.cc.o
+/usr/bin/ranlib librouter_frontend_lib.a

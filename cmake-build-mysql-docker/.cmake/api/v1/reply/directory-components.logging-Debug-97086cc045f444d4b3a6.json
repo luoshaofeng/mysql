@@ -1,0 +1,151 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"INSTALL",
+			"MYSQL_INSTALL_TARGET",
+			"MYSQL_ADD_COMPONENT"
+		],
+		"files" : 
+		[
+			"cmake/install_macros.cmake",
+			"cmake/component.cmake",
+			"components/logging/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 24,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 28,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 4
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 5
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 33,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 7
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 8
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 41,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 10
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 11
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 3,
+			"component" : "Server",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/component_log_sink_syseventlog.so"
+			],
+			"targetId" : "component_log_sink_syseventlog::@d18f10c1d23ba84010c1",
+			"targetIndex" : 194,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 6,
+			"component" : "Server",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/component_log_sink_json.so"
+			],
+			"targetId" : "component_log_sink_json::@d18f10c1d23ba84010c1",
+			"targetIndex" : 193,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 9,
+			"component" : "Server",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/component_log_filter_dragnet.so"
+			],
+			"targetId" : "component_log_filter_dragnet::@d18f10c1d23ba84010c1",
+			"targetIndex" : 192,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 12,
+			"component" : "Test",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/component_log_sink_test.so"
+			],
+			"targetId" : "component_log_sink_test::@d18f10c1d23ba84010c1",
+			"targetIndex" : 195,
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "components/logging",
+		"source" : "components/logging"
+	}
+}

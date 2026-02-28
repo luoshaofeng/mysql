@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsql_lexer.a CMakeFiles/sql_lexer.dir/sql_lexer.cc.o CMakeFiles/sql_lexer.dir/__/__/__/__/sql/sql_lex_hash.cc.o
+/usr/bin/ranlib libsql_lexer.a

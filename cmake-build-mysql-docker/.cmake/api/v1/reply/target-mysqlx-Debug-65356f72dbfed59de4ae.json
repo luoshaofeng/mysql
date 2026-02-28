@@ -1,0 +1,1707 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "plugin/x/libmysqlx.a"
+		}
+	],
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"ADD_LIBRARY",
+			"MYSQL_ADD_PLUGIN",
+			"TARGET_LINK_LIBRARIES",
+			"ADD_DEPENDENCIES",
+			"ADD_DEFINITIONS",
+			"INCLUDE",
+			"MYSQL_CHECK_SSL",
+			"SET_TARGET_PROPERTIES",
+			"INCLUDE_DIRECTORIES",
+			"MYSQL_USE_BUNDLED_PROTOBUF",
+			"MYSQL_CHECK_PROTOBUF",
+			"MYSQL_USE_BUNDLED_EDITLINE",
+			"MYSQL_CHECK_EDITLINE"
+		],
+		"files" : 
+		[
+			"cmake/plugin.cmake",
+			"plugin/x/CMakeLists.txt",
+			"cmake/boost.cmake",
+			"CMakeLists.txt",
+			"cmake/ssl.cmake",
+			"cmake/os/Linux.cmake",
+			"cmake/protobuf.cmake",
+			"cmake/readline.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 86,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 149,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 305,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 315,
+				"parent" : 1
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 153,
+				"parent" : 1
+			},
+			{
+				"file" : 3
+			},
+			{
+				"command" : 5,
+				"file" : 3,
+				"line" : 1608,
+				"parent" : 6
+			},
+			{
+				"file" : 2,
+				"parent" : 7
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 335,
+				"parent" : 8
+			},
+			{
+				"command" : 6,
+				"file" : 3,
+				"line" : 1848,
+				"parent" : 6
+			},
+			{
+				"command" : 4,
+				"file" : 4,
+				"line" : 411,
+				"parent" : 10
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 33,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 3,
+				"line" : 1634,
+				"parent" : 6
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 150,
+				"parent" : 1
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 105,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 3,
+				"line" : 744,
+				"parent" : 6
+			},
+			{
+				"file" : 5,
+				"parent" : 16
+			},
+			{
+				"command" : 4,
+				"file" : 5,
+				"line" : 93,
+				"parent" : 17
+			},
+			{
+				"command" : 4,
+				"file" : 5,
+				"line" : 90,
+				"parent" : 17
+			},
+			{
+				"command" : 4,
+				"file" : 3,
+				"line" : 1633,
+				"parent" : 6
+			},
+			{
+				"command" : 4,
+				"file" : 3,
+				"line" : 1632,
+				"parent" : 6
+			},
+			{
+				"command" : 4,
+				"file" : 3,
+				"line" : 1631,
+				"parent" : 6
+			},
+			{
+				"command" : 8,
+				"file" : 3,
+				"line" : 1650,
+				"parent" : 6
+			},
+			{
+				"command" : 8,
+				"file" : 1,
+				"line" : 74,
+				"parent" : 0
+			},
+			{
+				"command" : 10,
+				"file" : 3,
+				"line" : 1981,
+				"parent" : 6
+			},
+			{
+				"command" : 9,
+				"file" : 6,
+				"line" : 122,
+				"parent" : 25
+			},
+			{
+				"command" : 8,
+				"file" : 6,
+				"line" : 112,
+				"parent" : 26
+			},
+			{
+				"command" : 12,
+				"file" : 3,
+				"line" : 1952,
+				"parent" : 6
+			},
+			{
+				"command" : 11,
+				"file" : 7,
+				"line" : 221,
+				"parent" : 28
+			},
+			{
+				"command" : 8,
+				"file" : 7,
+				"line" : 125,
+				"parent" : 29
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-std=c++17 -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -march=armv8-a+crc -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Woverloaded-virtual -Wcast-qual -Wimplicit-fallthrough=5 -Wstringop-truncation -Wsuggest-override -Wmissing-include-dirs -Wextra-semi -Wlogical-op -Werror -DSAFE_MUTEX -DENABLED_DEBUG_SYNC -g -fPIC"
+				},
+				{
+					"fragment" : " -Wno-unused-parameter -Wno-undef -Wno-unused-but-set-parameter -Wno-extra-semi -Wno-suggest-override"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 9,
+					"define" : "BOOST_NO_CXX98_FUNCTION_BASE"
+				},
+				{
+					"backtrace" : 11,
+					"define" : "HAVE_TLSv13"
+				},
+				{
+					"backtrace" : 12,
+					"define" : "LOG_COMPONENT_TAG=\"mysqlx\""
+				},
+				{
+					"backtrace" : 13,
+					"define" : "LZ4_DISABLE_DEPRECATE_WARNINGS"
+				},
+				{
+					"backtrace" : 14,
+					"define" : "MYSQL_SERVER"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "PROTOBUF_USE_DLLS"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "RAPIDJSON_HAS_STDSTRING=1"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "RAPIDJSON_NO_SIZETYPEDEFINE"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "RAPIDJSON_SCHEMA_USE_INTERNALREGEX=0"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "RAPIDJSON_SCHEMA_USE_STDREGEX=1"
+				},
+				{
+					"backtrace" : 15,
+					"define" : "XPLUGIN_LOG_PROTOBUF"
+				},
+				{
+					"backtrace" : 18,
+					"define" : "_FILE_OFFSET_BITS=64"
+				},
+				{
+					"backtrace" : 19,
+					"define" : "_GNU_SOURCE"
+				},
+				{
+					"backtrace" : 20,
+					"define" : "_USE_MATH_DEFINES"
+				},
+				{
+					"backtrace" : 21,
+					"define" : "__STDC_FORMAT_MACROS"
+				},
+				{
+					"backtrace" : 22,
+					"define" : "__STDC_LIMIT_MACROS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 23,
+					"path" : "/tmp/mysql/cmake-build-mysql-docker"
+				},
+				{
+					"backtrace" : 23,
+					"path" : "/tmp/mysql/cmake-build-mysql-docker/include"
+				},
+				{
+					"backtrace" : 23,
+					"path" : "/tmp/mysql"
+				},
+				{
+					"backtrace" : 23,
+					"path" : "/tmp/mysql/include"
+				},
+				{
+					"backtrace" : 24,
+					"path" : "/tmp/mysql/cmake-build-mysql-docker/plugin/x/protocol/protobuf"
+				},
+				{
+					"backtrace" : 27,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/protobuf/protobuf-24.4/src"
+				},
+				{
+					"backtrace" : 30,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/libedit/libedit-20240808-3.1/src/editline"
+				},
+				{
+					"backtrace" : 24,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/cmake-build-mysql-docker/plugin/x/generated"
+				},
+				{
+					"backtrace" : 24,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/plugin/x/client"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/zlib/zlib-1.3.1"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/cmake-build-mysql-docker/extra/zlib/zlib-1.3.1"
+				},
+				{
+					"backtrace" : 4,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/libevent/libevent-2.1.11-stable/include"
+				},
+				{
+					"backtrace" : 4,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/cmake-build-mysql-docker/extra/libevent/libevent-2.1.11-stable/include"
+				},
+				{
+					"backtrace" : 4,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/icu/icu-release-77-1/source/common"
+				},
+				{
+					"backtrace" : 4,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/icu/icu-release-77-1/source/stubdata"
+				},
+				{
+					"backtrace" : 4,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/icu/icu-release-77-1/source/i18n"
+				},
+				{
+					"backtrace" : 4,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/abseil/abseil-cpp-20230802.1"
+				},
+				{
+					"backtrace" : 4,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/cmake-build-mysql-docker/plugin/x/generated/protobuf_lite"
+				},
+				{
+					"backtrace" : 4,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/rapidjson/include"
+				},
+				{
+					"backtrace" : 4,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/lz4/lz4-1.10.0/lib"
+				},
+				{
+					"backtrace" : 4,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/zstd/zstd-1.5.7/lib"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				40,
+				41,
+				42,
+				43,
+				44,
+				45,
+				46,
+				47,
+				48,
+				49,
+				50,
+				51,
+				52,
+				53,
+				54,
+				55,
+				56,
+				57,
+				58,
+				59,
+				60,
+				61,
+				62,
+				63,
+				64,
+				65,
+				66,
+				67,
+				68,
+				69,
+				70,
+				71,
+				72,
+				73,
+				74,
+				75,
+				76,
+				77,
+				78,
+				79,
+				80,
+				81,
+				82,
+				83,
+				84,
+				85,
+				86,
+				87,
+				88,
+				89,
+				90,
+				91,
+				92,
+				93,
+				94,
+				95,
+				96,
+				97,
+				98,
+				99,
+				100,
+				101,
+				102,
+				103,
+				104,
+				105,
+				106,
+				107,
+				108,
+				109,
+				110,
+				111,
+				112,
+				113,
+				114,
+				115,
+				116,
+				117,
+				118,
+				119
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "zlib::@132acbef7a17cf08553b"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "zstd::@4852f3e90c5b3a8fc4e8"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "event_core::@6a7956d454e45fb56c8c"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "event_extra::@6a7956d454e45fb56c8c"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "event_openssl::@6a7956d454e45fb56c8c"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "event_pthreads::@6a7956d454e45fb56c8c"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "lz4_lib::@ae00474e3be8614f4a83"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "icuuc::@6e75970fb27ac7032658"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "icui18n::@6e75970fb27ac7032658"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "icustubdata::@6e75970fb27ac7032658"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_log_severity::@d0bfcc38f320eda508c4"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_raw_logging_internal::@d0bfcc38f320eda508c4"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_spinlock_wait::@d0bfcc38f320eda508c4"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_malloc_internal::@d0bfcc38f320eda508c4"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_base::@d0bfcc38f320eda508c4"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_throw_delegate::@d0bfcc38f320eda508c4"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_strerror::@d0bfcc38f320eda508c4"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_hashtablez_sampler::@813d1eb44d82e2e5ac20"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_raw_hash_set::@813d1eb44d82e2e5ac20"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_crc_cpu_detect::@fa60c4d20e69846d8da8"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_crc_internal::@fa60c4d20e69846d8da8"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_crc32c::@fa60c4d20e69846d8da8"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_crc_cord_state::@fa60c4d20e69846d8da8"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_stacktrace::@655fbc4dcae42851788b"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_symbolize::@655fbc4dcae42851788b"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_examine_stack::@655fbc4dcae42851788b"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_debugging_internal::@655fbc4dcae42851788b"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_demangle_internal::@655fbc4dcae42851788b"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_leak_check::@655fbc4dcae42851788b"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_flags_program_name::@db391f05a5695d66d894"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_flags_config::@db391f05a5695d66d894"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_flags_marshalling::@db391f05a5695d66d894"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_flags_commandlineflag_internal::@db391f05a5695d66d894"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_flags_commandlineflag::@db391f05a5695d66d894"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_flags_private_handle_accessor::@db391f05a5695d66d894"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_flags_reflection::@db391f05a5695d66d894"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_flags_internal::@db391f05a5695d66d894"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_flags::@db391f05a5695d66d894"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_hash::@e88474aba0365ab093d0"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_city::@e88474aba0365ab093d0"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_low_level_hash::@e88474aba0365ab093d0"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_log_internal_check_op::@a7876263fae1530c9bad"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_log_internal_conditions::@a7876263fae1530c9bad"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_log_internal_format::@a7876263fae1530c9bad"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_log_internal_globals::@a7876263fae1530c9bad"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_log_internal_proto::@a7876263fae1530c9bad"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_log_internal_message::@a7876263fae1530c9bad"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_log_internal_log_sink_set::@a7876263fae1530c9bad"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_log_internal_nullguard::@a7876263fae1530c9bad"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_die_if_null::@a7876263fae1530c9bad"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_log_globals::@a7876263fae1530c9bad"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_log_initialize::@a7876263fae1530c9bad"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_log_entry::@a7876263fae1530c9bad"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_log_sink::@a7876263fae1530c9bad"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_int128::@0e6f7a0886d53da49cfa"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_exponential_biased::@7a2da4c018c42591f384"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_status::@4497fec6458647b03678"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_statusor::@4497fec6458647b03678"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_string_view::@a4757f1f1b4046bd00f9"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_strings::@a4757f1f1b4046bd00f9"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_strings_internal::@a4757f1f1b4046bd00f9"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_str_format_internal::@a4757f1f1b4046bd00f9"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_cord_internal::@a4757f1f1b4046bd00f9"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_cordz_functions::@a4757f1f1b4046bd00f9"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_cordz_handle::@a4757f1f1b4046bd00f9"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_cordz_info::@a4757f1f1b4046bd00f9"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_cord::@a4757f1f1b4046bd00f9"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_graphcycles_internal::@93b7570e389b544ae910"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_kernel_timeout_internal::@93b7570e389b544ae910"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_synchronization::@93b7570e389b544ae910"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_time::@dd15f4113236d1ff6063"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_civil_time::@dd15f4113236d1ff6063"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_time_zone::@dd15f4113236d1ff6063"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_bad_optional_access::@4ec7398060aed41cb0e6"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "absl_bad_variant_access::@4ec7398060aed41cb0e6"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "libprotobuf-lite::@11d4bd9adc70fb0e9b8f"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "mysqlxmessages_lite::@0fd4830209ca3980be17"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "xprotocol_tags::@a6639a947f5b90e4f724"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "GenError::@d3b0ab015cfc9b043577"
+		}
+	],
+	"id" : "mysqlx::@7cfd4152fef9b0f2a0b9",
+	"name" : "mysqlx",
+	"nameOnDisk" : "libmysqlx.a",
+	"paths" : 
+	{
+		"build" : "plugin/x",
+		"source" : "plugin/x"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				40,
+				41,
+				42,
+				43,
+				44,
+				45,
+				46,
+				47,
+				48,
+				49,
+				50,
+				51,
+				52,
+				53,
+				54,
+				55,
+				56,
+				57,
+				58,
+				59,
+				60,
+				61,
+				62,
+				63,
+				64,
+				65,
+				66,
+				67,
+				68,
+				69,
+				70,
+				71,
+				72,
+				73,
+				74,
+				75,
+				76,
+				77,
+				78,
+				79,
+				80,
+				81,
+				82,
+				83,
+				84,
+				85,
+				86,
+				87,
+				88,
+				89,
+				90,
+				91,
+				92,
+				93,
+				94,
+				95,
+				96,
+				97,
+				98,
+				99,
+				100,
+				101,
+				102,
+				103,
+				104,
+				105,
+				106,
+				107,
+				108,
+				109,
+				110,
+				111,
+				112,
+				113,
+				114,
+				115,
+				116,
+				117,
+				118,
+				119
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/account_verification_handler.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/admin_cmd_arguments.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/admin_cmd_collection_handler.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/admin_cmd_handler.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/admin_cmd_index.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/auth_plain.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/buffering_command_delegate.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/cache_based_verification.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/callback_command_delegate.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/capabilities/capability_compression.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/capabilities/configurator.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/capabilities/handler_auth_mech.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/capabilities/handler_client_interactive.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/capabilities/handler_connection_attributes.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/capabilities/handler_tls.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/challenge_response_verification.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/client.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/crud_cmd_handler.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/custom_command_delegates.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/delete_statement_builder.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/document_id_aggregator.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/expect/expect.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/expect/expect_condition_field.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/expect/expect_stack.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/expr_generator.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/find_statement_builder.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/helper/generate_hash.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/helper/multithread/cond.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/helper/multithread/initializer.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/helper/multithread/mutex.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/helper/multithread/rw_lock.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/helper/multithread/xsync_point.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/index_array_field.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/index_field.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/insert_statement_builder.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/io/connection_type.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/io/vio_input_stream.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/io/xpl_listener_factory.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/io/xpl_listener_tcp.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/io/xpl_listener_unix_socket.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/json_utils.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/meta_schema_validator.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/module_cache.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/module_mysqlx.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/mq/broker_task.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/mq/notice_input_queue.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/mq/notice_output_queue.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/mysql_function_names.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/mysql_show_variable_wrapper.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/mysql_variables.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/native_plain_verification.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/native_verification.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/ngs/client_list.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/ngs/document_id_generator.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/ngs/message_cache.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/ngs/message_decoder.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/ngs/notice_descriptor.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/ngs/protocol_decoder.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/ngs/protocol_encoder.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/ngs/protocol_encoder_compression.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/ngs/protocol_flusher.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/ngs/protocol_flusher_compression.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/ngs/protocol/page_pool.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/ngs/scheduler.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/ngs/server_client_timeout.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/ngs/socket_acceptors_task.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/ngs/socket_events.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/ngs/thread.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/ngs/vio_wrapper.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/notices.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/operations_factory.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/prepare_command_handler.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/prepared_statement_builder.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/prepare_param_handler.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/protocol_monitor.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/query_formatter.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/query_string_builder.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/server/authentication_container.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/server/builder/server_builder.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/server/builder/ssl_context_builder.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/server/server.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/server/server_factory.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/server/session_scheduler.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/services/mysqlx_group_membership_listener.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/services/mysqlx_group_member_status_listener.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/services/mysqlx_maintenance.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/services/registrator.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/services/service_audit_api_connection.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/services/service_registry_registration.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/services/services.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/services/service_sys_variables.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/services/service_udf_registration.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/session.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/sha256_password_cache.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/sha256_plain_verification.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/sha2_plain_verification.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/sql_data_context.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/sql_data_result.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/sql_statement_builder.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/sql_user_require.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/ssl_context.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/ssl_context_options.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/ssl_session_options.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/statement_builder.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/stmt_command_handler.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/streaming_command_delegate.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/udf/mysqlx_error.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/udf/mysqlx_generate_document_id.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/udf/mysqlx_get_prepared_statement_id.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/udf/registrator.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/udf/registry.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/update_statement_builder.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/variables/status_variables.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/variables/system_variables.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/view_statement_builder.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/xpl_dispatcher.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/xpl_log.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/xpl_performance_schema.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/xpl_plugin.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "plugin/x/src/xpl_regex.cc",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

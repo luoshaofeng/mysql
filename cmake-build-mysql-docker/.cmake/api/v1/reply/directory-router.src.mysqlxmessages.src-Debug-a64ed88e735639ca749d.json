@@ -1,0 +1,62 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"INSTALL",
+			"MYSQL_INSTALL_TARGET",
+			"MERGE_LIBRARIES_SHARED"
+		],
+		"files" : 
+		[
+			"cmake/install_macros.cmake",
+			"cmake/libutils.cmake",
+			"router/src/mysqlxmessages/src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 57,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 391,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 2
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 3,
+			"component" : "Router",
+			"destination" : "lib/mysqlrouter/private",
+			"paths" : 
+			[
+				"library_output_directory/libmysqlrouter_mysqlxmessages.so.1"
+			],
+			"targetId" : "router_mysqlxmessages::@6df1b7f6c3aadd996228",
+			"targetIndex" : 689,
+			"targetInstallNamelink" : "skip",
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "router/src/mysqlxmessages/src",
+		"source" : "router/src/mysqlxmessages/src"
+	}
+}

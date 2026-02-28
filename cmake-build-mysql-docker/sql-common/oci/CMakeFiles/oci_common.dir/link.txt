@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../archive_output_directory/liboci_common.a CMakeFiles/oci_common_objlib.dir/signing_key.cc.o CMakeFiles/oci_common_objlib.dir/ssl.cc.o CMakeFiles/oci_common_objlib.dir/utilities.cc.o
+/usr/bin/ranlib ../../archive_output_directory/liboci_common.a

@@ -1,0 +1,53 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"INSTALL",
+			"ADD_HARNESS_PLUGIN"
+		],
+		"files" : 
+		[
+			"router/cmake/Plugin.cmake",
+			"router/src/rest_api/src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 36,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 162,
+				"parent" : 1
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 2,
+			"component" : "Router",
+			"destination" : "lib/mysqlrouter",
+			"paths" : 
+			[
+				"plugin_output_directory/rest_api.so"
+			],
+			"targetId" : "rest_api::@b0207d5adfce3a3bca92",
+			"targetIndex" : 677,
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "router/src/rest_api/src",
+		"source" : "router/src/rest_api/src"
+	}
+}

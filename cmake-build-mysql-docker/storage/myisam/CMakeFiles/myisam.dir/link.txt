@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmyisam.a CMakeFiles/myisam.dir/ha_myisam.cc.o
+/usr/bin/ranlib libmyisam.a

@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../../../archive_output_directory/libndbtrace.a CMakeFiles/ndbtrace_objlib.dir/BlockNames.cpp.o CMakeFiles/ndbtrace_objlib.dir/DblqhStateDesc.cpp.o CMakeFiles/ndbtrace_objlib.dir/DbtcStateDesc.cpp.o CMakeFiles/ndbtrace_objlib.dir/DebuggerNames.cpp.o CMakeFiles/ndbtrace_objlib.dir/EventLogger.cpp.o CMakeFiles/ndbtrace_objlib.dir/NdbinfoTables.cpp.o CMakeFiles/ndbtrace_objlib.dir/SignalLoggerManager.cpp.o
+/usr/bin/ranlib ../../../../../archive_output_directory/libndbtrace.a

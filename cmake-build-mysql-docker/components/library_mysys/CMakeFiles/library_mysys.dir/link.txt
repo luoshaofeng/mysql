@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblibrary_mysys.a CMakeFiles/library_mysys.dir/my_memory.cc.o CMakeFiles/library_mysys.dir/my_hex_tools.cc.o
+/usr/bin/ranlib liblibrary_mysys.a

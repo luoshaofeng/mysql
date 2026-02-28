@@ -1,0 +1,72 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"INSTALL",
+			"ADD_HARNESS_PLUGIN"
+		],
+		"files" : 
+		[
+			"router/src/destination_status/src/CMakeLists.txt",
+			"router/cmake/Plugin.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 58,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 67,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 162,
+				"parent" : 2
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Router",
+			"destination" : "lib/mysqlrouter/private",
+			"paths" : 
+			[
+				"library_output_directory/libmysqlrouter_destination_status.so.1"
+			],
+			"targetId" : "destination_status::@028a40ec2809c4627ad1",
+			"targetIndex" : 274,
+			"targetInstallNamelink" : "skip",
+			"type" : "target"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Router",
+			"destination" : "lib/mysqlrouter",
+			"paths" : 
+			[
+				"plugin_output_directory/destination_status.so"
+			],
+			"targetId" : "destination_status_plugin::@028a40ec2809c4627ad1",
+			"targetIndex" : 275,
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "router/src/destination_status/src",
+		"source" : "router/src/destination_status/src"
+	}
+}

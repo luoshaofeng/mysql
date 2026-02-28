@@ -1,0 +1,72 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"INSTALL",
+			"add_harness_plugin"
+		],
+		"files" : 
+		[
+			"router/src/routing/src/CMakeLists.txt",
+			"router/cmake/Plugin.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 152,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 169,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 162,
+				"parent" : 2
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Router",
+			"destination" : "lib/mysqlrouter/private",
+			"paths" : 
+			[
+				"library_output_directory/libmysqlrouter_routing.so.1"
+			],
+			"targetId" : "routing::@65ecc95f5e65f3e05ff0",
+			"targetIndex" : 815,
+			"targetInstallNamelink" : "skip",
+			"type" : "target"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Router",
+			"destination" : "lib/mysqlrouter",
+			"paths" : 
+			[
+				"plugin_output_directory/routing.so"
+			],
+			"targetId" : "routing_plugin::@65ecc95f5e65f3e05ff0",
+			"targetIndex" : 817,
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "router/src/routing/src",
+		"source" : "router/src/routing/src"
+	}
+}

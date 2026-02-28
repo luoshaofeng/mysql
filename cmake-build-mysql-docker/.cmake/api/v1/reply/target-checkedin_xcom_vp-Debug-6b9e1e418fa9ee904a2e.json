@@ -1,0 +1,85 @@
+{
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"ADD_CUSTOM_TARGET",
+			"INCLUDE"
+		],
+		"files" : 
+		[
+			"plugin/group_replication/libmysqlgcs/cmake/rpcgen.cmake",
+			"plugin/group_replication/libmysqlgcs/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 51,
+				"parent" : 0
+			},
+			{
+				"file" : 0,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 178,
+				"parent" : 2
+			}
+		]
+	},
+	"id" : "checkedin_xcom_vp::@0943ec7f8775def64fa6",
+	"name" : "checkedin_xcom_vp",
+	"paths" : 
+	{
+		"build" : "plugin/group_replication/libmysqlgcs",
+		"source" : "plugin/group_replication/libmysqlgcs"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "cmake-build-mysql-docker/plugin/group_replication/libmysqlgcs/CMakeFiles/checkedin_xcom_vp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-mysql-docker/plugin/group_replication/libmysqlgcs/CMakeFiles/checkedin_xcom_vp.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-mysql-docker/plugin/group_replication/libmysqlgcs/xdr_gen/xcom_vp.h.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

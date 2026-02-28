@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "storage/ndb/src/common/mgmcommon",
+		"source" : "storage/ndb/src/common/mgmcommon"
+	}
+}

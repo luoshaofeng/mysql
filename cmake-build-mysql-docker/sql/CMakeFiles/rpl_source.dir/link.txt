@@ -1,0 +1,2 @@
+/usr/bin/ar qc librpl_source.a CMakeFiles/rpl_source.dir/rpl_source.cc.o CMakeFiles/rpl_source.dir/rpl_binlog_sender.cc.o CMakeFiles/rpl_source.dir/binlog_reader.cc.o
+/usr/bin/ranlib librpl_source.a

@@ -1,0 +1,93 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"INSTALL",
+			"MYSQL_INSTALL_TARGET",
+			"MYSQL_ADD_PLUGIN"
+		],
+		"files" : 
+		[
+			"cmake/install_macros.cmake",
+			"cmake/plugin.cmake",
+			"plugin/rewriter/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 24,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 272,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 2,
+				"line" : 62,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 2,
+				"line" : 62,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 3,
+			"component" : "Server",
+			"destination" : "lib/plugin",
+			"paths" : 
+			[
+				"plugin_output_directory/rewriter.so"
+			],
+			"targetId" : "rewriter::@e4bc5a548106914cc64f",
+			"targetIndex" : 686,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "SupportFiles",
+			"destination" : "share",
+			"paths" : 
+			[
+				"cmake-build-mysql-docker/plugin/rewriter/install_rewriter.sql"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 5,
+			"component" : "SupportFiles",
+			"destination" : "share",
+			"paths" : 
+			[
+				"cmake-build-mysql-docker/plugin/rewriter/uninstall_rewriter.sql"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "plugin/rewriter",
+		"source" : "plugin/rewriter"
+	}
+}

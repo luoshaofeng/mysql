@@ -1,0 +1,1053 @@
+{
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"ADD_CUSTOM_TARGET",
+			"ADD_DEPENDENCIES",
+			"MYSQL_ADD_COMPONENT"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt",
+			"cmake/component.cmake",
+			"plugin/x/tests/components/CMakeLists.txt",
+			"components/audit_api_message_emit/CMakeLists.txt",
+			"components/example/CMakeLists.txt",
+			"components/keyrings/keyring_file/CMakeLists.txt",
+			"components/logging/CMakeLists.txt",
+			"components/mysqlbackup/CMakeLists.txt",
+			"components/pfs_component/CMakeLists.txt",
+			"components/pfs_example/CMakeLists.txt",
+			"components/query_attributes/CMakeLists.txt",
+			"components/reference_cache/CMakeLists.txt",
+			"components/test/CMakeLists.txt",
+			"components/test_server_telemetry_traces/CMakeLists.txt",
+			"components/validate_password/CMakeLists.txt",
+			"components/test/perfschema/CMakeLists.txt",
+			"components/test/table_access/CMakeLists.txt",
+			"components/test/udf_services/CMakeLists.txt",
+			"unittest/gunit/components/mysql_server/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 2192,
+				"parent" : 0
+			},
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 25,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 3
+			},
+			{
+				"file" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 3,
+				"line" : 26,
+				"parent" : 5
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 6
+			},
+			{
+				"file" : 4
+			},
+			{
+				"command" : 2,
+				"file" : 4,
+				"line" : 24,
+				"parent" : 8
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 9
+			},
+			{
+				"command" : 2,
+				"file" : 4,
+				"line" : 31,
+				"parent" : 8
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 11
+			},
+			{
+				"command" : 2,
+				"file" : 4,
+				"line" : 37,
+				"parent" : 8
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 13
+			},
+			{
+				"command" : 2,
+				"file" : 4,
+				"line" : 43,
+				"parent" : 8
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 15
+			},
+			{
+				"command" : 2,
+				"file" : 4,
+				"line" : 48,
+				"parent" : 8
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 17
+			},
+			{
+				"command" : 2,
+				"file" : 4,
+				"line" : 53,
+				"parent" : 8
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 19
+			},
+			{
+				"command" : 2,
+				"file" : 4,
+				"line" : 58,
+				"parent" : 8
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 21
+			},
+			{
+				"file" : 5
+			},
+			{
+				"command" : 2,
+				"file" : 5,
+				"line" : 79,
+				"parent" : 23
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 24
+			},
+			{
+				"file" : 6
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 24,
+				"parent" : 26
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 27
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 28,
+				"parent" : 26
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 29
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 33,
+				"parent" : 26
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 31
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 41,
+				"parent" : 26
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 33
+			},
+			{
+				"file" : 7
+			},
+			{
+				"command" : 2,
+				"file" : 7,
+				"line" : 26,
+				"parent" : 35
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 36
+			},
+			{
+				"file" : 8
+			},
+			{
+				"command" : 2,
+				"file" : 8,
+				"line" : 26,
+				"parent" : 38
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 39
+			},
+			{
+				"file" : 9
+			},
+			{
+				"command" : 2,
+				"file" : 9,
+				"line" : 26,
+				"parent" : 41
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 42
+			},
+			{
+				"file" : 10
+			},
+			{
+				"command" : 2,
+				"file" : 10,
+				"line" : 24,
+				"parent" : 44
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 45
+			},
+			{
+				"file" : 11
+			},
+			{
+				"command" : 2,
+				"file" : 11,
+				"line" : 24,
+				"parent" : 47
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 48
+			},
+			{
+				"file" : 12
+			},
+			{
+				"command" : 2,
+				"file" : 12,
+				"line" : 28,
+				"parent" : 50
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 51
+			},
+			{
+				"command" : 2,
+				"file" : 12,
+				"line" : 33,
+				"parent" : 50
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 53
+			},
+			{
+				"command" : 2,
+				"file" : 12,
+				"line" : 38,
+				"parent" : 50
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 55
+			},
+			{
+				"command" : 2,
+				"file" : 12,
+				"line" : 43,
+				"parent" : 50
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 57
+			},
+			{
+				"command" : 2,
+				"file" : 12,
+				"line" : 48,
+				"parent" : 50
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 59
+			},
+			{
+				"command" : 2,
+				"file" : 12,
+				"line" : 53,
+				"parent" : 50
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 61
+			},
+			{
+				"command" : 2,
+				"file" : 12,
+				"line" : 58,
+				"parent" : 50
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 63
+			},
+			{
+				"command" : 2,
+				"file" : 12,
+				"line" : 63,
+				"parent" : 50
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 65
+			},
+			{
+				"command" : 2,
+				"file" : 12,
+				"line" : 68,
+				"parent" : 50
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 67
+			},
+			{
+				"command" : 2,
+				"file" : 12,
+				"line" : 73,
+				"parent" : 50
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 69
+			},
+			{
+				"command" : 2,
+				"file" : 12,
+				"line" : 78,
+				"parent" : 50
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 71
+			},
+			{
+				"command" : 2,
+				"file" : 12,
+				"line" : 83,
+				"parent" : 50
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 73
+			},
+			{
+				"command" : 2,
+				"file" : 12,
+				"line" : 88,
+				"parent" : 50
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 75
+			},
+			{
+				"command" : 2,
+				"file" : 12,
+				"line" : 93,
+				"parent" : 50
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 77
+			},
+			{
+				"command" : 2,
+				"file" : 12,
+				"line" : 98,
+				"parent" : 50
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 79
+			},
+			{
+				"command" : 2,
+				"file" : 12,
+				"line" : 103,
+				"parent" : 50
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 81
+			},
+			{
+				"command" : 2,
+				"file" : 12,
+				"line" : 108,
+				"parent" : 50
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 83
+			},
+			{
+				"command" : 2,
+				"file" : 12,
+				"line" : 113,
+				"parent" : 50
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 85
+			},
+			{
+				"command" : 2,
+				"file" : 12,
+				"line" : 118,
+				"parent" : 50
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 87
+			},
+			{
+				"command" : 2,
+				"file" : 12,
+				"line" : 123,
+				"parent" : 50
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 89
+			},
+			{
+				"command" : 2,
+				"file" : 12,
+				"line" : 128,
+				"parent" : 50
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 91
+			},
+			{
+				"command" : 2,
+				"file" : 12,
+				"line" : 133,
+				"parent" : 50
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 93
+			},
+			{
+				"command" : 2,
+				"file" : 12,
+				"line" : 138,
+				"parent" : 50
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 95
+			},
+			{
+				"command" : 2,
+				"file" : 12,
+				"line" : 143,
+				"parent" : 50
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 97
+			},
+			{
+				"command" : 2,
+				"file" : 12,
+				"line" : 148,
+				"parent" : 50
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 99
+			},
+			{
+				"command" : 2,
+				"file" : 12,
+				"line" : 154,
+				"parent" : 50
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 101
+			},
+			{
+				"command" : 2,
+				"file" : 12,
+				"line" : 159,
+				"parent" : 50
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 103
+			},
+			{
+				"command" : 2,
+				"file" : 12,
+				"line" : 164,
+				"parent" : 50
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 105
+			},
+			{
+				"command" : 2,
+				"file" : 12,
+				"line" : 169,
+				"parent" : 50
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 107
+			},
+			{
+				"command" : 2,
+				"file" : 12,
+				"line" : 174,
+				"parent" : 50
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 109
+			},
+			{
+				"file" : 13
+			},
+			{
+				"command" : 2,
+				"file" : 13,
+				"line" : 26,
+				"parent" : 111
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 112
+			},
+			{
+				"file" : 14
+			},
+			{
+				"command" : 2,
+				"file" : 14,
+				"line" : 24,
+				"parent" : 114
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 115
+			},
+			{
+				"file" : 15
+			},
+			{
+				"command" : 2,
+				"file" : 15,
+				"line" : 27,
+				"parent" : 117
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 118
+			},
+			{
+				"command" : 2,
+				"file" : 15,
+				"line" : 33,
+				"parent" : 117
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 120
+			},
+			{
+				"file" : 16
+			},
+			{
+				"command" : 2,
+				"file" : 16,
+				"line" : 27,
+				"parent" : 122
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 123
+			},
+			{
+				"file" : 17
+			},
+			{
+				"command" : 2,
+				"file" : 17,
+				"line" : 26,
+				"parent" : 125
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 126
+			},
+			{
+				"file" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 18,
+				"line" : 113,
+				"parent" : 128
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 129
+			},
+			{
+				"command" : 2,
+				"file" : 18,
+				"line" : 118,
+				"parent" : 128
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 131
+			},
+			{
+				"command" : 2,
+				"file" : 18,
+				"line" : 123,
+				"parent" : 128
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 133
+			},
+			{
+				"command" : 2,
+				"file" : 18,
+				"line" : 128,
+				"parent" : 128
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 137,
+				"parent" : 135
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "component_mysqlx_global_reset::@bcd6d1b7cd723ea2e2a3"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "component_audit_api_message_emit::@0ab8ac003d74006f8bf8"
+		},
+		{
+			"backtrace" : 10,
+			"id" : "component_example_component1::@237971921040229fd6e4"
+		},
+		{
+			"backtrace" : 12,
+			"id" : "component_example_component2::@237971921040229fd6e4"
+		},
+		{
+			"backtrace" : 14,
+			"id" : "component_example_component3::@237971921040229fd6e4"
+		},
+		{
+			"backtrace" : 16,
+			"id" : "component_test_string_service::@237971921040229fd6e4"
+		},
+		{
+			"backtrace" : 18,
+			"id" : "component_test_string_service_long::@237971921040229fd6e4"
+		},
+		{
+			"backtrace" : 20,
+			"id" : "component_test_string_service_charset::@237971921040229fd6e4"
+		},
+		{
+			"backtrace" : 22,
+			"id" : "component_test_backup_lock_service::@237971921040229fd6e4"
+		},
+		{
+			"backtrace" : 25,
+			"id" : "component_keyring_file::@87a32a907b672d360106"
+		},
+		{
+			"backtrace" : 28,
+			"id" : "component_log_sink_syseventlog::@d18f10c1d23ba84010c1"
+		},
+		{
+			"backtrace" : 30,
+			"id" : "component_log_sink_json::@d18f10c1d23ba84010c1"
+		},
+		{
+			"backtrace" : 32,
+			"id" : "component_log_filter_dragnet::@d18f10c1d23ba84010c1"
+		},
+		{
+			"backtrace" : 34,
+			"id" : "component_log_sink_test::@d18f10c1d23ba84010c1"
+		},
+		{
+			"backtrace" : 37,
+			"id" : "component_mysqlbackup::@a135fe945b302204c461"
+		},
+		{
+			"backtrace" : 40,
+			"id" : "component_pfs_example_component_population::@50d730a2baa7d59ed9e9"
+		},
+		{
+			"backtrace" : 43,
+			"id" : "component_pfs_example::@2992a99228831cbc5bb1"
+		},
+		{
+			"backtrace" : 46,
+			"id" : "component_query_attributes::@8385f3ddb8ae97270a24"
+		},
+		{
+			"backtrace" : 49,
+			"id" : "component_reference_cache::@2f22624c536546dd8373"
+		},
+		{
+			"backtrace" : 52,
+			"id" : "component_test_udf_registration::@ce0ba1ce342bc938eff1"
+		},
+		{
+			"backtrace" : 54,
+			"id" : "component_udf_reg_3_func::@ce0ba1ce342bc938eff1"
+		},
+		{
+			"backtrace" : 56,
+			"id" : "component_udf_reg_only_3_func::@ce0ba1ce342bc938eff1"
+		},
+		{
+			"backtrace" : 58,
+			"id" : "component_udf_unreg_3_func::@ce0ba1ce342bc938eff1"
+		},
+		{
+			"backtrace" : 60,
+			"id" : "component_udf_reg_int_func::@ce0ba1ce342bc938eff1"
+		},
+		{
+			"backtrace" : 62,
+			"id" : "component_udf_unreg_int_func::@ce0ba1ce342bc938eff1"
+		},
+		{
+			"backtrace" : 64,
+			"id" : "component_udf_reg_int_same_func::@ce0ba1ce342bc938eff1"
+		},
+		{
+			"backtrace" : 66,
+			"id" : "component_udf_reg_real_func::@ce0ba1ce342bc938eff1"
+		},
+		{
+			"backtrace" : 68,
+			"id" : "component_udf_unreg_real_func::@ce0ba1ce342bc938eff1"
+		},
+		{
+			"backtrace" : 70,
+			"id" : "component_udf_reg_avg_func::@ce0ba1ce342bc938eff1"
+		},
+		{
+			"backtrace" : 72,
+			"id" : "component_test_sys_var_service::@ce0ba1ce342bc938eff1"
+		},
+		{
+			"backtrace" : 74,
+			"id" : "component_test_sys_var_service_same::@ce0ba1ce342bc938eff1"
+		},
+		{
+			"backtrace" : 76,
+			"id" : "component_test_sys_var_service_int::@ce0ba1ce342bc938eff1"
+		},
+		{
+			"backtrace" : 78,
+			"id" : "component_test_sys_var_service_str::@ce0ba1ce342bc938eff1"
+		},
+		{
+			"backtrace" : 80,
+			"id" : "component_test_status_var_service::@ce0ba1ce342bc938eff1"
+		},
+		{
+			"backtrace" : 82,
+			"id" : "component_test_status_var_service_int::@ce0ba1ce342bc938eff1"
+		},
+		{
+			"backtrace" : 84,
+			"id" : "component_test_status_var_service_str::@ce0ba1ce342bc938eff1"
+		},
+		{
+			"backtrace" : 86,
+			"id" : "component_test_status_var_service_reg_only::@ce0ba1ce342bc938eff1"
+		},
+		{
+			"backtrace" : 88,
+			"id" : "component_test_status_var_service_unreg_only::@ce0ba1ce342bc938eff1"
+		},
+		{
+			"backtrace" : 90,
+			"id" : "component_test_system_variable_source::@ce0ba1ce342bc938eff1"
+		},
+		{
+			"backtrace" : 92,
+			"id" : "component_test_host_application_signal::@ce0ba1ce342bc938eff1"
+		},
+		{
+			"backtrace" : 94,
+			"id" : "component_test_audit_api_message::@ce0ba1ce342bc938eff1"
+		},
+		{
+			"backtrace" : 96,
+			"id" : "component_test_mysql_runtime_error::@ce0ba1ce342bc938eff1"
+		},
+		{
+			"backtrace" : 98,
+			"id" : "component_test_mysql_current_thread_reader::@ce0ba1ce342bc938eff1"
+		},
+		{
+			"backtrace" : 100,
+			"id" : "component_test_component_deinit::@ce0ba1ce342bc938eff1"
+		},
+		{
+			"backtrace" : 102,
+			"id" : "component_test_mysql_system_variable_set::@ce0ba1ce342bc938eff1"
+		},
+		{
+			"backtrace" : 104,
+			"id" : "component_test_sensitive_system_variables::@ce0ba1ce342bc938eff1"
+		},
+		{
+			"backtrace" : 106,
+			"id" : "component_test_mysql_command_services::@ce0ba1ce342bc938eff1"
+		},
+		{
+			"backtrace" : 108,
+			"id" : "component_test_status_var_reader::@ce0ba1ce342bc938eff1"
+		},
+		{
+			"backtrace" : 110,
+			"id" : "component_test_mysql_thd_store_service::@ce0ba1ce342bc938eff1"
+		},
+		{
+			"backtrace" : 113,
+			"id" : "component_test_server_telemetry_traces::@0e1a63944ef237508397"
+		},
+		{
+			"backtrace" : 116,
+			"id" : "component_validate_password::@1cce1f3fcb0f6f01c494"
+		},
+		{
+			"backtrace" : 119,
+			"id" : "component_test_pfs_resource_group::@87ab84adb8fcecf28670"
+		},
+		{
+			"backtrace" : 121,
+			"id" : "component_test_pfs_notification::@87ab84adb8fcecf28670"
+		},
+		{
+			"backtrace" : 124,
+			"id" : "component_test_table_access::@3e1cbb1fdc7dde41eeb8"
+		},
+		{
+			"backtrace" : 127,
+			"id" : "component_test_udf_services::@af372abe6d2525fe52af"
+		},
+		{
+			"backtrace" : 130,
+			"id" : "component_self_required_test_component::@9f50cc37595f4e609916"
+		},
+		{
+			"backtrace" : 132,
+			"id" : "component_cyclic_dependency_test_component_1::@9f50cc37595f4e609916"
+		},
+		{
+			"backtrace" : 134,
+			"id" : "component_cyclic_dependency_test_component_2::@9f50cc37595f4e609916"
+		},
+		{
+			"backtrace" : 136,
+			"id" : "component_test_reference_cache::@9f50cc37595f4e609916"
+		}
+	],
+	"id" : "component_all::@6890427a1f51a3e7e1df",
+	"name" : "component_all",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

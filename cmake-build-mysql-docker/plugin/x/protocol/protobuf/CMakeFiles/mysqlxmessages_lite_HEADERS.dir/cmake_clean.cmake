@@ -1,0 +1,43 @@
+file(REMOVE_RECURSE
+  "../../generated/protobuf_lite/mysqlx.pb.cc"
+  "../../generated/protobuf_lite/mysqlx.pb.h"
+  "../../generated/protobuf_lite/mysqlx.proto"
+  "../../generated/protobuf_lite/mysqlx_connection.pb.cc"
+  "../../generated/protobuf_lite/mysqlx_connection.pb.h"
+  "../../generated/protobuf_lite/mysqlx_connection.proto"
+  "../../generated/protobuf_lite/mysqlx_crud.pb.cc"
+  "../../generated/protobuf_lite/mysqlx_crud.pb.h"
+  "../../generated/protobuf_lite/mysqlx_crud.proto"
+  "../../generated/protobuf_lite/mysqlx_cursor.pb.cc"
+  "../../generated/protobuf_lite/mysqlx_cursor.pb.h"
+  "../../generated/protobuf_lite/mysqlx_cursor.proto"
+  "../../generated/protobuf_lite/mysqlx_datatypes.pb.cc"
+  "../../generated/protobuf_lite/mysqlx_datatypes.pb.h"
+  "../../generated/protobuf_lite/mysqlx_datatypes.proto"
+  "../../generated/protobuf_lite/mysqlx_expect.pb.cc"
+  "../../generated/protobuf_lite/mysqlx_expect.pb.h"
+  "../../generated/protobuf_lite/mysqlx_expect.proto"
+  "../../generated/protobuf_lite/mysqlx_expr.pb.cc"
+  "../../generated/protobuf_lite/mysqlx_expr.pb.h"
+  "../../generated/protobuf_lite/mysqlx_expr.proto"
+  "../../generated/protobuf_lite/mysqlx_notice.pb.cc"
+  "../../generated/protobuf_lite/mysqlx_notice.pb.h"
+  "../../generated/protobuf_lite/mysqlx_notice.proto"
+  "../../generated/protobuf_lite/mysqlx_prepare.pb.cc"
+  "../../generated/protobuf_lite/mysqlx_prepare.pb.h"
+  "../../generated/protobuf_lite/mysqlx_prepare.proto"
+  "../../generated/protobuf_lite/mysqlx_resultset.pb.cc"
+  "../../generated/protobuf_lite/mysqlx_resultset.pb.h"
+  "../../generated/protobuf_lite/mysqlx_resultset.proto"
+  "../../generated/protobuf_lite/mysqlx_session.pb.cc"
+  "../../generated/protobuf_lite/mysqlx_session.pb.h"
+  "../../generated/protobuf_lite/mysqlx_session.proto"
+  "../../generated/protobuf_lite/mysqlx_sql.pb.cc"
+  "../../generated/protobuf_lite/mysqlx_sql.pb.h"
+  "../../generated/protobuf_lite/mysqlx_sql.proto"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang )
+  include(CMakeFiles/mysqlxmessages_lite_HEADERS.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

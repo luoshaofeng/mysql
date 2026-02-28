@@ -1,0 +1,107 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"INSTALL"
+		],
+		"files" : 
+		[
+			"man/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 109,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 110,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 113,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "ManPages",
+			"destination" : "man/man1",
+			"paths" : 
+			[
+				"man/comp_err.1",
+				"man/ibd2sdi.1",
+				"man/innochecksum.1",
+				"man/lz4_decompress.1",
+				"man/my_print_defaults.1",
+				"man/myisam_ftdump.1",
+				"man/myisamchk.1",
+				"man/myisamlog.1",
+				"man/myisampack.1",
+				"man/mysql.1",
+				"man/mysql_config.1",
+				"man/mysql_config_editor.1",
+				"man/mysql_secure_installation.1",
+				"man/mysql_ssl_rsa_setup.1",
+				"man/mysql_tzinfo_to_sql.1",
+				"man/mysql_upgrade.1",
+				"man/mysqladmin.1",
+				"man/mysqlbinlog.1",
+				"man/mysqlcheck.1",
+				"man/mysqldump.1",
+				"man/mysqldumpslow.1",
+				"man/mysqlimport.1",
+				"man/mysqlman.1",
+				"man/mysqlpump.1",
+				"man/mysqlshow.1",
+				"man/mysqlslap.1",
+				"man/perror.1",
+				"man/zlib_decompress.1",
+				"man/mysql.server.1",
+				"man/mysqld_multi.1",
+				"man/mysqld_safe.1"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "ManPages",
+			"destination" : "man/man8",
+			"paths" : 
+			[
+				"man/mysqld.8"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "ManPages",
+			"destination" : "man/man1",
+			"paths" : 
+			[
+				"man/mysqlrouter.1",
+				"man/mysqlrouter_passwd.1",
+				"man/mysqlrouter_plugin_info.1"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "man",
+		"source" : "man"
+	}
+}

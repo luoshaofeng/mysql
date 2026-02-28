@@ -1,0 +1,2 @@
+/usr/bin/ar qc lib/libevent_openssl.a CMakeFiles/event_openssl.dir/bufferevent_openssl.c.o
+/usr/bin/ranlib lib/libevent_openssl.a

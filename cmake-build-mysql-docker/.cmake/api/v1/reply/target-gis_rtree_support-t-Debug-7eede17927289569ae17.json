@@ -1,0 +1,1493 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "runtime_output_directory/gis_rtree_support-t"
+		}
+	],
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"ADD_EXECUTABLE",
+			"MYSQL_ADD_EXECUTABLE",
+			"TARGET_LINK_LIBRARIES",
+			"ADD_COMPILE_OPTIONS",
+			"ADD_WSHADOW_WARNING",
+			"ADD_DEFINITIONS",
+			"INCLUDE",
+			"MYSQL_CHECK_SSL",
+			"INCLUDE_DIRECTORIES",
+			"MYSQL_USE_BUNDLED_PROTOBUF",
+			"MYSQL_CHECK_PROTOBUF",
+			"MYSQL_USE_BUNDLED_EDITLINE",
+			"MYSQL_CHECK_EDITLINE"
+		],
+		"files" : 
+		[
+			"cmake/mysql_add_executable.cmake",
+			"unittest/gunit/CMakeLists.txt",
+			"cmake/maintainer.cmake",
+			"unittest/CMakeLists.txt",
+			"cmake/boost.cmake",
+			"CMakeLists.txt",
+			"cmake/ssl.cmake",
+			"cmake/os/Linux.cmake",
+			"cmake/protobuf.cmake",
+			"cmake/readline.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 415,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 128,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 169,
+				"parent" : 1
+			},
+			{
+				"file" : 3
+			},
+			{
+				"command" : 4,
+				"file" : 3,
+				"line" : 24,
+				"parent" : 4
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 204,
+				"parent" : 5
+			},
+			{
+				"file" : 5
+			},
+			{
+				"command" : 6,
+				"file" : 5,
+				"line" : 1608,
+				"parent" : 7
+			},
+			{
+				"file" : 4,
+				"parent" : 8
+			},
+			{
+				"command" : 5,
+				"file" : 4,
+				"line" : 335,
+				"parent" : 9
+			},
+			{
+				"command" : 5,
+				"file" : 1,
+				"line" : 118,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 1,
+				"line" : 117,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 1,
+				"line" : 116,
+				"parent" : 0
+			},
+			{
+				"command" : 7,
+				"file" : 5,
+				"line" : 1848,
+				"parent" : 7
+			},
+			{
+				"command" : 5,
+				"file" : 6,
+				"line" : 411,
+				"parent" : 14
+			},
+			{
+				"command" : 5,
+				"file" : 5,
+				"line" : 1634,
+				"parent" : 7
+			},
+			{
+				"command" : 6,
+				"file" : 5,
+				"line" : 744,
+				"parent" : 7
+			},
+			{
+				"file" : 7,
+				"parent" : 17
+			},
+			{
+				"command" : 5,
+				"file" : 7,
+				"line" : 93,
+				"parent" : 18
+			},
+			{
+				"command" : 5,
+				"file" : 7,
+				"line" : 90,
+				"parent" : 18
+			},
+			{
+				"command" : 5,
+				"file" : 5,
+				"line" : 1633,
+				"parent" : 7
+			},
+			{
+				"command" : 5,
+				"file" : 5,
+				"line" : 1632,
+				"parent" : 7
+			},
+			{
+				"command" : 5,
+				"file" : 5,
+				"line" : 1631,
+				"parent" : 7
+			},
+			{
+				"command" : 8,
+				"file" : 5,
+				"line" : 1650,
+				"parent" : 7
+			},
+			{
+				"command" : 10,
+				"file" : 5,
+				"line" : 1981,
+				"parent" : 7
+			},
+			{
+				"command" : 9,
+				"file" : 8,
+				"line" : 122,
+				"parent" : 25
+			},
+			{
+				"command" : 8,
+				"file" : 8,
+				"line" : 112,
+				"parent" : 26
+			},
+			{
+				"command" : 12,
+				"file" : 5,
+				"line" : 1952,
+				"parent" : 7
+			},
+			{
+				"command" : 11,
+				"file" : 9,
+				"line" : 221,
+				"parent" : 28
+			},
+			{
+				"command" : 8,
+				"file" : 9,
+				"line" : 125,
+				"parent" : 29
+			},
+			{
+				"command" : 8,
+				"file" : 1,
+				"line" : 39,
+				"parent" : 0
+			},
+			{
+				"command" : 8,
+				"file" : 1,
+				"line" : 41,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-std=c++17 -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -march=armv8-a+crc -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Woverloaded-virtual -Wcast-qual -Wimplicit-fallthrough=5 -Wstringop-truncation  -Wmissing-include-dirs -Wextra-semi -Wlogical-op -Werror -DSAFE_MUTEX -DENABLED_DEBUG_SYNC -g -fPIE"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "-Wshadow=local"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 10,
+					"define" : "BOOST_NO_CXX98_FUNCTION_BASE"
+				},
+				{
+					"backtrace" : 11,
+					"define" : "DATA_DIR=\"/tmp/mysql/cmake-build-mysql-docker/unittest/gunit\""
+				},
+				{
+					"backtrace" : 12,
+					"define" : "ERRMSG_DIR=\"/tmp/mysql/cmake-build-mysql-docker/share\""
+				},
+				{
+					"backtrace" : 13,
+					"define" : "EXTRA_CODE_FOR_UNIT_TESTING"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "HAVE_EXT_BACKTRACE"
+				},
+				{
+					"backtrace" : 15,
+					"define" : "HAVE_TLSv13"
+				},
+				{
+					"backtrace" : 16,
+					"define" : "LZ4_DISABLE_DEPRECATE_WARNINGS"
+				},
+				{
+					"backtrace" : 13,
+					"define" : "MYSQL_SERVER"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "PROTOBUF_USE_DLLS"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "RAPIDJSON_HAS_STDSTRING=1"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "RAPIDJSON_NO_SIZETYPEDEFINE"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "RAPIDJSON_SCHEMA_USE_INTERNALREGEX=0"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "RAPIDJSON_SCHEMA_USE_STDREGEX=1"
+				},
+				{
+					"backtrace" : 19,
+					"define" : "_FILE_OFFSET_BITS=64"
+				},
+				{
+					"backtrace" : 20,
+					"define" : "_GNU_SOURCE"
+				},
+				{
+					"backtrace" : 21,
+					"define" : "_USE_MATH_DEFINES"
+				},
+				{
+					"backtrace" : 22,
+					"define" : "__STDC_FORMAT_MACROS"
+				},
+				{
+					"backtrace" : 23,
+					"define" : "__STDC_LIMIT_MACROS"
+				},
+				{
+					"define" : "gis_rtree_support_t_EXPORTS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 24,
+					"path" : "/tmp/mysql/cmake-build-mysql-docker"
+				},
+				{
+					"backtrace" : 24,
+					"path" : "/tmp/mysql/cmake-build-mysql-docker/include"
+				},
+				{
+					"backtrace" : 24,
+					"path" : "/tmp/mysql"
+				},
+				{
+					"backtrace" : 24,
+					"path" : "/tmp/mysql/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/tmp/mysql/extra/libbacktrace/include"
+				},
+				{
+					"backtrace" : 27,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/protobuf/protobuf-24.4/src"
+				},
+				{
+					"backtrace" : 30,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/libedit/libedit-20240808-3.1/src/editline"
+				},
+				{
+					"backtrace" : 31,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/include/boost_1_77_0/patches"
+				},
+				{
+					"backtrace" : 31,
+					"isSystem" : true,
+					"path" : "/opt/boost/boost_1_77_0"
+				},
+				{
+					"backtrace" : 32,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/googletest/googletest-1.17.0/googlemock"
+				},
+				{
+					"backtrace" : 32,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/googletest/googletest-1.17.0/googlemock/include"
+				},
+				{
+					"backtrace" : 32,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/googletest/googletest-1.17.0/googletest"
+				},
+				{
+					"backtrace" : 32,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/googletest/googletest-1.17.0/googletest/include"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/icu/icu-release-77-1/source/common"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/icu/icu-release-77-1/source/stubdata"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/icu/icu-release-77-1/source/i18n"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/zlib/zlib-1.3.1"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/cmake-build-mysql-docker/extra/zlib/zlib-1.3.1"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/unordered_dense/unordered_dense-4.4.0/include"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/zstd/zstd-1.5.7/lib"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/rapidjson/include"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/lz4/lz4-1.10.0/lib"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/libevent/libevent-2.1.11-stable/include"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/cmake-build-mysql-docker/extra/libevent/libevent-2.1.11-stable/include"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/extra/abseil/abseil-cpp-20230802.1"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/plugin/x/client"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/cmake-build-mysql-docker/plugin/x/generated/protobuf_lite"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/tmp/mysql/cmake-build-mysql-docker/plugin/x/generated"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "gmock::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "gtest::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "server_unittest_library::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "backtrace::@72fe72e27e394ec41d76"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "zlib::@132acbef7a17cf08553b"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "zstd::@4852f3e90c5b3a8fc4e8"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "event_core::@6a7956d454e45fb56c8c"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "event_extra::@6a7956d454e45fb56c8c"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "event_openssl::@6a7956d454e45fb56c8c"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "event_pthreads::@6a7956d454e45fb56c8c"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "lz4_lib::@ae00474e3be8614f4a83"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "icuuc::@6e75970fb27ac7032658"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "icui18n::@6e75970fb27ac7032658"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "icustubdata::@6e75970fb27ac7032658"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_log_severity::@d0bfcc38f320eda508c4"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_raw_logging_internal::@d0bfcc38f320eda508c4"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_spinlock_wait::@d0bfcc38f320eda508c4"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_malloc_internal::@d0bfcc38f320eda508c4"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_base::@d0bfcc38f320eda508c4"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_throw_delegate::@d0bfcc38f320eda508c4"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_strerror::@d0bfcc38f320eda508c4"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_hashtablez_sampler::@813d1eb44d82e2e5ac20"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_raw_hash_set::@813d1eb44d82e2e5ac20"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_crc_cpu_detect::@fa60c4d20e69846d8da8"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_crc_internal::@fa60c4d20e69846d8da8"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_crc32c::@fa60c4d20e69846d8da8"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_crc_cord_state::@fa60c4d20e69846d8da8"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_stacktrace::@655fbc4dcae42851788b"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_symbolize::@655fbc4dcae42851788b"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_examine_stack::@655fbc4dcae42851788b"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_debugging_internal::@655fbc4dcae42851788b"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_demangle_internal::@655fbc4dcae42851788b"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_leak_check::@655fbc4dcae42851788b"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_flags_program_name::@db391f05a5695d66d894"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_flags_config::@db391f05a5695d66d894"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_flags_marshalling::@db391f05a5695d66d894"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_flags_commandlineflag_internal::@db391f05a5695d66d894"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_flags_commandlineflag::@db391f05a5695d66d894"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_flags_private_handle_accessor::@db391f05a5695d66d894"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_flags_reflection::@db391f05a5695d66d894"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_flags_internal::@db391f05a5695d66d894"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_flags::@db391f05a5695d66d894"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_hash::@e88474aba0365ab093d0"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_city::@e88474aba0365ab093d0"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_low_level_hash::@e88474aba0365ab093d0"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_log_internal_check_op::@a7876263fae1530c9bad"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_log_internal_conditions::@a7876263fae1530c9bad"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_log_internal_format::@a7876263fae1530c9bad"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_log_internal_globals::@a7876263fae1530c9bad"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_log_internal_proto::@a7876263fae1530c9bad"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_log_internal_message::@a7876263fae1530c9bad"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_log_internal_log_sink_set::@a7876263fae1530c9bad"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_log_internal_nullguard::@a7876263fae1530c9bad"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_die_if_null::@a7876263fae1530c9bad"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_log_globals::@a7876263fae1530c9bad"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_log_initialize::@a7876263fae1530c9bad"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_log_entry::@a7876263fae1530c9bad"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_log_sink::@a7876263fae1530c9bad"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_int128::@0e6f7a0886d53da49cfa"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_exponential_biased::@7a2da4c018c42591f384"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_status::@4497fec6458647b03678"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_statusor::@4497fec6458647b03678"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_string_view::@a4757f1f1b4046bd00f9"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_strings::@a4757f1f1b4046bd00f9"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_strings_internal::@a4757f1f1b4046bd00f9"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_str_format_internal::@a4757f1f1b4046bd00f9"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_cord_internal::@a4757f1f1b4046bd00f9"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_cordz_functions::@a4757f1f1b4046bd00f9"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_cordz_handle::@a4757f1f1b4046bd00f9"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_cordz_info::@a4757f1f1b4046bd00f9"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_cord::@a4757f1f1b4046bd00f9"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_graphcycles_internal::@93b7570e389b544ae910"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_kernel_timeout_internal::@93b7570e389b544ae910"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_synchronization::@93b7570e389b544ae910"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_time::@dd15f4113236d1ff6063"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_civil_time::@dd15f4113236d1ff6063"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_time_zone::@dd15f4113236d1ff6063"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_bad_optional_access::@4ec7398060aed41cb0e6"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_bad_variant_access::@4ec7398060aed41cb0e6"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "libprotobuf-lite::@11d4bd9adc70fb0e9b8f"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "strings::@89d0016ae4e25e06fd39"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "xxhash_lib::@579f9b07bae318cddc91"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "vio::@c062e1da8e129617a875"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "mytime::@64e0e5023d60a36b555e"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "binlogevents_static::@2bc2c719f9331b86922b"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "archive::@2e44bbdae2afc01b0e4e"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "blackhole::@cbff55daf8a1ba3118e0"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "csv::@2d8bab0368e1620dc542"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "federated::@b132bc03dee175d33813"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "heap_library::@bb54266284e84a722211"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "heap::@bb54266284e84a722211"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "innobase::@8123eafe19b66234b7de"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "myisam_library::@a51e6dff989a3e96f0ee"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "myisam::@a51e6dff989a3e96f0ee"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "myisammrg::@efff744f1108af639037"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "ndbcluster::@2483a65989db39b6163b"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "ndbclient_static::@3f60386d75d2496d6937"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "perfschema::@7a73c12e406e924f5617"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "temptable::@4b138bdd1d62f50b8d8b"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "ngram_parser::@5cea746ce5de5d66e1e7"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "mysqlx::@7cfd4152fef9b0f2a0b9"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "mysqlxmessages_lite::@0fd4830209ca3980be17"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "minchassis::@3510df0e258f35f0ce2f"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "gunit_large::@b83d884a88c8b6af1826"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "mysql_server_component_services::@a000426781dafe198881"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "rpl_protobuf_lite::@a0ab54e7738c6b465057"
+		}
+	],
+	"id" : "gis_rtree_support-t::@b83d884a88c8b6af1826",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-std=c++17 -fno-omit-frame-pointer -ffp-contract=off  -moutline-atomics -march=armv8-a+crc -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Woverloaded-virtual -Wcast-qual -Wimplicit-fallthrough=5 -Wstringop-truncation  -Wmissing-include-dirs -Wextra-semi -Wlogical-op -Werror -DSAFE_MUTEX -DENABLED_DEBUG_SYNC -g",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-Wl,--export-dynamic -rdynamic  -Wl,--build-id=sha1",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/tmp/mysql/cmake-build-mysql-docker/library_output_directory",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "../../archive_output_directory/libgunit_large.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "../../library_output_directory/libserver_unittest_library.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../libgmock.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../libgtest.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../archive_output_directory/libsql_main.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../storage/innobase/libinnobase.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../sql/libsql_dd.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../sql/libsql_gis.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../sql/librpl.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../sql/librpl_source.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../archive_output_directory/librpl_replica.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../sql/libbinlog.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../archive_output_directory/libsql_main.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../storage/innobase/libinnobase.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../sql/libsql_dd.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../sql/libsql_gis.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../sql/librpl.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../sql/librpl_source.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../archive_output_directory/librpl_replica.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../sql/libbinlog.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../archive_output_directory/libsql_main.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../storage/innobase/libinnobase.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../sql/libsql_dd.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../sql/libsql_gis.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../sql/librpl.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../sql/librpl_source.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../archive_output_directory/librpl_replica.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../sql/libbinlog.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../storage/archive/libarchive.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../storage/blackhole/libblackhole.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../storage/csv/libcsv.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../storage/federated/libfederated.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../storage/heap/libheap.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../storage/heap/libheap_library.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../archive_output_directory/libxxhash_lib.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../sql/server_component/libmysql_server_component_services.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../archive_output_directory/libvio.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-laio",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../sql/protobuf/librpl_protobuf_lite.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../libbinlogevents/lib/libbinlogevents.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../storage/myisam/libmyisam.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../storage/myisam/libmyisam_library.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../archive_output_directory/libmysys.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../archive_output_directory/libstrings.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../archive_output_directory/libmysys.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../archive_output_directory/libstrings.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../archive_output_directory/libmytime.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../archive_output_directory/libbacktrace.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../storage/myisammrg/libmyisammrg.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../storage/ndb/libndbcluster.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../archive_output_directory/libndbclient_static.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lm",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/lib/aarch64-linux-gnu/libssl.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/lib/aarch64-linux-gnu/libcrypto.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../storage/perfschema/libperfschema.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../storage/temptable/libtemptable.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../plugin/fulltext/libngram_parser.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../plugin/x/libmysqlx.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/icu/libicui18n.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/icu/libicuuc.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/icu/libicustubdata.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../archive_output_directory/libzlib.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../archive_output_directory/liblz4_lib.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/libevent/libevent-2.1.11-stable/lib/libevent_extra.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/libevent/libevent-2.1.11-stable/lib/libevent_openssl.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/libevent/libevent-2.1.11-stable/lib/libevent_core.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/libevent/libevent-2.1.11-stable/lib/libevent_pthreads.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../plugin/x/protocol/protobuf/libmysqlxmessages_lite.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../library_output_directory/libprotobuf-lite.so.24.4.0",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/log/libabsl_log_internal_check_op.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/debugging/libabsl_leak_check.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/log/libabsl_die_if_null.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/log/libabsl_log_internal_conditions.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/log/libabsl_log_internal_message.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/log/libabsl_log_internal_nullguard.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/debugging/libabsl_examine_stack.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/log/libabsl_log_internal_format.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/log/libabsl_log_internal_proto.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/log/libabsl_log_internal_log_sink_set.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/log/libabsl_log_sink.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/log/libabsl_log_entry.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/flags/libabsl_flags.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/flags/libabsl_flags_internal.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/flags/libabsl_flags_marshalling.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/flags/libabsl_flags_reflection.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/flags/libabsl_flags_config.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/flags/libabsl_flags_program_name.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/flags/libabsl_flags_private_handle_accessor.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/flags/libabsl_flags_commandlineflag.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/flags/libabsl_flags_commandlineflag_internal.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/log/libabsl_log_initialize.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/log/libabsl_log_globals.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/log/libabsl_log_internal_globals.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/container/libabsl_raw_hash_set.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/hash/libabsl_hash.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/hash/libabsl_city.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/hash/libabsl_low_level_hash.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/container/libabsl_hashtablez_sampler.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/status/libabsl_statusor.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/status/libabsl_status.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/strings/libabsl_cord.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/strings/libabsl_cordz_info.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/strings/libabsl_cord_internal.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/strings/libabsl_cordz_functions.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/profiling/libabsl_exponential_biased.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/strings/libabsl_cordz_handle.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/crc/libabsl_crc_cord_state.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/crc/libabsl_crc32c.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/crc/libabsl_crc_internal.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/crc/libabsl_crc_cpu_detect.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/types/libabsl_bad_optional_access.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/strings/libabsl_str_format_internal.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/base/libabsl_strerror.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/synchronization/libabsl_synchronization.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/debugging/libabsl_stacktrace.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/debugging/libabsl_symbolize.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/debugging/libabsl_debugging_internal.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/debugging/libabsl_demangle_internal.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/synchronization/libabsl_graphcycles_internal.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/synchronization/libabsl_kernel_timeout_internal.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/base/libabsl_malloc_internal.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/time/libabsl_time.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/strings/libabsl_strings.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/strings/libabsl_string_view.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/base/libabsl_throw_delegate.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/strings/libabsl_strings_internal.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/base/libabsl_base.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/base/libabsl_spinlock_wait.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lrt",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/numeric/libabsl_int128.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/time/libabsl_civil_time.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/time/libabsl_time_zone.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/types/libabsl_bad_variant_access.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/base/libabsl_raw_logging_internal.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../extra/abseil/abseil-cpp-20230802.1/absl/base/libabsl_log_severity.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../archive_output_directory/libzstd.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../components/libminchassis/libminchassis.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-ldl",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "gis_rtree_support-t",
+	"nameOnDisk" : "gis_rtree_support-t",
+	"paths" : 
+	{
+		"build" : "unittest/gunit",
+		"source" : "unittest/gunit"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "unittest/gunit/gis_rtree_support-t.cc",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}
