@@ -1,2 +1,0 @@
-/usr/bin/ar qc ../../archive_output_directory/libxxhash_lib.a CMakeFiles/xxhash_lib.dir/xxHash-0.8.3/xxhash.c.o
-/usr/bin/ranlib ../../archive_output_directory/libxxhash_lib.a

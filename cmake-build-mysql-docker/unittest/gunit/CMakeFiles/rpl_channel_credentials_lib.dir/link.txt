@@ -1,2 +1,0 @@
-/usr/bin/ar qc librpl_channel_credentials_lib.a CMakeFiles/rpl_channel_credentials_lib.dir/__/__/sql/rpl_channel_credentials.cc.o
-/usr/bin/ranlib librpl_channel_credentials_lib.a

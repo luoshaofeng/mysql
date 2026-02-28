@@ -1,2 +1,0 @@
-/usr/bin/ar qc libharness_net_ts.a CMakeFiles/harness_net_ts.dir/mysql/harness/net_ts/internet.cpp.o CMakeFiles/harness_net_ts.dir/mysql/harness/net_ts/socket.cpp.o
-/usr/bin/ranlib libharness_net_ts.a

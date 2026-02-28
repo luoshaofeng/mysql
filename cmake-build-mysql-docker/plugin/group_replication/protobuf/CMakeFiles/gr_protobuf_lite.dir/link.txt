@@ -1,2 +1,0 @@
-/usr/bin/ar qc libgr_protobuf_lite.a CMakeFiles/gr_protobuf_lite.dir/__/generated/protobuf_lite/replication_group_member_actions.pb.cc.o
-/usr/bin/ranlib libgr_protobuf_lite.a

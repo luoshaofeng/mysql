@@ -1,1 +1,0 @@
-cd /tmp/mysql/cmake-build-mysql-docker && '/usr/bin/cpack' -G TGZ --config CPackConfig.cmake

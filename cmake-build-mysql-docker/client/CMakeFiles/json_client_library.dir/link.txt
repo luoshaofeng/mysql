@@ -1,2 +1,0 @@
-/usr/bin/ar qc ../archive_output_directory/libjson_client_library.a CMakeFiles/json_client_library_objlib.dir/__/sql-common/json_binary.cc.o CMakeFiles/json_client_library_objlib.dir/__/sql-common/json_dom.cc.o CMakeFiles/json_client_library_objlib.dir/__/sql-common/json_path.cc.o CMakeFiles/json_client_library_objlib.dir/__/sql-common/json_syntax_check.cc.o CMakeFiles/json_client_library_objlib.dir/__/sql-common/sql_string.cc.o
-/usr/bin/ranlib ../archive_output_directory/libjson_client_library.a

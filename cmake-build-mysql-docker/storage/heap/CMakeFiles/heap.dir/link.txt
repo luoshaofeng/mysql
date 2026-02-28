@@ -1,2 +1,0 @@
-/usr/bin/ar qc libheap.a CMakeFiles/heap.dir/ha_heap.cc.o
-/usr/bin/ranlib libheap.a

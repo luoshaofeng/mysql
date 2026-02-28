@@ -1,2 +1,0 @@
-/usr/bin/ar qc libunit_test_common.a CMakeFiles/unit_test_common.dir/unit_test_common.cc.o
-/usr/bin/ranlib libunit_test_common.a
