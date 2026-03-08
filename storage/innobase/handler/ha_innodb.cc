@@ -20229,24 +20229,24 @@ bool ha_innobase::check_if_incompatible_data(HA_CREATE_INFO *info,
                                              uint table_changes) {
   innobase_copy_frm_flags_from_create_info(m_prebuilt->table, info);
 
-  if (table_changes != IS_EQUAL_YES) {
+  if (table_changes != IS_EQUAL_YES) {    // 需要完成相等才能使用instance算法
     return (COMPATIBLE_DATA_NO);
   }
 
   /* Check that auto_increment value was not changed */
   if ((info->used_fields & HA_CREATE_USED_AUTO) &&
-      info->auto_increment_value != 0) {
+      info->auto_increment_value != 0) {      // 自增主键值不能变
     return (COMPATIBLE_DATA_NO);
   }
 
   /* Check that row format didn't change */
   if ((info->used_fields & HA_CREATE_USED_ROW_FORMAT) &&
-      info->row_type != table->s->real_row_type) {
+      info->row_type != table->s->real_row_type) {      // 行格式不能变
     return (COMPATIBLE_DATA_NO);
   }
 
   /* Specifying KEY_BLOCK_SIZE requests a rebuild of the table. */
-  if (info->used_fields & HA_CREATE_USED_KEY_BLOCK_SIZE) {
+  if (info->used_fields & HA_CREATE_USED_KEY_BLOCK_SIZE) {    // 设置索引块大小
     return (COMPATIBLE_DATA_NO);
   }
 

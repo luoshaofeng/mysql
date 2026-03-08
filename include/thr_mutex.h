@@ -156,6 +156,7 @@ static inline void safe_mutex_assert_owner(safe_mutex_t *mp) {
 
 static inline void safe_mutex_assert_not_owner(safe_mutex_t *mp) {
   assert(mp != nullptr);
+  // 加锁
   native_mutex_lock(&mp->global);
   assert(!mp->count || !my_thread_equal(my_thread_self(), mp->thread));
   native_mutex_unlock(&mp->global);

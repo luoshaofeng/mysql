@@ -2819,6 +2819,7 @@ bool MDL_context::try_acquire_lock_impl(MDL_request *mdl_request,
 
   /* Don't take chances in production. */
   mdl_request->ticket = nullptr;
+  // 检查当前这把锁不被持有
   mysql_mutex_assert_not_owner(&LOCK_open);
 
   /*
@@ -3658,10 +3659,10 @@ bool MDL_context::acquire_locks(MDL_request_list *mdl_requests,
     sort_buf.push_back(it++);
   }
 
-  std::sort(sort_buf.begin(), sort_buf.end(), MDL_request_cmp());
+  std::sort(sort_buf.begin(), sort_buf.end(), MDL_request_cmp());   // 把锁排序（按照key排序，二级按照type排序）
 
   size_t num_acquired = 0;
-  for (p_req = sort_buf.begin(); p_req != sort_buf.end(); p_req++) {
+  for (p_req = sort_buf.begin(); p_req != sort_buf.end(); p_req++) {    // 排完序后依次加锁
     if (acquire_lock(*p_req, lock_wait_timeout)) goto err;
     ++num_acquired;
   }
@@ -3757,12 +3758,12 @@ bool MDL_context::upgrade_shared_lock(MDL_ticket *mdl_ticket,
     Do nothing if already upgraded. Used when we FLUSH TABLE under
     LOCK TABLES and a table is listed twice in LOCK TABLES list.
   */
-  if (mdl_ticket->has_stronger_or_equal_type(new_type)) return false;
+  if (mdl_ticket->has_stronger_or_equal_type(new_type)) return false;   // 是否有更强的锁
 
   MDL_REQUEST_INIT_BY_KEY(&mdl_new_lock_request, &mdl_ticket->m_lock->key,
                           new_type, MDL_TRANSACTION);
 
-  if (acquire_lock(&mdl_new_lock_request, lock_wait_timeout)) return true;
+  if (acquire_lock(&mdl_new_lock_request, lock_wait_timeout)) return true;      // 升级为独占锁
 
   is_new_ticket = !has_lock(mdl_svp, mdl_new_lock_request.ticket);
 

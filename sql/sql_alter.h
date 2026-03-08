@@ -371,7 +371,7 @@ class Alter_info {
   */
   enum enum_alter_table_lock {
     // Maximum supported level of concurrency for the given operation.
-    ALTER_TABLE_LOCK_DEFAULT,
+    ALTER_TABLE_LOCK_DEFAULT,   // 智能选择
 
     // Allow concurrent reads & writes. If not supported, give error.
     ALTER_TABLE_LOCK_NONE,
@@ -425,7 +425,7 @@ class Alter_info {
   std::vector<CreateFieldApplier> cf_appliers;
 
   // Type of ALTER TABLE operation.
-  ulonglong flags;
+  ulonglong flags;    // 标识是哪种alter table操作
   // Enable or disable keys.
   enum_enable_or_disable keys_onoff;
   // List of partitions.

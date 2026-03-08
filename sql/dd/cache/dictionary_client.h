@@ -173,7 +173,7 @@ class Dictionary_client {
     by acquire_uncached(). These objects are owned by the Auto_releaser
     and are deleted when the auto releaser goes out of scope.
   */
-
+  // 数据字典客户端中的自动资源释放管理器，用于自动管理数据字典对象的生命周期和内存释放，防止资源泄漏
   class Auto_releaser {
     friend class Dictionary_client;
 

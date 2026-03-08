@@ -250,9 +250,9 @@ enum type_conversion_status {
 /*
   Some defines for exit codes for ::is_equal class functions.
 */
-#define IS_EQUAL_NO 0
-#define IS_EQUAL_YES 1
-#define IS_EQUAL_PACK_LENGTH 2
+#define IS_EQUAL_NO 0       // 不相等
+#define IS_EQUAL_YES 1      // 完全相等
+#define IS_EQUAL_PACK_LENGTH 2    // 特定属性相等
 
 #define my_charset_numeric my_charset_latin1
 #define MY_REPERTOIRE_NUMERIC MY_REPERTOIRE_ASCII

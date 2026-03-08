@@ -1237,13 +1237,15 @@ int write_bin_log(THD *thd, bool clear_error, const char *query,
 }
 
 bool lock_trigger_names(THD *thd, Table_ref *tables) {
+  // 遍历alter table涉及到的表
   for (Table_ref *table = tables; table; table = table->next_global) {
     if (table->open_type == OT_TEMPORARY_ONLY ||
         (table->open_type == OT_TEMPORARY_OR_BASE && is_temporary_table(table)))
-      continue;
+      continue;   // 跳过临时表
 
     dd::cache::Dictionary_client::Auto_releaser releaser(thd->dd_client());
 
+    // 拿到表实例对象
     const dd::Table *table_obj = nullptr;
     if (thd->dd_client()->acquire(table->db, table->table_name, &table_obj)) {
       // Error is reported by the dictionary subsystem.
@@ -1251,6 +1253,7 @@ bool lock_trigger_names(THD *thd, Table_ref *tables) {
     }
     if (table_obj == nullptr) continue;
 
+    // 获取触发器mdl独占锁
     for (const dd::Trigger *trigger : table_obj->triggers()) {
       if (acquire_exclusive_mdl_for_trigger(thd, table->db,
                                             trigger->name().c_str()))
@@ -13375,7 +13378,7 @@ static bool mysql_inplace_alter_table(
     */
     reopen_tables = true;
   } else if (inplace_supported == HA_ALTER_INPLACE_SHARED_LOCK_AFTER_PREPARE ||
-             inplace_supported == HA_ALTER_INPLACE_NO_LOCK_AFTER_PREPARE) {
+             inplace_supported == HA_ALTER_INPLACE_NO_LOCK_AFTER_PREPARE) {   // 升级为独占锁
     /*
       Storage engine has requested exclusive lock only for prepare phase
       and we are not under LOCK TABLES.
@@ -13383,7 +13386,7 @@ static bool mysql_inplace_alter_table(
       of table by other threads during main phase of in-place ALTER TABLE.
     */
     if (thd->mdl_context.upgrade_shared_lock(table->mdl_ticket, MDL_EXCLUSIVE,
-                                             thd->variables.lock_wait_timeout))
+                                             thd->variables.lock_wait_timeout))   // 升级为独占锁
       goto cleanup;
 
     tdc_remove_table(thd, TDC_RT_REMOVE_NOT_OWN_KEEP_SHARE, table->s->db.str,
@@ -13450,6 +13453,7 @@ static bool mysql_inplace_alter_table(
   }
 
   // It's now safe to take the table level lock.
+  // 加表锁
   if (lock_tables(thd, table_list, alter_ctx->tables_opened, 0)) goto cleanup;
 
   if (alter_ctx->error_if_not_empty) {
@@ -13513,7 +13517,7 @@ static bool mysql_inplace_alter_table(
       switch (alter_info->requested_lock) {
         case Alter_info::ALTER_TABLE_LOCK_DEFAULT:
         case Alter_info::ALTER_TABLE_LOCK_NONE:
-          ha_alter_info->online = true;
+          ha_alter_info->online = true;     // 支持online
           break;
         case Alter_info::ALTER_TABLE_LOCK_SHARED:
         case Alter_info::ALTER_TABLE_LOCK_EXCLUSIVE:
@@ -13557,7 +13561,7 @@ static bool mysql_inplace_alter_table(
         table->mdl_ticket->downgrade_lock(MDL_SHARED_NO_WRITE);
       else {
         assert(inplace_supported == HA_ALTER_INPLACE_NO_LOCK_AFTER_PREPARE);
-        table->mdl_ticket->downgrade_lock(MDL_SHARED_UPGRADABLE);
+        table->mdl_ticket->downgrade_lock(MDL_SHARED_UPGRADABLE);     // 降级为共享升级锁
       }
     }
 
@@ -13570,7 +13574,7 @@ static bool mysql_inplace_alter_table(
     }
 
     // Upgrade to EXCLUSIVE before commit.
-    if (wait_while_table_is_used(thd, table, HA_EXTRA_PREPARE_FOR_RENAME))
+    if (wait_while_table_is_used(thd, table, HA_EXTRA_PREPARE_FOR_RENAME))      // 再升级成独占锁
       goto rollback;
 
     if (collect_and_lock_fk_tables_for_complex_alter_table(
@@ -16327,12 +16331,13 @@ bool mysql_alter_table(THD *thd, const char *new_db, const char *new_name,
   }
 
   // Reject request to ALTER TABLE with START TRANSACTION.
-  if (create_info->m_transactional_ddl) {
+  if (create_info->m_transactional_ddl) {   // 事务禁止执行alter table
     my_error(ER_NOT_ALLOWED_WITH_START_TRANSACTION, MYF(0),
              "with ALTER TABLE command.");
     return true;
   }
 
+  // 检查WITH VALIDATION的语法是否正确
   if (alter_info->with_validation != Alter_info::ALTER_VALIDATION_DEFAULT &&
       !(alter_info->flags &
         (Alter_info::ALTER_ADD_COLUMN | Alter_info::ALTER_CHANGE_COLUMN))) {
@@ -16340,6 +16345,9 @@ bool mysql_alter_table(THD *thd, const char *new_db, const char *new_name,
     return true;
   }
 
+  // 检查ADD COLUMN模式下的一些危险操作，主从复制会有数据不一致问题
+  // ALTER TABLE orders ADD COLUMN order_id VARCHAR(36) DEFAULT (UUID());
+  // ALTER TABLE logs ADD COLUMN timestamp TIMESTAMP DEFAULT (NOW());
   if ((alter_info->flags & Alter_info::ALTER_ADD_COLUMN) ==
       Alter_info::ALTER_ADD_COLUMN) {
     for (auto create_field : alter_info->create_list) {
@@ -16367,6 +16375,7 @@ bool mysql_alter_table(THD *thd, const char *new_db, const char *new_name,
   }
 
   // LOCK clause doesn't make any sense for ALGORITHM=INSTANT.
+  // 指定INSTANT算法，不支持指定LOCK
   if (alter_info->requested_algorithm ==
           Alter_info::ALTER_TABLE_ALGORITHM_INSTANT &&
       alter_info->requested_lock != Alter_info::ALTER_TABLE_LOCK_DEFAULT) {
@@ -16377,7 +16386,7 @@ bool mysql_alter_table(THD *thd, const char *new_db, const char *new_name,
 
   THD_STAGE_INFO(thd, stage_init);
 
-  // Reject invalid usage of the 'mysql' tablespace.
+  // Reject invalid usage of the 'mysql' tablespace.  不允许alter系统库
   if (dd::invalid_tablespace_usage(thd, table_list->db, table_list->table_name,
                                    create_info))
     return true;
@@ -16388,7 +16397,7 @@ bool mysql_alter_table(THD *thd, const char *new_db, const char *new_name,
     opened and the SE (needed for SE specific validation) is identified.
   */
   if (create_info->tablespace) {
-    if (validate_tablespace_name_length(create_info->tablespace)) return true;
+    if (validate_tablespace_name_length(create_info->tablespace)) return true;  // 校验表空间名字长度
 
     if (lex_string_strmake(thd->mem_root, &table_list->target_tablespace_name,
                            create_info->tablespace,
@@ -16426,7 +16435,7 @@ bool mysql_alter_table(THD *thd, const char *new_db, const char *new_name,
     Note that RENAME TABLE the only ALTER clause which is supported for views
     has been already processed.
   */
-  table_list->required_type = dd::enum_table_type::BASE_TABLE;
+  table_list->required_type = dd::enum_table_type::BASE_TABLE;      // 设置为基础表
 
   /*
     If we are about to ALTER non-temporary table we need to get permission
@@ -16435,7 +16444,7 @@ bool mysql_alter_table(THD *thd, const char *new_db, const char *new_name,
   Table_ddl_hton_notification_guard notification_guard{
       thd, &table_list->mdl_request.key, HA_ALTER_DDL};
 
-  if (!is_temporary_table(table_list) && notification_guard.notify())
+  if (!is_temporary_table(table_list) && notification_guard.notify())   // 非临时表，通知引擎alter变更
     return true;
 
   Alter_table_prelocking_strategy alter_prelocking_strategy;
@@ -16501,6 +16510,7 @@ bool mysql_alter_table(THD *thd, const char *new_db, const char *new_name,
                                        *table_list->table))
     return true;
 
+  // 针对每个trigger 加mdl 独占锁
   if (lock_trigger_names(thd, table_list)) return true;
 
   /*
@@ -16508,7 +16518,7 @@ bool mysql_alter_table(THD *thd, const char *new_db, const char *new_name,
     as well as the currently used tablesapces (since these may have been
     introduced by a previous ALTER while already in LOCK TABLE mode).
   */
-  if (thd->locked_tables_mode &&
+  if (thd->locked_tables_mode &&    // 锁表命名空间
       get_and_lock_tablespace_names(thd, table_list, nullptr,
                                     thd->variables.lock_wait_timeout, MYF(0))) {
     return true;
@@ -16899,7 +16909,7 @@ bool mysql_alter_table(THD *thd, const char *new_db, const char *new_name,
   partition_info *new_part_info = nullptr;
   {
     if (prep_alter_part_table(thd, table, alter_info, create_info, &alter_ctx,
-                              &partition_changed, &new_part_info)) {
+                              &partition_changed, &new_part_info)) {      //部分表变更
       return true;
     }
   }
@@ -16989,7 +16999,7 @@ bool mysql_alter_table(THD *thd, const char *new_db, const char *new_name,
            Alter_info::ALTER_TABLE_ALGORITHM_INPLACE &&
        alter_info->requested_algorithm !=
            Alter_info::ALTER_TABLE_ALGORITHM_INSTANT) ||
-      is_inplace_alter_impossible(table, create_info, alter_info) ||
+      is_inplace_alter_impossible(table, create_info, alter_info) ||      // 判断能不能用inplace算法
       (partition_changed &&
        !(table->s->db_type()->partition_flags() & HA_USE_AUTO_PARTITION) &&
        !new_part_info)) {
@@ -17133,7 +17143,7 @@ bool mysql_alter_table(THD *thd, const char *new_db, const char *new_name,
     MDL_REQUEST_INIT(&tmp_name_mdl_request, MDL_key::TABLE, alter_ctx.new_db,
                      alter_ctx.tmp_name, MDL_EXCLUSIVE, MDL_STATEMENT);
     if (thd->mdl_context.acquire_lock(&tmp_name_mdl_request,
-                                      thd->variables.lock_wait_timeout))
+                                      thd->variables.lock_wait_timeout))    // 表加mdl独占锁
       return true;
   }
 
@@ -17192,7 +17202,7 @@ bool mysql_alter_table(THD *thd, const char *new_db, const char *new_name,
     storage engines support DDL atomicity.
   */
   bool atomic_replace = (new_db_type->flags & HTON_SUPPORTS_ATOMIC_DDL) &&
-                        (old_db_type->flags & HTON_SUPPORTS_ATOMIC_DDL);
+                        (old_db_type->flags & HTON_SUPPORTS_ATOMIC_DDL);    // 原子替换
 
   /* Remember that we have not created table in storage engine yet. */
   bool no_ha_table = true;
@@ -17450,9 +17460,9 @@ bool mysql_alter_table(THD *thd, const char *new_db, const char *new_name,
     // Ask storage engine whether to use copy or in-place
     enum_alter_inplace_result inplace_supported =
         table->file->check_if_supported_inplace_alter(altered_table,
-                                                      &ha_alter_info);
+                                                      &ha_alter_info);    // 是否支持原地算法
 
-    // If INSTANT was requested but it is not supported, report error.
+    // If INSTANT was requested but it is not supported, report error.    // 决定走哪个算法
     if (alter_info->requested_algorithm ==
             Alter_info::ALTER_TABLE_ALGORITHM_INSTANT &&
         inplace_supported != HA_ALTER_INPLACE_INSTANT &&
@@ -17461,7 +17471,7 @@ bool mysql_alter_table(THD *thd, const char *new_db, const char *new_name,
                                              "ALGORITHM=COPY/INPLACE");
       close_temporary_table(thd, altered_table, true, false);
       goto err_new_table_cleanup;
-    }
+    }   // 要求走原地算法，但是不支持，报错
 
     switch (inplace_supported) {
       case HA_ALTER_INPLACE_EXCLUSIVE_LOCK:
@@ -17533,7 +17543,7 @@ bool mysql_alter_table(THD *thd, const char *new_db, const char *new_name,
         goto err_new_table_cleanup;
     }
 
-    if (use_inplace) {
+    if (use_inplace) {      // inplace算法
       if (mysql_inplace_alter_table(thd, *schema, *new_schema, old_table_def,
                                     table_def, table_list, table, altered_table,
                                     &ha_alter_info, inplace_supported,

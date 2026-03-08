@@ -988,6 +988,7 @@ class THD : public MDL_context_owner,
   }
 
  private:
+  // 数据字典客户端指针 用于管理当前线程对MySQL数据字典的访问和操作
   std::unique_ptr<dd::cache::Dictionary_client> m_dd_client;
 
   /**

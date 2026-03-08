@@ -807,12 +807,12 @@ bool lock_tablespace_names(THD *thd, Tablespace_hash_set *tablespace_set,
     MDL_REQUEST_INIT(tablespace_request, MDL_key::TABLESPACE, "",
                      tablespace.c_str(), MDL_INTENTION_EXCLUSIVE,
                      MDL_TRANSACTION);
-    mdl_tablespace_requests.push_front(tablespace_request);
+    mdl_tablespace_requests.push_front(tablespace_request);     // 表空间意向锁
   }
 
   // Finally, acquire IX MDL locks.
   if (thd->mdl_context.acquire_locks(&mdl_tablespace_requests,
-                                     lock_wait_timeout))
+                                     lock_wait_timeout))      // 加表空间意向锁
     return true;
 
   DEBUG_SYNC(thd, "after_wait_locked_tablespace_name_for_table");

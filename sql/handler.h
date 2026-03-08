@@ -200,7 +200,7 @@ enum enum_alter_inplace_result {
   HA_ALTER_INPLACE_EXCLUSIVE_LOCK,
   HA_ALTER_INPLACE_SHARED_LOCK_AFTER_PREPARE,
   HA_ALTER_INPLACE_SHARED_LOCK,
-  HA_ALTER_INPLACE_NO_LOCK_AFTER_PREPARE,
+  HA_ALTER_INPLACE_NO_LOCK_AFTER_PREPARE,     // prepare后无锁
   HA_ALTER_INPLACE_NO_LOCK,
   HA_ALTER_INPLACE_INSTANT
 };
@@ -715,14 +715,14 @@ enum class enum_sampling_method { SYSTEM, NONE };
 #define HA_CREATE_USED_MAX_ROWS (1L << 5)
 #define HA_CREATE_USED_AVG_ROW_LENGTH (1L << 6)
 #define HA_CREATE_USED_PACK_KEYS (1L << 7)
-#define HA_CREATE_USED_CHARSET (1L << 8)
-#define HA_CREATE_USED_DEFAULT_CHARSET (1L << 9)
+#define HA_CREATE_USED_CHARSET (1L << 8)      // 字符集
+#define HA_CREATE_USED_DEFAULT_CHARSET (1L << 9)    // 默认字符集
 #define HA_CREATE_USED_DATADIR (1L << 10)
 #define HA_CREATE_USED_INDEXDIR (1L << 11)
 #define HA_CREATE_USED_ENGINE (1L << 12)
 #define HA_CREATE_USED_CHECKSUM (1L << 13)
 #define HA_CREATE_USED_DELAY_KEY_WRITE (1L << 14)
-#define HA_CREATE_USED_ROW_FORMAT (1L << 15)
+#define HA_CREATE_USED_ROW_FORMAT (1L << 15)      // 行定义
 #define HA_CREATE_USED_COMMENT (1L << 16)
 #define HA_CREATE_USED_PASSWORD (1L << 17)
 #define HA_CREATE_USED_CONNECTION (1L << 18)
@@ -3042,7 +3042,7 @@ enum enum_stats_auto_recalc : int {
 /**
   Struct to hold information about the table that should be created.
  */
-struct HA_CREATE_INFO {
+struct HA_CREATE_INFO {     // 保存这个表应该被创建的信息
   const CHARSET_INFO *table_charset{nullptr};
   const CHARSET_INFO *default_table_charset{nullptr};
   bool schema_read_only{false};
@@ -3193,7 +3193,7 @@ class inplace_alter_handler_ctx {
   using in-place algorithm.
 */
 
-class Alter_inplace_info {
+class Alter_inplace_info {      // 变更表结构信息，用于执行inplace算法
  public:
   /**
      Bits to show in detail what operations the storage engine is
@@ -3235,7 +3235,7 @@ class Alter_inplace_info {
   // Virtual generated column
   static const HA_ALTER_FLAGS ADD_VIRTUAL_COLUMN = 1ULL << 6;
   // Stored base (non-generated) column
-  static const HA_ALTER_FLAGS ADD_STORED_BASE_COLUMN = 1ULL << 7;
+  static const HA_ALTER_FLAGS ADD_STORED_BASE_COLUMN = 1ULL << 7;     // 添加列
   // Stored generated column
   static const HA_ALTER_FLAGS ADD_STORED_GENERATED_COLUMN = 1ULL << 8;
   // Add generic column (convenience constant).
@@ -3249,6 +3249,7 @@ class Alter_inplace_info {
       DROP_VIRTUAL_COLUMN | DROP_STORED_COLUMN;
 
   // Rename column
+  // 变更列名
   static const HA_ALTER_FLAGS ALTER_COLUMN_NAME = 1ULL << 11;
 
   // Change column datatype
@@ -3261,6 +3262,7 @@ class Alter_inplace_info {
     possible to perform change by only updating data dictionary
     without changing table rows.
   */
+  // 列类型变更，数据兼容，不修改行
   static const HA_ALTER_FLAGS ALTER_COLUMN_EQUAL_PACK_LENGTH = 1ULL << 14;
 
   /// A virtual column has changed its position
@@ -3276,6 +3278,7 @@ class Alter_inplace_info {
   static const HA_ALTER_FLAGS ALTER_COLUMN_NOT_NULLABLE = 1ULL << 18;
 
   // Set or remove default column value
+  // 变更默认值
   static const HA_ALTER_FLAGS ALTER_COLUMN_DEFAULT = 1ULL << 19;
 
   // Change column generation expression
@@ -3289,9 +3292,11 @@ class Alter_inplace_info {
   static const HA_ALTER_FLAGS DROP_FOREIGN_KEY = 1ULL << 23;
 
   // table_options changed, see HA_CREATE_INFO::used_fields for details.
+  // 可选项：如comment之类
   static const HA_ALTER_FLAGS CHANGE_CREATE_OPTION = 1ULL << 24;
 
   // Table is renamed
+  // 表被重命名
   static const HA_ALTER_FLAGS ALTER_RENAME = 1ULL << 25;
 
   // Change the storage type of column
@@ -3330,6 +3335,7 @@ class Alter_inplace_info {
     detect renaming of indexes which is done by dropping index and then
     re-creating index with identical definition under different name.
   */
+  // 重命名索引
   static const HA_ALTER_FLAGS RENAME_INDEX = 1ULL << 36;
 
   /**
@@ -3342,6 +3348,7 @@ class Alter_inplace_info {
   static const HA_ALTER_FLAGS ADD_SPATIAL_INDEX = 1ULL << 38;
 
   // Alter index comment
+  // 重命名索引注释
   static const HA_ALTER_FLAGS ALTER_INDEX_COMMENT = 1ULL << 39;
 
   // New/changed virtual generated column require validation
@@ -3362,6 +3369,7 @@ class Alter_inplace_info {
     For example, change in index length due to column expansion like
     varchar(X) changed to varchar(X + N).
   */
+  // 重命名索引长度。如列长度变更导致
   static const HA_ALTER_FLAGS ALTER_COLUMN_INDEX_LENGTH = 1ULL << 43;
 
   /**

@@ -264,7 +264,7 @@ class Repair_mrg_table_error_handler : public Internal_error_handler {
   9) share->m_flush_tickets
 */
 
-mysql_mutex_t LOCK_open;
+mysql_mutex_t LOCK_open;    // 全局锁
 
 /**
   COND_open synchronizes concurrent opening of the same share:
@@ -2468,7 +2468,7 @@ bool wait_while_table_is_used(THD *thd, TABLE *table,
                        table->s->version()));
 
   if (thd->mdl_context.upgrade_shared_lock(table->mdl_ticket, MDL_EXCLUSIVE,
-                                           thd->variables.lock_wait_timeout))
+                                           thd->variables.lock_wait_timeout))   // 升级为独占锁
     return true;
 
   tdc_remove_table(thd, TDC_RT_REMOVE_NOT_OWN, table->s->db.str,
@@ -5276,7 +5276,7 @@ bool get_and_lock_tablespace_names(THD *thd, Table_ref *tables_start,
   // the data dictionary.
   Table_ref *table;
   for (table = tables_start; table && table != tables_end;
-       table = table->next_global) {
+       table = table->next_global) {    // 遍历表
     // Consider only non-temporary tables. The if clauses below have the
     // following meaning:
     //
@@ -5349,7 +5349,7 @@ bool get_and_lock_tablespace_names(THD *thd, Table_ref *tables_start,
       return true;
   } else {
     if (lock_tablespace_names(thd, &tablespace_set, lock_wait_timeout,
-                              thd->mem_root))
+                              thd->mem_root))   // 加表空间意向锁
       return true;
   }
 
@@ -5410,7 +5410,7 @@ bool lock_table_names(THD *thd, Table_ref *tables_start, Table_ref *tables_end,
   //          construct a list of requests for table MDL locks.
   for (table = tables_start; table && table != tables_end;
        table = table->next_global) {
-    if (is_temporary_table_being_opened(table)) {
+    if (is_temporary_table_being_opened(table)) {   // 判断临时表
       continue;
     }
 
@@ -5429,8 +5429,8 @@ bool lock_table_names(THD *thd, Table_ref *tables_start, Table_ref *tables_end,
         takes place when FLUSH PRIVILEGES executed.
       */
       if (thd->lex->sql_command != SQLCOM_LOCK_TABLES &&
-          table->mdl_request.type != MDL_SHARED_READ_ONLY)
-        acquire_backup_lock = true;
+          table->mdl_request.type != MDL_SHARED_READ_ONLY)      // 不是lock table命令，要加的锁类型也不是mdl共享锁
+        acquire_backup_lock = true;     // 获取备用锁
     }
 
     if (table->mdl_request.type != MDL_SHARED_READ_ONLY) {
@@ -5444,25 +5444,25 @@ bool lock_table_names(THD *thd, Table_ref *tables_start, Table_ref *tables_end,
       if (!(flags & MYSQL_OPEN_SKIP_SCOPED_MDL_LOCK)) {
         schema_set.insert(table);
       }
-      need_global_read_lock_protection = true;
+      need_global_read_lock_protection = true;    // 需要全局读锁保护
     }
 
-    mdl_requests.push_front(&table->mdl_request);
+    mdl_requests.push_front(&table->mdl_request);   // 需要加的mdl锁添加到队头上
   }
 
   // Phase 2: Iterate over the schema set, add an IX lock for each
   //          schema name.
-  if (!(flags & MYSQL_OPEN_SKIP_SCOPED_MDL_LOCK) && !mdl_requests.is_empty()) {
+  if (!(flags & MYSQL_OPEN_SKIP_SCOPED_MDL_LOCK) && !mdl_requests.is_empty()) {   // mdl锁不为空，上锁
     /*
       Scoped locks: Take intention exclusive locks on all involved
       schemas.
     */
     for (const Table_ref *table_l : schema_set) {
-      MDL_request *schema_request = new (thd->mem_root) MDL_request;
+      MDL_request *schema_request = new (thd->mem_root) MDL_request;    // 定义mdl锁请求对象
       if (schema_request == nullptr) return true;
       MDL_REQUEST_INIT(schema_request, MDL_key::SCHEMA, table_l->db, "",
-                       MDL_INTENTION_EXCLUSIVE, MDL_TRANSACTION);
-      mdl_requests.push_front(schema_request);
+                       MDL_INTENTION_EXCLUSIVE, MDL_TRANSACTION);     // 初始化mdl锁请求对象
+      mdl_requests.push_front(schema_request);    // 将锁请求对象放到队头
       if (schema_reqs) schema_reqs->push_back(schema_request);
     }
 
@@ -5474,19 +5474,19 @@ bool lock_table_names(THD *thd, Table_ref *tables_start, Table_ref *tables_end,
       */
       if (thd->global_read_lock.can_acquire_protection()) return true;
       MDL_REQUEST_INIT(&global_request, MDL_key::GLOBAL, "", "",
-                       MDL_INTENTION_EXCLUSIVE, MDL_STATEMENT);
-      mdl_requests.push_front(&global_request);
+                       MDL_INTENTION_EXCLUSIVE, MDL_STATEMENT);   // 全局锁，mdl意向锁
+      mdl_requests.push_front(&global_request);   // 将锁请求对象放到队头
     }
   }
 
   if (acquire_backup_lock) {
     MDL_REQUEST_INIT(&backup_lock_request, MDL_key::BACKUP_LOCK, "", "",
-                     MDL_INTENTION_EXCLUSIVE, MDL_TRANSACTION);
-    mdl_requests.push_front(&backup_lock_request);
+                     MDL_INTENTION_EXCLUSIVE, MDL_TRANSACTION);   // 备份锁
+    mdl_requests.push_front(&backup_lock_request);      // 将锁请求对象放到队头
   }
 
   // Phase 3: Acquire the locks which have been requested so far.
-  if (thd->mdl_context.acquire_locks(&mdl_requests, lock_wait_timeout))
+  if (thd->mdl_context.acquire_locks(&mdl_requests, lock_wait_timeout))   // 依次加锁（1.全局锁（意向锁） 2.备份锁（意向锁） 3.库锁 （意向锁）4.表锁（共享升级锁））
     return true;
 
   /*
@@ -5498,12 +5498,12 @@ bool lock_table_names(THD *thd, Table_ref *tables_start, Table_ref *tables_end,
   if (need_global_read_lock_protection &&
       !(flags & MYSQL_OPEN_SKIP_SCOPED_MDL_LOCK) &&
       !(flags & MYSQL_LOCK_IGNORE_GLOBAL_READ_ONLY) &&
-      check_readonly(thd, true))
+      check_readonly(thd, true))    // 检验当前这个操作在thd级别上是不是只读的
     return true;
 
   // Check schema read only for all schemas.
   for (const Table_ref *table_l : schema_set)
-    if (check_schema_readonly(thd, table_l->db)) return true;
+    if (check_schema_readonly(thd, table_l->db)) return true;   // 检验当前这个操作在库级别上是不是只读的
 
   /*
     Phase 4: Lock tablespace names. This cannot be done as part
@@ -5512,7 +5512,7 @@ bool lock_table_names(THD *thd, Table_ref *tables_start, Table_ref *tables_end,
     to do this, we must have acquired a lock on the table.
   */
   return get_and_lock_tablespace_names(thd, tables_start, tables_end,
-                                       lock_wait_timeout, flags);
+                                       lock_wait_timeout, flags);     // 加表空间意向锁
 }
 
 /**
@@ -5829,7 +5829,7 @@ restart:
     } else {
       Table_ref *table;
       if (lock_table_names(thd, *start, thd->lex->first_not_own_table(),
-                           ot_ctx.get_timeout(), flags)) {
+                           ot_ctx.get_timeout(), flags)) {      // 加意向锁，加表共享升级锁
         error = true;
         goto err;
       }
@@ -6744,7 +6744,7 @@ bool open_tables_for_query(THD *thd, Table_ref *tables, uint flags) {
 
   assert(tables == thd->lex->query_tables);
 
-  if (open_tables(thd, &tables, &thd->lex->table_count, flags,
+  if (open_tables(thd, &tables, &thd->lex->table_count, flags,    // 给表加意向升级锁
                   &prelocking_strategy))
     goto end;
 

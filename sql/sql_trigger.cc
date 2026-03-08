@@ -178,8 +178,10 @@ bool acquire_exclusive_mdl_for_trigger(THD *thd, const char *db,
   DBUG_TRACE;
 
   // Protect CREATE/DROP TRIGGER statement against concurrent global read lock.
+  // 检查是否有全局读锁保护
   if (thd->global_read_lock.can_acquire_protection()) return true;
 
+  // 获取触发器mdl独占锁
   return acquire_mdl_for_trigger(thd, db, trg_name, MDL_EXCLUSIVE);
 }
 
@@ -190,10 +192,12 @@ bool acquire_mdl_for_trigger(THD *thd, const char *db, const char *trg_name,
   assert(trigger_name_mdl_type == MDL_EXCLUSIVE ||
          trigger_name_mdl_type == MDL_SHARED_HIGH_PRIO);
 
+  // 创建mdl_key
   MDL_key mdl_key;
   dd::Trigger::create_mdl_key(dd::String_type(db), dd::String_type(trg_name),
                               &mdl_key);
 
+  // 初始化mdl锁请求对象
   MDL_request mdl_request;
   MDL_REQUEST_INIT_BY_KEY(&mdl_request, &mdl_key, trigger_name_mdl_type,
                           MDL_TRANSACTION);
@@ -202,6 +206,7 @@ bool acquire_mdl_for_trigger(THD *thd, const char *db, const char *trg_name,
     MDL_key::SCHEMA since it was already done before while
     calling the method open_and_lock_subj_table().
   */
+  // 获取mdl锁
   if (thd->mdl_context.acquire_lock(&mdl_request,
                                     thd->variables.lock_wait_timeout))
     return true;

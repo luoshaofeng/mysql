@@ -2789,7 +2789,7 @@ class Table_function;
        ;
 */
 
-class Table_ref {
+class Table_ref {   // 表实例对象
  public:
   Table_ref() = default;
 
@@ -3794,7 +3794,7 @@ class Table_ref {
   */
   enum {
     /* Normal open. */
-    OPEN_NORMAL = 0,
+    OPEN_NORMAL = 0,    // 正常打开
     /* Associate a table share only if the the table exists. */
     OPEN_IF_EXISTS,
     /*

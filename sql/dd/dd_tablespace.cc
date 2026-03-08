@@ -59,7 +59,7 @@ namespace {
 template <typename T>
 bool get_and_store_tablespace_name(THD *thd, const T *obj,
                                    Tablespace_hash_set *tablespace_set) {
-  dd::String_type tablespace_name;
+  dd::String_type tablespace_name;    // 索引的 表空间名是表 db_name/table_name
   if (get_tablespace_name(thd, obj, &tablespace_name)) {
     return true;
   }
@@ -81,7 +81,7 @@ bool fill_table_and_parts_tablespace_names(
   // Get hold of the dd::Table object.
   dd::cache::Dictionary_client::Auto_releaser releaser(thd->dd_client());
   const dd::Table *table_obj = nullptr;
-  if (thd->dd_client()->acquire(db_name, table_name, &table_obj)) {
+  if (thd->dd_client()->acquire(db_name, table_name, &table_obj)) {   // 拿到表实例对象
     // Error is reported by the dictionary subsystem.
     return true;
   }
@@ -130,7 +130,7 @@ bool fill_table_and_parts_tablespace_names(
   }
 
   // Add tablespaces used by indexes.
-  for (const dd::Index *idx_obj : table_obj->indexes())
+  for (const dd::Index *idx_obj : table_obj->indexes())       // 拿索引
     if (get_and_store_tablespace_name(thd, idx_obj, tablespace_set))
       return true;
   // TODO WL#7156: Add tablespaces used by individual columnns.

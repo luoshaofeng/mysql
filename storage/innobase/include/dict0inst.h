@@ -49,7 +49,7 @@ enum class Instant_Type : uint16_t {
 
   /** ADD/DROP COLUMN which can be done instantly, including adding/dropping
   stored column only (or along with adding/dropping virtual columns) */
-  INSTANT_ADD_DROP_COLUMN,
+  INSTANT_ADD_DROP_COLUMN,      // add或者drop能够instant
 
   /** Column rename */
   INSTANT_COLUMN_RENAME

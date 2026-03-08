@@ -861,7 +861,7 @@ static inline Instant_Type innobase_support_instant(
     op = INSTANT_OPERATION::VIRTUAL_ADD_DROP_WITH_RENAME;
   } else if (alter_inplace_flags & Alter_inplace_info::ADD_STORED_BASE_COLUMN &&
              !(alter_inplace_flags & Alter_inplace_info::DROP_VIRTUAL_COLUMN)) {
-    op = INSTANT_OPERATION::INSTANT_ADD;
+    op = INSTANT_OPERATION::INSTANT_ADD;      // alter table add column命中这里
   } else if (alter_inplace_flags & Alter_inplace_info::DROP_STORED_COLUMN) {
     op = INSTANT_OPERATION::INSTANT_DROP;
   }
@@ -1039,7 +1039,7 @@ enum_alter_inplace_result ha_innobase::check_if_supported_inplace_alter(
     switch (instant_type) {
       case Instant_Type::INSTANT_IMPOSSIBLE:
         break;
-      case Instant_Type::INSTANT_ADD_DROP_COLUMN:
+      case Instant_Type::INSTANT_ADD_DROP_COLUMN:   // alter table add column命中这里
         if (ha_alter_info->alter_info->requested_algorithm ==
             Alter_info::ALTER_TABLE_ALGORITHM_INPLACE) {
           /* Still fall back to INPLACE since the behaviour is different */
@@ -1047,7 +1047,7 @@ enum_alter_inplace_result ha_innobase::check_if_supported_inplace_alter(
         } else if ((ha_alter_info->alter_info->requested_algorithm ==
                     Alter_info::ALTER_TABLE_ALGORITHM_DEFAULT) &&
                    !dict_table_is_discarded(m_prebuilt->table) &&
-                   btr_is_index_empty(m_prebuilt->table->first_index())) {
+                   btr_is_index_empty(m_prebuilt->table->first_index())) {  // 进到这里
           /* No records: prefer INPLACE to prevent bumping row version */
           break;
         } else if (!((m_prebuilt->table->n_def +

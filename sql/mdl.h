@@ -205,7 +205,7 @@ enum enum_mdl_type {
     Compatible with other IX locks, but is incompatible with scoped S and
     X locks.
   */
-  MDL_INTENTION_EXCLUSIVE = 0,
+  MDL_INTENTION_EXCLUSIVE = 0,    // mdl意向排他锁。锁数据库实例资源（库级别的锁）
   /*
     A shared metadata lock.
     To be used in cases when we are interested in object metadata only
@@ -228,7 +228,7 @@ enum enum_mdl_type {
     during PREPARE calls as table-level locks are not acquired in this
     case.
   */
-  MDL_SHARED,
+  MDL_SHARED,   // 共享锁
   /*
     A high priority shared metadata lock.
     Used for cases when there is no intention to access object data (i.e.
@@ -245,7 +245,7 @@ enum enum_mdl_type {
     deadlock during upgrade of SNW or SNRW to X lock (e.g. if the
     upgrading connection holds the resource that is being waited for).
   */
-  MDL_SHARED_HIGH_PRIO,
+  MDL_SHARED_HIGH_PRIO,   // 高优先级共享锁
   /*
     A shared metadata lock for cases when there is an intention to read data
     from table.
@@ -283,13 +283,13 @@ enum enum_mdl_type {
     or SNRW lock data modification can happen freely.
     To be used for the first phase of ALTER TABLE.
   */
-  MDL_SHARED_UPGRADABLE,
+  MDL_SHARED_UPGRADABLE,      // 可升级的共享元数据锁
   /*
     A shared metadata lock for cases when we need to read data from table
     and block all concurrent modifications to it (for both data and metadata).
     Used by LOCK TABLES READ statement.
   */
-  MDL_SHARED_READ_ONLY,
+  MDL_SHARED_READ_ONLY,     // mdl共享读锁，用于阻止数据修改和元数据修改
   /*
     An upgradable shared metadata lock which blocks all attempts to update
     table data, allowing reads.
@@ -323,14 +323,14 @@ enum enum_mdl_type {
     To be used for CREATE/DROP/RENAME TABLE statements and for execution of
     certain phases of other DDL statements.
   */
-  MDL_EXCLUSIVE,
+  MDL_EXCLUSIVE,      // 持有锁的可以修改表结构和数据
   /* This should be the last !!! */
   MDL_TYPE_END
 };
 
 /** Duration of metadata lock. */
 
-enum enum_mdl_duration {
+enum enum_mdl_duration {    // MDL锁的生命周期
   /**
     Locks with statement duration are automatically released at the end
     of statement or transaction.
@@ -340,12 +340,12 @@ enum enum_mdl_duration {
     Locks with transaction duration are automatically released at the end
     of transaction.
   */
-  MDL_TRANSACTION,
+  MDL_TRANSACTION,      // 事务级别自动释放
   /**
     Locks with explicit duration survive the end of statement and transaction.
     They have to be released explicitly by calling MDL_context::release_lock().
   */
-  MDL_EXPLICIT,
+  MDL_EXPLICIT,     // 手动释放
   /* This should be the last ! */
   MDL_DURATION_END
 };
@@ -398,17 +398,17 @@ struct MDL_key {
     treatment - waiting is aborted if connection to client is lost.
   */
   enum enum_mdl_namespace {
-    GLOBAL = 0,
-    BACKUP_LOCK,
-    TABLESPACE,
-    SCHEMA,
-    TABLE,
-    FUNCTION,
-    PROCEDURE,
-    TRIGGER,
-    EVENT,
-    COMMIT,
-    USER_LEVEL_LOCK,
+    GLOBAL = 0,   // 全局锁
+    BACKUP_LOCK,    // 阻止备份不一致
+    TABLESPACE,   // 用于表空间
+    SCHEMA,     // 数据库
+    TABLE,    // 表和视图
+    FUNCTION,   // 存储函数
+    PROCEDURE,  // 存储过程
+    TRIGGER,    // 触发器
+    EVENT,    // 事件调度器事件
+    COMMIT,   // 启用全局读锁以阻止提交
+    USER_LEVEL_LOCK,  // 用户级锁
     LOCKING_SERVICE,
     SRID,
     ACL_CACHE,
@@ -798,12 +798,12 @@ struct MDL_key {
   locks (tickets) is controlled within the MDL subsystem.
 */
 
-class MDL_request {
+class MDL_request {   // mdl锁请求对象
  public:
   /** Type of metadata lock. */
   enum_mdl_type type{MDL_INTENTION_EXCLUSIVE};
   /** Duration for requested lock. */
-  enum_mdl_duration duration{MDL_STATEMENT};
+  enum_mdl_duration duration{MDL_STATEMENT};    // 请求的锁时间
 
   /**
     Pointers for participating in the list of lock requests for this context.
@@ -1408,6 +1408,7 @@ typedef I_P_List<MDL_request,
   connection has such a context.
 */
 
+// mdl上下文
 class MDL_context {
  public:
   typedef I_P_List<MDL_ticket,
