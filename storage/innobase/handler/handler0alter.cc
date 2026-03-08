@@ -111,65 +111,94 @@ inline uint16_t instant_type_to_int(Instant_Type type) {
   return (static_cast<typename std::underlying_type<Log_Type>::type>(type));
 }
 
-/** Operations for creating secondary indexes (no rebuild needed) */
+/** 【在线创建二级索引】这些操作不需要重建聚簇索引（表数据不动），
+    只需要扫描表数据来构建新的二级索引。支持 Online（LOCK=NONE）。 */
 static const Alter_inplace_info::HA_ALTER_FLAGS INNOBASE_ONLINE_CREATE =
-    Alter_inplace_info::ADD_INDEX | Alter_inplace_info::ADD_UNIQUE_INDEX |
-    Alter_inplace_info::ADD_SPATIAL_INDEX;
+    Alter_inplace_info::ADD_INDEX |          /* 添加普通索引 */
+    Alter_inplace_info::ADD_UNIQUE_INDEX |   /* 添加唯一索引 */
+    Alter_inplace_info::ADD_SPATIAL_INDEX;   /* 添加空间索引 */
 
-/** Operations for rebuilding a table in place */
+/** 【需要重建表】这些操作需要重建聚簇索引（即创建新表、拷贝数据、交换表名）。
+    虽然是 INPLACE 算法，但代价较高。如果是 Online 模式，并发 DML 通过 row log 捕获。
+    注意：CHANGE_CREATE_OPTION 和 ADD_STORED_BASE_COLUMN 需要额外调用
+    innobase_need_rebuild() 判断是否真的需要 rebuild（可能走 INSTANT）。 */
 static const Alter_inplace_info::HA_ALTER_FLAGS INNOBASE_ALTER_REBUILD =
-    Alter_inplace_info::ADD_PK_INDEX | Alter_inplace_info::DROP_PK_INDEX |
-    Alter_inplace_info::CHANGE_CREATE_OPTION
+    Alter_inplace_info::ADD_PK_INDEX |              /* 添加主键 */
+    Alter_inplace_info::DROP_PK_INDEX |             /* 删除主键 */
+    Alter_inplace_info::CHANGE_CREATE_OPTION        /* 改表选项（ROW_FORMAT等） */
     /* CHANGE_CREATE_OPTION needs to check innobase_need_rebuild() */
-    | Alter_inplace_info::ALTER_COLUMN_NULLABLE |
-    Alter_inplace_info::ALTER_COLUMN_NOT_NULLABLE |
-    Alter_inplace_info::ALTER_STORED_COLUMN_ORDER |
-    Alter_inplace_info::DROP_STORED_COLUMN |
-    Alter_inplace_info::ADD_STORED_BASE_COLUMN
+    | Alter_inplace_info::ALTER_COLUMN_NULLABLE |   /* 列改为可 NULL */
+    Alter_inplace_info::ALTER_COLUMN_NOT_NULLABLE | /* 列改为非 NULL */
+    Alter_inplace_info::ALTER_STORED_COLUMN_ORDER | /* 改变存储列顺序 */
+    Alter_inplace_info::DROP_STORED_COLUMN |        /* 删除存储列（不满足 INSTANT 条件时） */
+    Alter_inplace_info::ADD_STORED_BASE_COLUMN      /* 添加存储列（不满足 INSTANT 条件时） */
     /* ADD_STORED_BASE_COLUMN needs to check innobase_need_rebuild() */
-    | Alter_inplace_info::RECREATE_TABLE;
+    | Alter_inplace_info::RECREATE_TABLE;           /* ALTER TABLE ... ENGINE=InnoDB 强制重建 */
 
-/** Operations that require changes to data */
+/** 【需要修改数据的操作】= 在线创建索引 + 重建表，这两类都涉及数据变更 */
 static const Alter_inplace_info::HA_ALTER_FLAGS INNOBASE_ALTER_DATA =
     INNOBASE_ONLINE_CREATE | INNOBASE_ALTER_REBUILD;
 
-/** Operations for altering a table that InnoDB does not care about */
+/** 【InnoDB 忽略的操作】这些操作 InnoDB 不需要做任何事情，
+    由 SQL 层自行处理（仅修改 .frm / 数据字典元数据） */
 static const Alter_inplace_info::HA_ALTER_FLAGS INNOBASE_INPLACE_IGNORE =
-    Alter_inplace_info::ALTER_COLUMN_DEFAULT |
-    Alter_inplace_info::ALTER_COLUMN_COLUMN_FORMAT |
-    Alter_inplace_info::ALTER_COLUMN_STORAGE_TYPE |
-    Alter_inplace_info::ALTER_RENAME | Alter_inplace_info::CHANGE_INDEX_OPTION |
-    Alter_inplace_info::ADD_CHECK_CONSTRAINT |
-    Alter_inplace_info::DROP_CHECK_CONSTRAINT |
-    Alter_inplace_info::SUSPEND_CHECK_CONSTRAINT |
-    Alter_inplace_info::ALTER_COLUMN_VISIBILITY;
+    Alter_inplace_info::ALTER_COLUMN_DEFAULT |       /* 改列默认值 */
+    Alter_inplace_info::ALTER_COLUMN_COLUMN_FORMAT | /* 改列格式 */
+    Alter_inplace_info::ALTER_COLUMN_STORAGE_TYPE |  /* 改列存储类型 */
+    Alter_inplace_info::ALTER_RENAME |               /* 表重命名 */
+    Alter_inplace_info::CHANGE_INDEX_OPTION |        /* 改索引选项 */
+    Alter_inplace_info::ADD_CHECK_CONSTRAINT |       /* 添加 CHECK 约束 */
+    Alter_inplace_info::DROP_CHECK_CONSTRAINT |      /* 删除 CHECK 约束 */
+    Alter_inplace_info::SUSPEND_CHECK_CONSTRAINT |   /* 暂停 CHECK 约束 */
+    Alter_inplace_info::ALTER_COLUMN_VISIBILITY;     /* 改列可见性 */
 
-/** Operation allowed with ALGORITHM=INSTANT */
+/** 【INSTANT 算法允许的操作】这些操作可以只修改数据字典元数据，
+    不碰任何数据页，毫秒级完成。具体能否走 INSTANT 还需要
+    innobase_support_instant() 做进一步检查（如行大小限制等） */
 static const Alter_inplace_info::HA_ALTER_FLAGS INNOBASE_INSTANT_ALLOWED =
-    Alter_inplace_info::ALTER_COLUMN_NAME |
-    Alter_inplace_info::ADD_VIRTUAL_COLUMN |
-    Alter_inplace_info::DROP_VIRTUAL_COLUMN |
-    Alter_inplace_info::ALTER_VIRTUAL_COLUMN_ORDER |
-    Alter_inplace_info::ADD_STORED_BASE_COLUMN |
-    Alter_inplace_info::ALTER_STORED_COLUMN_ORDER |
-    Alter_inplace_info::DROP_STORED_COLUMN;
+    Alter_inplace_info::ALTER_COLUMN_NAME |          /* 列重命名 */
+    Alter_inplace_info::ADD_VIRTUAL_COLUMN |         /* 添加虚拟列 */
+    Alter_inplace_info::DROP_VIRTUAL_COLUMN |        /* 删除虚拟列 */
+    Alter_inplace_info::ALTER_VIRTUAL_COLUMN_ORDER | /* 改变虚拟列顺序 */
+    Alter_inplace_info::ADD_STORED_BASE_COLUMN |     /* 添加存储列（INSTANT ADD） */
+    Alter_inplace_info::ALTER_STORED_COLUMN_ORDER |  /* 改变存储列顺序 */
+    Alter_inplace_info::DROP_STORED_COLUMN;          /* 删除存储列（INSTANT DROP） */
 
-/** Operations on foreign key definitions (changing the schema only) */
+/** 【外键操作】仅修改 schema 定义，不涉及数据变更 */
 static const Alter_inplace_info::HA_ALTER_FLAGS INNOBASE_FOREIGN_OPERATIONS =
     Alter_inplace_info::DROP_FOREIGN_KEY | Alter_inplace_info::ADD_FOREIGN_KEY;
 
-/** Operations that InnoDB cares about and can perform without rebuild */
+/** 【不需要重建表的 INPLACE 操作】这些操作 InnoDB 可以就地完成，
+    不需要重建聚簇索引。包括：创建/删除二级索引、外键操作、列重命名等 */
 static const Alter_inplace_info::HA_ALTER_FLAGS INNOBASE_ALTER_NOREBUILD =
     INNOBASE_ONLINE_CREATE | INNOBASE_FOREIGN_OPERATIONS |
-    Alter_inplace_info::DROP_INDEX | Alter_inplace_info::DROP_UNIQUE_INDEX |
-    Alter_inplace_info::RENAME_INDEX | Alter_inplace_info::ALTER_COLUMN_NAME |
-    Alter_inplace_info::ALTER_COLUMN_EQUAL_PACK_LENGTH |
-    Alter_inplace_info::ALTER_INDEX_COMMENT |
-    Alter_inplace_info::ADD_VIRTUAL_COLUMN |
-    Alter_inplace_info::DROP_VIRTUAL_COLUMN |
-    Alter_inplace_info::ALTER_VIRTUAL_COLUMN_ORDER |
+    Alter_inplace_info::DROP_INDEX |                 /* 删除索引 */
+    Alter_inplace_info::DROP_UNIQUE_INDEX |          /* 删除唯一索引 */
+    Alter_inplace_info::RENAME_INDEX |               /* 重命名索引 */
+    Alter_inplace_info::ALTER_COLUMN_NAME |          /* 列重命名 */
+    Alter_inplace_info::ALTER_COLUMN_EQUAL_PACK_LENGTH | /* 改列类型（pack长度不变） */
+    Alter_inplace_info::ALTER_INDEX_COMMENT |        /* 改索引注释 */
+    Alter_inplace_info::ADD_VIRTUAL_COLUMN |         /* 添加虚拟列 */
+    Alter_inplace_info::DROP_VIRTUAL_COLUMN |        /* 删除虚拟列 */
+    Alter_inplace_info::ALTER_VIRTUAL_COLUMN_ORDER | /* 改变虚拟列顺序 */
     Alter_inplace_info::ALTER_COLUMN_INDEX_LENGTH;
 
+/**
+ InnoDB Inplace ALTER TABLE 的上下文结构体。
+
+ 这是 Online DDL 在 InnoDB 层最核心的数据结构，贯穿 prepare/inplace/commit 三个阶段。
+ 它保存了 DDL 操作所需的所有状态信息：
+
+ 关键字段说明：
+ - old_table / new_table: 对于需要重建的操作，new_table 是新创建的临时表；
+   对于不需要重建的操作，old_table == new_table。
+   need_rebuild() 方法通过比较这两个指针来判断是否需要重建。
+ - online: 是否允许并发 DML（LOCK=NONE）
+ - col_map: 旧列号到新列号的映射，用于重建时的数据转换
+ - add_cols: 新增列的默认值 tuple，用于重建时填充新列
+ - skip_pk_sort: 如果主键列顺序不变，可以跳过排序直接按顺序插入新表
+ - m_stage: Performance Schema 的进度跟踪对象
+*/
 struct ha_innobase_inplace_ctx : public inplace_alter_handler_ctx {
   /** Dummy query graph */
   que_thr_t *thr;
@@ -297,7 +326,9 @@ struct ha_innobase_inplace_ctx : public inplace_alter_handler_ctx {
     mem_heap_free(heap);
   }
 
-  /** Determine if the table will be rebuilt.
+  /** 判断是否需要重建表。
+  当 old_table != new_table 时，说明 prepare 阶段创建了新的临时表，
+  需要将旧表数据复制/重建到新表中。
   @return whether the table will be rebuilt */
   bool need_rebuild() const { return (old_table != new_table); }
 
@@ -816,6 +847,21 @@ static bool ok_to_rename_column(const Alter_inplace_info *ha_alter_info,
 @param[in]      old_table       old TABLE
 @param[in]      altered_table   new TABLE
 @return Instant_Type accordingly */
+/** 判断给定的 ALTER TABLE 操作是否可以使用 INSTANT 算法。
+    INSTANT 算法只修改数据字典元数据，不碰任何数据页，是最快的 DDL 路径。
+    返回具体的 Instant_Type 枚举值，表示可以执行的 INSTANT 操作类型。
+    如果返回 INSTANT_IMPOSSIBLE，则需要回退到 INPLACE 或 COPY 算法。
+
+    判断逻辑：
+    1. 先排除 InnoDB 不关心的操作（INNOBASE_INPLACE_IGNORE）
+    2. 检查操作是否在 INSTANT 允许列表（INNOBASE_INSTANT_ALLOWED）内
+    3. 根据具体操作类型做进一步检查（如列重命名合法性、虚拟列顺序、行大小限制等）
+
+    @param[in] ha_alter_info  ALTER TABLE 的变更描述
+    @param[in] table          InnoDB 字典表对象
+    @param[in] old_table      旧的 MySQL TABLE 对象
+    @param[in] altered_table  新的 MySQL TABLE 对象
+    @return Instant_Type 枚举值 */
 static inline Instant_Type innobase_support_instant(
     const Alter_inplace_info *ha_alter_info, const dict_table_t *table,
     const TABLE *old_table, const TABLE *altered_table) {
@@ -917,6 +963,16 @@ static inline bool is_instant(const Alter_inplace_info *ha_alter_info) {
 /** Determine if ALTER TABLE needs to rebuild the table.
 @param[in]      ha_alter_info   The DDL operation
 @return whether it is necessary to rebuild the table */
+/** 判断给定的 ALTER TABLE 操作是否需要重建聚簇索引（即重建整张表）。
+    重建表意味着：创建新的 dict_table_t → 扫描旧表数据写入新表 → 交换表名。
+    如果是 Online 模式，并发 DML 通过 row log 机制捕获并在 commit 阶段回放。
+
+    以下情况不需要 rebuild：
+    - 操作可以走 INSTANT 算法（is_instant() 返回 true）
+    - 仅修改表选项（CHANGE_CREATE_OPTION）且不涉及 ROW_FORMAT/KEY_BLOCK_SIZE/TABLESPACE
+
+    @param[in] ha_alter_info  ALTER TABLE 的变更描述
+    @return true 需要重建表，false 不需要 */
 [[nodiscard]] static bool innobase_need_rebuild(
     const Alter_inplace_info *ha_alter_info) {
   if (is_instant(ha_alter_info)) {
@@ -4365,8 +4421,25 @@ static bool innobase_check_index_len(const TABLE *form, ulint max_part_len) {
   return valid;
 }
 
-/** Update internal structures with concurrent writes blocked,
-while preparing ALTER TABLE.
+/** 在独占锁保护下更新内部数据结构，为 INPLACE ALTER TABLE 做准备。
+
+这是 Online DDL 的 prepare 阶段核心函数，主要工作：
+
+1. 如果需要重建表（new_clustered=true）：
+   - 创建一个新的临时 InnoDB 表（dict_mem_table_create）
+   - 将新表的列定义从 MySQL 层映射到 InnoDB 层
+   - 构建列映射关系（col_map），用于后续数据转换
+   - 如果是 Online 操作，在旧表聚簇索引上分配 row log
+
+2. 创建新索引（无论是否重建）：
+   - 调用 ddl::create_index() 创建索引定义
+   - 对于 Online 的非重建操作，为每个新二级索引分配 row log
+   - 处理全文索引（FTS）的特殊逻辑
+
+3. Row Log 分配策略：
+   - 重建表：row log 分配在旧表的聚簇索引上（记录并发 DML 的行变更）
+   - 创建二级索引：row log 分配在新索引上（记录并发 DML 对该索引的影响）
+   - 非 Online 操作：不需要 row log（持有锁，无并发 DML）
 
 @param ha_alter_info Data used during in-place alter
 @param altered_table MySQL table that is being altered
@@ -4567,9 +4640,8 @@ template <typename Table>
 
   ut_d(dict_table_check_for_dup_indexes(ctx->new_table, CHECK_ABORTED_OK));
 
-  /* If a new clustered index is defined for the table we need
-  to rebuild the table with a temporary name. */
-
+  /* 如果需要重建聚簇索引（new_clustered），则创建一个新的临时 InnoDB 表。
+  新表使用临时名称，在 commit 阶段通过重命名替换旧表。 */
   if (new_clustered) {
     const char *new_table_name = dict_mem_create_temporary_tablename(
         ctx->heap, ctx->new_table->name.m_name, ctx->new_table->id);
@@ -4933,12 +5005,10 @@ template <typename Table>
       fts_index = ctx->add_index[a];
     }
 
-    /* If only online ALTER TABLE operations have been
-    requested, allocate a modification log. If the table
-    will be locked anyway, the modification
-    log is unnecessary. When rebuilding the table
-    (new_clustered), we will allocate the log for the
-    clustered index of the old table, later. */
+    /* 如果仅请求了 Online ALTER TABLE 操作，则为新索引分配 modification log。
+    如果表会被锁定（非 Online），则不需要 modification log。
+    当重建表（new_clustered）时，row log 会在后面为旧表的聚簇索引分配，
+    而不是在这里为新索引分配。 */
     if (new_clustered || !ctx->online || user_table->ibd_file_missing ||
         dict_table_is_discarded(user_table)) {
       /* No need to allocate a modification log. */
@@ -4970,6 +5040,7 @@ template <typename Table>
   if (new_clustered) {
     dict_index_t *clust_index = user_table->first_index();
     dict_index_t *new_clust_index = ctx->new_table->first_index();
+    /* 检查主键列顺序是否不变，如果不变可以跳过排序，直接按顺序插入新表 */
     ctx->skip_pk_sort = innobase_pk_order_preserved(
         ctx->col_map, clust_index, new_clust_index, ctx->add_autoinc);
 
@@ -4977,7 +5048,14 @@ template <typename Table>
                     assert(ctx->skip_pk_sort););
 
     if (ctx->online) {
-      /* Allocate a log for online table rebuild. */
+      /* 为 Online 表重建分配 row log。
+      row log 分配在旧表的聚簇索引上，用于记录 DDL 执行期间的并发 DML。
+      参数说明：
+      - clust_index: 旧表聚簇索引（row log 挂载点）
+      - ctx->new_table: 新表（回放目标）
+      - same_pk: 主键定义是否不变（影响 row log 的记录格式）
+      - ctx->add_cols: 新增列的默认值（回放时用于填充新列）
+      - ctx->col_map: 列映射关系（旧列号→新列号） */
       rw_lock_x_lock(&clust_index->lock, UT_LOCATION_HERE);
       bool ok = row_log_allocate(
           clust_index, ctx->new_table,
@@ -6897,9 +6975,24 @@ static void innobase_rename_col_discard_foreign(
   }
 }
 
-/** Commit the changes made during prepare_inplace_alter_table()
-and inplace_alter_table() inside the data dictionary tables,
-when rebuilding the table.
+/** 提交需要重建表的 INPLACE ALTER TABLE 操作。
+
+这是 Online 表重建的 commit 阶段核心函数，主要工作：
+
+1. 检查所有新索引是否完整且未损坏
+2. 更新外键约束
+3. 如果是 Online 操作（ctx->online），调用 row_log_table_apply()
+   将 DDL 执行期间积累的并发 DML 变更回放到新表
+4. 处理回放过程中可能出现的错误：
+   - DB_DUPLICATE_KEY: 并发 INSERT 导致唯一键冲突
+   - DB_ONLINE_LOG_TOO_BIG: row log 超过 innodb_online_alter_log_max_size
+   - DB_INDEX_CORRUPT: 索引损坏
+5. 继承旧表的 discarded 标志
+6. 检查表引用计数（必须为 1，否则说明有其他连接在使用）
+
+注意：此函数在持有数据字典 X 锁的情况下执行，
+row_log_table_apply() 是最耗时的部分。
+
 @param ha_alter_info Data used during in-place alter
 @param ctx In-place ALTER TABLE context
 @param altered_table MySQL table that is being altered
@@ -6957,6 +7050,8 @@ when rebuilding the table.
   if (ctx->online) {
     DEBUG_SYNC_C("row_log_table_apply2_before");
 
+    /* 如果新表有虚拟列，需要构建虚拟列模板，
+    以便在回放 row log 时能正确计算虚拟列的值 */
     dict_vcol_templ_t *s_templ = nullptr;
 
     if (ctx->new_table->n_v_cols > 0) {
@@ -6968,6 +7063,9 @@ when rebuilding the table.
       ctx->new_table->vc_templ = s_templ;
     }
 
+    /* 核心步骤：回放表级 row log。
+    将 DDL 执行期间积累的所有并发 DML 变更（INSERT/UPDATE/DELETE）
+    逐条回放到新表的聚簇索引中。这是 Online 表重建最关键的一步。 */
     error = row_log_table_apply(
         ctx->thr, user_table, altered_table,
         static_cast<ha_innobase_inplace_ctx *>(ha_alter_info->handler_ctx)
@@ -6987,6 +7085,7 @@ when rebuilding the table.
       case DB_SUCCESS:
         break;
       case DB_DUPLICATE_KEY:
+        /* 回放过程中发现唯一键冲突（并发 INSERT 导致） */
         if (err_key == ULINT_UNDEFINED) {
           /* This should be the hidden index on
           FTS_DOC_ID. */
@@ -7005,6 +7104,9 @@ when rebuilding the table.
                            old_table->s->table_name.str);
         return true;
       case DB_ONLINE_LOG_TOO_BIG:
+        /* Row log 超过 innodb_online_alter_log_max_size 限制。
+        并发 DML 产生的变更日志太多，DDL 失败。
+        用户可以增大该参数或在低峰期重试。 */
         my_error(ER_INNODB_ONLINE_LOG_TOO_BIG, MYF(0),
                  get_error_key_name(err_key, ha_alter_info, rebuilt_table));
         return true;
@@ -7124,9 +7226,26 @@ static void get_col_list_to_be_dropped(const ha_innobase_inplace_ctx *ctx,
   }
 }
 
-/** Commit the changes made during prepare_inplace_alter_table() and
-inplace_alter_table() inside the data dictionary tables, when not rebuilding
-the table.
+/** 提交不需要重建表的 INPLACE ALTER TABLE 操作。
+
+这是非重建类 Online DDL 的 commit 阶段核心函数，典型场景包括：
+- 创建/删除二级索引
+- 删除外键
+- 重命名索引/列
+
+主要工作：
+1. 检查所有新创建的索引是否完整且未损坏
+2. 对于新创建的二级索引，如果是 Online 操作，
+   调用 row_log_apply() 将索引创建期间积累的并发 DML 变更回放到新索引
+3. 将新索引标记为 committed（使其对查询可见）
+4. 处理外键的删除和更新
+5. 处理列重命名
+
+与 commit_try_rebuild 的区别：
+- 不需要 row_log_table_apply()（没有表重建）
+- 使用 row_log_apply() 回放到二级索引（而非聚簇索引）
+- 不需要表重命名操作
+
 @param[in]      ha_alter_info   Data used during in-place alter
 @param[in]      ctx             In-place ALTER TABLE context
 @param[in]      trx             Data dictionary transaction

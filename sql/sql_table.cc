@@ -13329,6 +13329,29 @@ static bool remove_secondary_engine(THD *thd, const Table_ref &table,
         failure.
 */
 
+/**
+ INPLACE ALTER TABLE 的 SQL 层执行入口。
+
+ 这是 Online DDL 在 SQL 层的核心函数，实现了经典的三阶段流程：
+
+ 阶段一：Prepare（准备）
+   - 根据存储引擎返回的锁级别，升级 MDL 锁
+   - 获取外键名称锁，检查外键名冲突
+   - 调用 ha_prepare_inplace_alter_table()（InnoDB 中会创建新表、分配 row log 等）
+   - Prepare 完成后，如果引擎只需要 prepare 阶段的排他锁，则降级锁
+
+ 阶段二：Inplace（执行）
+   - 调用 ha_inplace_alter_table()（InnoDB 中执行数据扫描、索引构建等）
+   - 此阶段根据锁级别，可能允许并发 DML（LOCK=NONE）
+
+ 阶段三：Commit（提交）
+   - 升级为排他锁（wait_while_table_is_used）
+   - 调用 ha_commit_inplace_alter_table()（InnoDB 中回放 row log、重命名表等）
+   - 更新数据字典
+
+ 锁降级/升级时序（以 NO_LOCK_AFTER_PREPARE 为例）：
+   EXCLUSIVE → [prepare] → SHARED_UPGRADABLE → [inplace] → EXCLUSIVE → [commit]
+*/
 static bool mysql_inplace_alter_table(
     THD *thd, const dd::Schema &schema, const dd::Schema &new_schema,
     const dd::Table *table_def, dd::Table *altered_table_def,
@@ -13532,10 +13555,10 @@ static bool mysql_inplace_alter_table(
   }
 
   {
-    /*
-      We want warnings/errors about data truncation emitted when
-      values of virtual columns are evaluated in INPLACE algorithm.
-    */
+    /* ===== 阶段一：Prepare =====
+    调用存储引擎的 prepare_inplace_alter_table。
+    InnoDB 中此函数会：创建新表（如需重建）、分配 row log、创建索引定义等。
+    此阶段在排他锁或升级后的锁保护下执行。 */
     thd->check_for_truncated_fields = CHECK_FIELD_WARN;
     thd->num_truncated_fields = 0L;
 
@@ -13544,11 +13567,11 @@ static bool mysql_inplace_alter_table(
       goto rollback;
     }
 
-    /*
-      Downgrade the lock if storage engine has told us that exclusive lock was
-      necessary only for prepare phase (unless we are not under LOCK TABLES) and
-      user has not explicitly requested exclusive lock.
-    */
+    /* ===== Prepare 完成后降级锁 =====
+    如果存储引擎表示只需要 prepare 阶段的排他锁（*_AFTER_PREPARE），
+    则在 inplace 阶段降级锁，允许并发读写。
+    - SHARED_LOCK_AFTER_PREPARE → 降级为 SHARED_NO_WRITE（允许读，阻止写）
+    - NO_LOCK_AFTER_PREPARE → 降级为 SHARED_UPGRADABLE（允许读写） */
     if ((inplace_supported == HA_ALTER_INPLACE_SHARED_LOCK_AFTER_PREPARE ||
          inplace_supported == HA_ALTER_INPLACE_NO_LOCK_AFTER_PREPARE) &&
         !(thd->locked_tables_mode == LTM_LOCK_TABLES ||
@@ -13568,12 +13591,18 @@ static bool mysql_inplace_alter_table(
     DEBUG_SYNC(thd, "alter_table_inplace_after_lock_downgrade");
     THD_STAGE_INFO(thd, stage_alter_inplace);
 
+    /* ===== 阶段二：Inplace 执行 =====
+    调用存储引擎的 inplace_alter_table。
+    InnoDB 中此函数执行实际的数据操作：扫描旧表数据、构建新索引/新表。
+    如果是 Online 操作，此阶段并发 DML 的变更会被记录到 row log 中。 */
     if (table->file->ha_inplace_alter_table(altered_table, ha_alter_info,
                                             table_def, altered_table_def)) {
       goto rollback;
     }
 
-    // Upgrade to EXCLUSIVE before commit.
+    // ===== 阶段三前：升级为排他锁 =====
+    // Inplace 执行完成后，需要升级为 EXCLUSIVE 锁才能进入 commit 阶段。
+    // 这是 Online DDL 中唯一需要阻塞所有并发操作的短暂窗口。
     if (wait_while_table_is_used(thd, table, HA_EXTRA_PREPARE_FOR_RENAME))      // 再升级成独占锁
       goto rollback;
 
@@ -13610,6 +13639,13 @@ static bool mysql_inplace_alter_table(
     DEBUG_SYNC(thd, "alter_table_inplace_before_commit");
     THD_STAGE_INFO(thd, stage_alter_inplace_commit);
 
+    /* ===== 阶段三：Commit =====
+    调用存储引擎的 commit_inplace_alter_table。
+    InnoDB 中此函数会：
+    - 对于重建表：回放 row log（row_log_table_apply）、重命名表
+    - 对于非重建：回放索引 row log（row_log_apply）、提交新索引
+    - 更新数据字典元数据
+    此阶段在排他锁保护下执行，阻塞所有并发操作。 */
     if (table->file->ha_commit_inplace_alter_table(
             altered_table, ha_alter_info, true, table_def, altered_table_def)) {
       goto rollback;
@@ -17457,12 +17493,16 @@ bool mysql_alter_table(THD *thd, const char *new_db, const char *new_name,
       goto end_inplace_noop;
     }
 
-    // Ask storage engine whether to use copy or in-place
+    // ===== 算法选择：询问存储引擎是否支持 Inplace =====
+    // check_if_supported_inplace_alter() 是算法决策的核心入口。
+    // InnoDB 中会检查 handler_flags，判断操作属于 INSTANT/INPLACE/COPY 哪种。
+    // 返回值决定了后续走 Inplace 路径还是 Copy 路径。
     enum_alter_inplace_result inplace_supported =
         table->file->check_if_supported_inplace_alter(altered_table,
                                                       &ha_alter_info);    // 是否支持原地算法
 
-    // If INSTANT was requested but it is not supported, report error.    // 决定走哪个算法
+    // ===== 算法选择：INSTANT 请求但不支持的处理 =====
+    // 如果用户显式指定了 ALGORITHM=INSTANT 但引擎不支持，直接报错。
     if (alter_info->requested_algorithm ==
             Alter_info::ALTER_TABLE_ALGORITHM_INSTANT &&
         inplace_supported != HA_ALTER_INPLACE_INSTANT &&
@@ -17473,9 +17513,25 @@ bool mysql_alter_table(THD *thd, const char *new_db, const char *new_name,
       goto err_new_table_cleanup;
     }   // 要求走原地算法，但是不支持，报错
 
+    /* ===== 算法选择：根据引擎返回值和用户请求决定最终算法 =====
+
+    决策矩阵：
+    引擎返回值                    | 用户 LOCK 请求  | 结果
+    -----------------------------|----------------|------------------
+    EXCLUSIVE_LOCK               | SHARED+DEFAULT | 回退到 COPY
+    EXCLUSIVE_LOCK               | NONE/SHARED    | 报错
+    SHARED_LOCK*                 | NONE           | 报错
+    NO_LOCK* / INSTANT           | 任意           | 使用 Inplace
+    NOT_SUPPORTED                | INPLACE        | 报错
+    NOT_SUPPORTED                | 其他           | 使用 COPY
+
+    注意：INSTANT 操作也被视为 Inplace 操作的一种，
+    引擎可以在 check_if_supported_inplace_alter 中自行决定
+    是否将 INSTANT 降级为 INPLACE。
+    */
     switch (inplace_supported) {
       case HA_ALTER_INPLACE_EXCLUSIVE_LOCK:
-        // If SHARED lock and no particular algorithm was requested, use COPY.
+        // 引擎需要排他锁。如果用户请求 SHARED 且未指定算法，回退到 COPY。
         if (alter_info->requested_lock == Alter_info::ALTER_TABLE_LOCK_SHARED &&
             alter_info->requested_algorithm ==
                 Alter_info::ALTER_TABLE_ALGORITHM_DEFAULT) {
@@ -17494,7 +17550,7 @@ bool mysql_alter_table(THD *thd, const char *new_db, const char *new_name,
         break;
       case HA_ALTER_INPLACE_SHARED_LOCK_AFTER_PREPARE:
       case HA_ALTER_INPLACE_SHARED_LOCK:
-        // If weaker lock was requested, report error.
+        // 引擎需要共享锁（阻止写入）。如果用户请求 LOCK=NONE，报错。
         if (alter_info->requested_lock == Alter_info::ALTER_TABLE_LOCK_NONE) {
           ha_alter_info.report_unsupported_error("LOCK=NONE", "LOCK=SHARED");
           close_temporary_table(thd, altered_table, true, false);
@@ -17520,7 +17576,7 @@ bool mysql_alter_table(THD *thd, const char *new_db, const char *new_name,
         */
         break;
       case HA_ALTER_INPLACE_NOT_SUPPORTED:
-        // If INPLACE was requested, report error.
+        // 引擎不支持 Inplace。如果用户显式请求了 ALGORITHM=INPLACE，报错。
         if (alter_info->requested_algorithm ==
             Alter_info::ALTER_TABLE_ALGORITHM_INPLACE) {
           ha_alter_info.report_unsupported_error("ALGORITHM=INPLACE",
@@ -18447,6 +18503,35 @@ bool mysql_trans_commit_alter_copy_data(THD *thd) {
   return error;
 }
 
+/**
+ COPY 算法的核心实现：逐行将数据从旧表复制到新表。
+
+ 这是最传统也最安全的 DDL 算法，适用于所有类型的 ALTER TABLE 操作。
+ 执行流程：
+ 1. 准备阶段：
+    - 建立旧表列到新表列的复制映射（Copy_field 数组）
+    - 识别需要重新生成值的列（生成列、带默认值表达式的新列）
+    - 对新表加外部写锁（F_WRLCK）
+    - 开启批量插入模式（ha_start_bulk_insert）
+
+ 2. 数据复制阶段（while 循环）：
+    - 逐行读取旧表数据（通过 RowIterator）
+    - 复制旧列值到新表对应列
+    - 计算生成列和默认值表达式
+    - 执行表级 CHECK 约束
+    - 写入新表（ha_write_row）
+    - 处理重复键错误
+
+ 3. 收尾阶段：
+    - 结束批量插入
+    - 提交事务（对于非原子 DDL 引擎）
+
+ 性能特点：
+ - 需要全表扫描和逐行写入，对大表非常耗时
+ - 执行期间持有锁，阻塞并发 DML
+ - 如果指定了 ORDER BY 且新表有聚簇索引，ORDER BY 会被忽略
+ - 支持 AUTO_INCREMENT 值的正确传递
+*/
 static int copy_data_between_tables(
     THD *thd, PSI_stage_progress *psi [[maybe_unused]], TABLE *from, TABLE *to,
     List<Create_field> &create, ha_rows *copied, ha_rows *deleted,
@@ -18623,8 +18708,10 @@ static int copy_data_between_tables(
 
   set_column_static_defaults(to, create);
 
+  /* 通知存储引擎开始 ALTER COPY 数据复制阶段 */
   to->file->ha_extra(HA_EXTRA_BEGIN_ALTER_COPY);
 
+  /* ===== 核心复制循环：逐行读取旧表、写入新表 ===== */
   while (!(error = iterator->Read())) {
     if (thd->killed) {
       thd->send_kill_message();
@@ -18653,6 +18740,7 @@ static int copy_data_between_tables(
         to->next_number_field->reset();
     }
 
+    /* 复制旧表列值到新表对应列 */
     for (Copy_field *copy_ptr = copy; copy_ptr != copy_end; copy_ptr++) {
       copy_ptr->invoke_do_copy();
     }
@@ -18661,18 +18749,9 @@ static int copy_data_between_tables(
       break;
     }
 
-    /*
-      Iterate through all generated columns and all new columns which have
-      generated defaults and evaluate their values. This needs to happen
-      after copying values for old columns and storing default values for
-      new columns without generated defaults, as generated values might
-      depend on these values.
-      OTOH generated columns/generated defaults need to be processed in
-      the order in which their columns are present in table as generated
-      values are allowed to depend on each other as long as there are no
-      forward references (i.e. references to other columns with generated
-      values which come later in the table).
-    */
+    /* 计算生成列和带默认值表达式的新列的值。
+    必须在复制旧列值之后执行，因为生成列可能依赖其他列的值。
+    列按在表中的顺序处理，避免前向引用问题。 */
     for (ptr = gen_fields; ptr != gen_fields_end; ptr++) {
       Item *expr_item;
       if ((*ptr)->is_gcol()) {
@@ -18689,9 +18768,11 @@ static int copy_data_between_tables(
     }
     if (error) break;
 
+    /* 执行表级 CHECK 约束验证 */
     error = invoke_table_check_constraints(thd, to);
     if (error) break;
 
+    /* 将新行写入目标表 */
     error = to->file->ha_write_row(to->record[0]);
     to->autoinc_field_has_explicit_non_null_value = false;
     if (error) {

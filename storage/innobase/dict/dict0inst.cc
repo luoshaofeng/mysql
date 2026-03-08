@@ -25,7 +25,13 @@ this program; if not, write to the Free Software Foundation, Inc.,
 *****************************************************************************/
 
 /** @file dict/dict0inst.cc
-Instant DDL interface implementation
+Instant DDL 接口实现。
+
+本文件实现了 Instant DDL 的核心逻辑，包括：
+1. commit_instant_ddl() —— 根据 Instant_Type 分发到不同的提交路径
+2. is_instant_add_drop_possible() —— 行大小校验，确保 Instant ADD 后不会超限
+3. commit_instant_add_col_low() / commit_instant_drop_col_low() —— DD 元数据更新
+4. populate_to_be_instant_columns_low() —— 对比新旧表列定义，识别 ADD/DROP 列
 
 Created 2020-04-24 by Mayank Prasad */
 
@@ -38,6 +44,13 @@ static void populate_to_be_instant_columns_low(
     const Alter_inplace_info *ha_alter_info, const TABLE *old_table,
     const TABLE *new_table, Columns &cols_to_add, Columns &cols_to_drop);
 
+/**
+ 检查 Instant ADD/DROP 是否可行。
+ 核心逻辑：计算当前表行的最大可能大小，再逐个累加新增列的最大大小，
+ 如果超过页面允许的最大记录大小（page_rec_max），则拒绝 Instant。
+ 这是因为 Instant ADD 不会重写数据，如果新行可能超大，
+ 后续 INSERT 会失败，所以必须在 DDL 阶段就拒绝。
+*/
 template <typename Table>
 bool Instant_ddl_impl<Table>::is_instant_add_drop_possible(
     const Alter_inplace_info *ha_alter_info, const TABLE *table,
@@ -119,6 +132,14 @@ template bool Instant_ddl_impl<dd::Partition>::is_instant_add_drop_possible(
     const Alter_inplace_info *ha_alter_info, const TABLE *table,
     const TABLE *altered_table, const dict_table_t *dict_table);
 
+/**
+ Instant ADD COLUMN 底层实现。
+ 步骤：
+ 1. 调用 dd_copy_table_columns() 将旧列的默认值信息复制到新 DD 表
+ 2. 调用 dd_add_instant_columns() 为新增列在 DD 中记录默认值
+    （这些默认值存储在列的 se_private_data 中，读取旧行时用于填充新列）
+ 3. 调用 dd_update_v_cols() 更新虚拟列元数据
+*/
 template <typename Table>
 bool Instant_ddl_impl<Table>::commit_instant_add_col_low() {
   ut_ad(!m_dict_table->is_temporary());
@@ -157,6 +178,15 @@ bool Instant_ddl_impl<dd::Partition>::commit_instant_add_col() {
   return false;
 }
 
+/**
+ Instant DROP COLUMN 底层实现。
+ 步骤：
+ 1. 调用 dd_copy_table_columns() 复制列元数据
+ 2. 调用 dd_drop_instant_columns() 将被删除列标记为 "dropped"
+    在 DD 中记录其物理位置（column position、version_added/dropped 等），
+    使得旧行中该列的数据在读取时被正确跳过。
+    物理数据并不会立即删除，而是在后续表重建时清理。
+*/
 template <typename Table>
 bool Instant_ddl_impl<Table>::commit_instant_drop_col_low() {
   ut_ad(!m_dict_table->is_temporary());
@@ -194,6 +224,28 @@ bool Instant_ddl_impl<dd::Partition>::commit_instant_drop_col() {
   return false;
 }
 
+/**
+ commit_instant_ddl() —— Instant DDL 的提交入口。
+ 根据 handler_trivial_ctx 中存储的 Instant_Type 分发到不同路径：
+
+ INSTANT_NO_CHANGE:
+   仅复制 DD 私有数据，不做任何实际变更。
+
+ INSTANT_COLUMN_RENAME:
+   更新列名 + 刷新字典缓存（innobase_discard_table 使旧缓存失效）。
+
+ INSTANT_VIRTUAL_ONLY:
+   更新虚拟列元数据 + 处理 FTS_DOC_ID 隐藏列 + 刷新字典缓存。
+
+ INSTANT_ADD_DROP_COLUMN（核心路径）:
+   1. 开启事务
+   2. populate_to_be_instant_columns() 识别新增/删除的列
+   3. commit_instant_drop_col() 处理删除列
+   4. commit_instant_add_col() 处理新增列
+   5. 递增 current_row_version（行版本号，用于区分新旧格式行）
+   6. 记录事务 ID 到索引元数据
+   7. 刷新字典缓存
+*/
 template <typename Table>
 bool Instant_ddl_impl<Table>::commit_instant_ddl() {
   Instant_Type type =
@@ -287,9 +339,21 @@ bool Instant_ddl_impl<Table>::commit_instant_ddl() {
 template bool Instant_ddl_impl<dd::Table>::commit_instant_ddl();
 template bool Instant_ddl_impl<dd::Partition>::commit_instant_ddl();
 
+/**
+ 识别需要 Instant ADD 和 DROP 的列（底层实现）。
+
+ 算法：
+ 1. 先收集所有被重命名的列（重命名不算 ADD/DROP）
+ 2. 遍历旧表的每一列，在新表中查找同名列：
+    - 找不到 → 该列被 DROP
+    - 找到但在 drop list 中 → 该列被 DROP，同时检查新表中同名列是否是新增的
+ 3. 遍历新表的每一列，在旧表中查找同名列：
+    - 找不到 → 该列被 ADD
+    - 找到但旧列被重命名 → 该列是新增的（旧列名已被重命名走了）
+
+ 注意：虚拟列被跳过，因为虚拟列不占物理存储。
+*/
 static void populate_to_be_instant_columns_low(
-    const Alter_inplace_info *ha_alter_info, const TABLE *old_table,
-    const TABLE *altered_table, Columns &cols_to_add, Columns &cols_to_drop) {
   /* Collect all renamed columns */
   using renamed_fields_t = std::pair<std::string, std::string>;
   std::vector<renamed_fields_t> renamed_fields;

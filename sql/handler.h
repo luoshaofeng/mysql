@@ -189,19 +189,34 @@ extern ulong total_ha_2pc;
 #define HA_ADMIN_NEEDS_DUMP_UPGRADE -14
 
 /**
-   Return values for check_if_supported_inplace_alter().
+   check_if_supported_inplace_alter() 的返回值枚举。
+   存储引擎通过返回不同的值来告知 SQL 层：
+   1) 是否支持 inplace/instant 算法
+   2) 执行期间所需的并发锁级别（从严到宽排列）
 
    @see check_if_supported_inplace_alter() for description of
    the individual values.
 */
 enum enum_alter_inplace_result {
+  /** 发生了意外错误，ALTER TABLE 将被中止 */
   HA_ALTER_ERROR,
+  /** 存储引擎不支持 inplace，必须回退到 COPY 算法（逐行拷贝到临时表） */
   HA_ALTER_INPLACE_NOT_SUPPORTED,
+  /** 支持 inplace，但全程需要排他锁（X lock），阻塞所有并发读写 */
   HA_ALTER_INPLACE_EXCLUSIVE_LOCK,
+  /** 支持 inplace，prepare 阶段需要排他锁，之后降级为 SNW（共享非写）锁，
+      允许并发读但阻塞写 */
   HA_ALTER_INPLACE_SHARED_LOCK_AFTER_PREPARE,
+  /** 支持 inplace，全程需要 SNW 锁，允许并发读但阻塞写 */
   HA_ALTER_INPLACE_SHARED_LOCK,
-  HA_ALTER_INPLACE_NO_LOCK_AFTER_PREPARE,     // prepare后无锁
+  /** 支持 inplace，prepare 阶段需要排他锁，之后降级为 SU（共享可升级）锁，
+      允许并发读写。这是真正的 Online DDL（带 prepare 阶段短暂阻塞） */
+  HA_ALTER_INPLACE_NO_LOCK_AFTER_PREPARE,
+  /** 支持 inplace，全程允许并发读写，无需额外加锁。最理想的 Online DDL */
   HA_ALTER_INPLACE_NO_LOCK,
+  /** 支持 INSTANT 算法。prepare 和 main 阶段都是空操作（no-op），
+      所有变更在 commit 阶段瞬间完成（仅修改元数据）。
+      全程只持有 SU 锁，commit 前短暂升级为 X 锁 */
   HA_ALTER_INPLACE_INSTANT
 };
 
